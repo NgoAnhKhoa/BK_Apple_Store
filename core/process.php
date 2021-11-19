@@ -1,0 +1,184 @@
+<?php
+
+    include 'auth.php';
+
+    // function process_product(){
+    //     if(checkLogin()) {
+
+    //     }
+    //     else{
+    //         header('Location: login.php');
+    //     }
+    // }
+
+    function get_HightLight($typeId){
+        $conn = newConnection();
+        if($typeId == 0)
+            $query = "SELECT * FROM Products ORDER BY `rate` DESC LIMIT 3";
+        elseif($typeId==15)
+            $query = "SELECT * FROM Products WHERE `type`=8 OR `type`=9 OR `type`=10 OR `type`=11 ORDER BY `rate` DESC LIMIT 3";
+        elseif($typeId==13)
+            $query = "SELECT * FROM Products WHERE `type`=1 OR `type`=2 OR `type`=3 OR `type`=4 ORDER BY `rate` DESC LIMIT 3";
+        elseif($typeId==14)
+            $query = "SELECT * FROM Products WHERE `type`=5 OR `type`=6 OR `type`=7 ORDER BY `rate` DESC LIMIT 3";
+        else
+            $query = "SELECT * FROM Products WHERE `type`=$typeId ORDER BY `rate` DESC LIMIT 3";
+        $result = $conn->query($query);
+        $conn->close();
+        return $result;
+    }
+
+    function getInbox(){
+        $conn = newConnection();
+        $query = "SELECT * FROM `MessageView`";
+        $result = $conn->query($query);
+        $conn->close();
+        return $result;
+    }
+
+    function searchProduct($id, $q, $price) {
+        $conn = newConnection();
+        $query = "SELECT * FROM `Products`";
+        if($price) {
+            switch(intval($price)){
+                case 1:
+                    $price1 = 0;
+                    $price2 = 100;
+                    break;
+                case 2:
+                    $price1 = 100;
+                    $price2 = 500;
+                    break;
+                case 3:
+                    $price1 = 500;
+                    $price2 = 1000;
+                    break;
+                case 4:
+                    $price1 = 1000;
+                    $price2 = 2000;
+                    break;
+                case 5:
+                    $price1 = 2000;
+                    $price2 = 100000;
+                    break;
+                default:
+                    $price1 = 0;
+                    $price2 = 100000;
+                    break;
+            }
+        }
+        if($id && intval($id)!=0) {
+            $query = $query." WHERE `type`=$id";
+            if($q){
+                $query = $query." AND (`name` LIKE '%$q%' OR `des` LIKE '%$q%')";
+                if($price){
+                    $query=$query." AND (`price` BETWEEN $price1 AND $price2)";
+                }
+            }
+            else {
+                if($price){
+                    $query=$query." AND (`price` BETWEEN $price1 AND $price2)";
+                }
+            }
+        }
+        else{
+            if($q){
+                $query = $query." WHERE (`name` LIKE '%$q%' OR `des` LIKE '%$q%')";
+                if($price){
+                    $query=$query." AND (`price` BETWEEN $price1 AND $price2)";
+                }
+            }
+            else{
+                if($price){
+                    $query=$query." WHERE (`price` BETWEEN $price1 AND $price2)";
+                }
+            }
+        }
+        $result = $conn->query($query);
+        $conn->close();
+        return $result;
+    }
+
+    function getProduct($id){
+        $conn = newConnection();
+        $query = "SELECT * FROM `Products` WHERE `productId`=$id";
+        $result = $conn->query($query);
+        $conn->close();
+        return $result->fetch_array(MYSQLI_BOTH);
+    }
+
+    function getCart($userId) {
+        $conn = newConnection();
+        if(checkState($userId)) {
+            $query = "SELECT * FROM `Cart` WHERE `userId` = $userId";
+            $result = $conn->query($query);
+            $conn->close();
+            return $result;
+        }
+        else {
+            header('Location: login');
+        }
+        
+    }
+
+    function getCartItem($cartId){
+        // checkCart
+        $conn = newConnection();
+        // $query = "SELECT `userId` FROM `Cart` WHERE `cartId`=$cartId";
+        // $result = $conn->query($query);
+        // $row = $result->fetch_array(MYSQLI_BOTH);
+        // if($row['userId'] != $_SESSION['user']['userId']){
+        //     header('Location: cart_history.php');
+        // }
+        $query = "SELECT * FROM `ItemCartView` WHERE `cartId`='$cartId'";
+        $result = $conn->query($query);
+        $conn->close();
+        return $result;
+    }
+
+    function getAllCart() {
+        $conn = newConnection();
+        $query = "SELECT * FROM `CartView`";
+        $result = $conn->query($query);
+        $conn->close();
+        return $result;
+    }
+
+    function checkText255($input) {
+        $exp = "/^(\w{3,255})$/";
+        return preg_match($exp,$input)==1;
+    }
+
+    function addUser($name, $email, $password, $type) {
+        $hash = password_hash($password, PASSWORD_DEFAULT);
+        $conn = newConnection();
+        $query = "INSERT INTO `Users` (`userName`, `email`, `password`, `type`) VALUES ('$name', '$email','$hash', $type)";
+        $result = $conn->query($query);
+        $conn->close();
+        return $result;
+    }
+
+    function updateUser($name, $password){
+        $id = $_SESSION['user']['userId'];
+        if(checkState($id)){
+            $conn = newConnection();
+            $hash = password_hash($password, PASSWORD_DEFAULT);
+            $query = "UPDATE `Users` SET `userName`='$name', `password`='$hash' WHERE `userId`=$id";
+            $result = $conn->query($query);
+            $conn->close();
+            return $result;
+        }
+		else {
+            header('Location:login');
+        }
+    }
+
+    function getUserList() {
+        $conn = newConnection();
+        $query = "SELECT `userId`, `userName`,`email`,`state` FROM `Users` WHERE `type` = 0";
+        $result = $conn->query($query);
+        $conn->close();
+        return $result;
+    }
+
+?>

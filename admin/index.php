@@ -1,0 +1,93 @@
+
+<?php
+    include '../core/process.php';
+    if(!checkAdmin()){
+        header('Location: ../home');
+    }
+    include 'include/header.php';
+
+    $hightlight = get_HightLight(0);
+?>
+
+<!-- carousel -->
+<div class="container">
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="https://images.samsung.com/is/image/samsung/assets/ph/p6_gro1/p6_initial_home/HOME_T_O_KV_Main_Animated_KV_1440X640.jpg" alt="First slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="black">
+                        Galaxy S21|S21+ 5G
+                    </h2>
+                    <a href="product.php?id=3" class="btn btn-carousel-dark">Xem ngay</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="https://images.samsung.com/is/image/samsung/assets/vn/home/2021/2021_Home_KV_NeoQLED_Perspective_PC.jpg" alt="Second slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="white">
+                        Neo QLED
+                    </h2>
+                    <a href="product.php?id=25" class="btn btn-carousel-dark">Xem ngay</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="https://images.samsung.com/is/image/samsung/assets/vn/home/2021/DA_Main-KV_Homepage_Desk_202103.png" alt="Third slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="white">
+                        Samsung AI
+                    </h2>
+                    <a href="product.php?id=53" class="btn btn-carousel-light">Xem ngay</a>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+<!-- end carousel -->
+
+<!-- Category -->
+
+<div class="container">
+    <h2 class="title">Nổi bật</h2>
+    <div class="row">
+      <?php
+        while($row = $hightlight->fetch_array(MYSQLI_BOTH)) {
+          $url = $row['url1'];
+          $name = $row['name'];
+          $id = $row['productId'];
+          $des = $row['des'];
+      ?>
+      <div class="col-md-4">
+        <a href=<?php echo "product.php?id=$id"; ?> class="card-link">
+          <div class="card">
+            <img src=<?php echo "$url"; ?> alt="hight light image" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">
+                <?php echo $name; ?>
+              </h5>
+              <p class="card-text">
+                <?php echo $des; ?>
+              </p>
+              <br>
+              <a href=<?php echo "product.php?id=$id"; ?> class="btn btn-primary btn-card">Xem ngay</a>
+            </div>
+          </div>
+        </a>
+      </div>
+      <?php } ?>
+    </div>
+  </div>
+
+<!-- end category -->
+
+<?php
+    include 'include/footer.php';
+?>

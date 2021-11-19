@@ -1,0 +1,130 @@
+<?php
+    $uri = $_SERVER['PHP_SELF'];
+    $title = "";
+    $route = "";
+    switch($uri){
+        case "/BK_Apple_Store/index.php":
+        case "/BK_Apple_Store":
+        case "/BK_Apple_Store//":
+            $route = "home";
+            $title = "Trang chủ";
+            break;
+        case "/BK_Apple_Store/mobile.php":
+            $route = "product";
+            $title = "Di động";
+            break;
+        case "/BK_Apple_Store/tvav.php":
+            $route = "product";
+            $title = "TV & AV";
+            break;
+        case "/BK_Apple_Store/appliance.php":
+            $route = "product";
+            $title = "Gia dụng";
+            break;
+        case "/BK_Apple_Store/screen.php":
+            $title = "Màn hình";
+            $route = "product";
+            break;
+        case "/BK_Apple_Store/about.php":
+            $route = "about";
+            $title = "Khám phá";
+            break;
+        case "/BK_Apple_Store/contact.php":
+            $route = "contact";
+            $title = "Liên hệ";
+            break;
+        case "/BK_Apple_Store/product_list.php":
+            $title = "Danh sách sản phẩm";
+            break;
+        case "/BK_Apple_Store/product.php":
+            $title = "Sản phẩm";
+            break;
+        default:
+            $title = "404 Not Found";
+            break;
+    }
+
+?>
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <?php
+            echo $title;
+        ?>
+    </title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.css" type="text/css">
+
+    <script src="./assets/js/script.js" type="text/javascript"></script>
+</head>
+<body>
+
+<!-- scroll button -->
+<div class="scroll-up-btn">
+    <i class="fa fa-angle-up"></i>
+</div>
+
+<!-- navigation bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="home">
+        <img src="./assets/images/apple_logo.jpeg" alt="logo" class="logo" style="width: 80px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="col-auto">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class=<?php echo $route == 'home'? "'nav-item active'": "nav-item" ?>>
+                        <a class="nav-link" href="home">Trang chủ <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class=<?php echo $route == 'product'? "'nav-item active dropdown'": "'nav-item dropdown'" ?>>
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Sản phẩm
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="mobile">Di động</a>
+                            <a class="dropdown-item" href="tvav">TV & AV</a>
+                            <a class="dropdown-item" href="appliance">Gia dụng</a>
+                            <a class="dropdown-item" href="screen">Màn hình</a>
+                        </div>
+                    </li>
+                    <li class=<?php echo $route == 'about'? "'nav-item active'": "nav-item" ?>>
+                        <a class="nav-link" href="about">Khám phá</a>
+                    </li>
+                    <li class=<?php echo $route == 'contact'? "'nav-item active'": "nav-item" ?>>
+                        <a class="nav-link" href="contact">Liên hệ</a>
+                    </li>
+                    <li class="nav-item">
+                        <form id="demo-2" action="product_list.php" method="GET">
+                            <input type="search" name="q" placeholder="Search" >
+                            <input type="submit" 
+                                style="position: absolute; left: -9999px; width: 1px; height: 1px;"
+                                tabindex="-1" />
+                        </form>
+                    </li>
+                    <li class="nav-item">
+                        <a href="login.php" class="nav-link">
+                            <i class="fa fa-user"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
