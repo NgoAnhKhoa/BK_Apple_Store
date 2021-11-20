@@ -21,7 +21,7 @@
         ?>
 
         <tr>
-            <td class="img-container"><img src=<?php echo "'$url'"; ?> class="img-cart" alt="image"/> </td>
+            <td class="img-container"><a href=<?php echo "'product.php?id=$id'"; ?>><img src=<?php echo "'$url'"; ?> class="img-cart" alt="image"/></a> </td>
             <td class="product-name"><a href=<?php echo "'product.php?id=$id'"; ?>><?php echo $product['name']; ?></a></td>
             <td><input class="form-control quantity-product" id=<?php echo "'quantity$id'"; ?> type="number" value=<?php echo "$quantity"; ?> min="1" onchange="changeQuantity(<?php echo $id; ?>)"/></td>
             <td class="text-right price-item"><?php echo $price*$quantity; ?></td>

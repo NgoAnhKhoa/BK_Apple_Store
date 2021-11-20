@@ -1,7 +1,8 @@
 <?php
+include '../../core/auth.php';
+include "../common/helper.php";
 header('Content-type: text/html; charset=utf-8');
 
-include '../../core/auth.php';
 if (!checkLogin()) {
     header("Location: ../../login");
     return;
@@ -14,7 +15,6 @@ if ($_SESSION["cart"] == []) {
 $config = file_get_contents('../config.json');
 $array = json_decode($config, true);
 
-include "../common/helper.php";
 
 $endpoint = "https://test-payment.momo.vn/gw_payment/transactionProcessor";
 
@@ -40,9 +40,10 @@ if (!empty($_POST)) {
     // $returnUrl = $_POST["returnUrl"];
     // $extraData = $_POST["extraData"];
     
-    $orderId = time() ."";
+    $userId = $_SESSION['user']['userId'];
+    $orderId = "$userId".time();
     $amount = $_POST["amount"];
-    $requestId = time() . "";
+    $requestId = "$userId".time();
     // $extraData = ($_POST["extraData"] ? $_POST["extraData"] : "");
     //before sign HMAC SHA256 signature
     $rawHash = "partnerCode=" . $partnerCode . "&accessKey=" . $accessKey . "&requestId=" . $requestId . "&amount=" . $amount . "&orderId=" . $orderId . "&orderInfo=" . $orderInfo . "&returnUrl=" . $returnUrl . "&notifyUrl=" . $notifyUrl . "&extraData=" . $extraData;

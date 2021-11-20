@@ -20,7 +20,7 @@
 
 <div class="container">
     <h2 class="title">Lịch sử mua hàng</h2>
-    <table class="table">
+    <table class="table table-striped">
         <thead class="thead-dark">
             <tr>
                 <th>STT</th>

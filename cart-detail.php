@@ -27,7 +27,7 @@
 
 <div class="container">
     <h2 class="title">Thông tin chi tiết</h2>
-    <table class="table">
+    <table class="table table-striped">
         <thead class="thead-dark">
             <tr>
                 <th>STT</th>
@@ -43,6 +43,7 @@
                     $name = $row['name'];
                     $quantity = $row['quantity'];
                     $price = $row['price'];
+                    $totalPrice += $price * $quantity;
                     echo "<tr>";
                     echo "<td>$i</td>";
                     echo "<td>$name</td>";
@@ -51,6 +52,28 @@
                     echo "</tr>";
                     $i++;
                 }
+                echo "<tr>";
+                echo "<td></td>";
+                echo "<td></td>";
+                echo '<td class="text-right">Tổng</td>';
+                echo '<td>$ ' . $totalPrice . '</td>';
+                echo "</tr>";
+
+                $ship = round($totalPrice*0.05, 2);
+                echo "<tr>";
+                echo "<td></td>";
+                echo "<td></td>";
+                echo '<td class="text-right">Ship</td>';
+                echo '<td>$ ' . $ship . '</td>';
+                echo "</tr>";
+
+                $totalPrice = round($totalPrice + $ship, 2);
+                echo "<tr>";
+                echo "<td></td>";
+                echo "<td></td>";
+                echo '<td class="text-right"><strong>Tổng cộng</strong></td>';
+                echo '<td>$ ' . $totalPrice . '</td>';
+                echo "</tr>";
             ?>
         </tbody>
     </table>

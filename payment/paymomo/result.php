@@ -1,6 +1,6 @@
 <?php
 header('Content-type: text/html; charset=utf-8');
-
+include '../../core/auth.php';
 
 $secretKey = 'uGuV2sJDuN3Kp8WHUEJ5dyvSLWHyrAJC'; //Put your secret key in there
 
@@ -36,9 +36,44 @@ if (!empty($_GET)) {
 
     if ($m2signature == $partnerSignature) {
         if ($errorCode == '0') {
-            $result = '<div class="alert alert-success"><strong>Payment status: </strong>Success</div>';
+            // $result = '<div class="alert alert-success"><strong>Payment status: </strong>Success</div>';
+            $userId = $_SESSION['user']['userId'];
+            if(checkState($userId)){
+                $success = true;
+                $totalPrice = 0;
+                $cartId = $orderId;
+                $conn = newConnection();
+                $cart = $_SESSION["cart"];
+                foreach($cart as $id => $quantity) {
+                    $query = "SELECT `price` FROM `Products` WHERE `productId`=$id";
+                    $result = $conn->query($query);
+                    $row = $result->fetch_array(MYSQLI_BOTH);
+                    $totalPrice += $row['price']*intval($quantity);
+                }
+                $ship = round($totalPrice*0.05, 2);
+                $totalPrice = round($totalPrice + $ship, 2);
+                $query = "INSERT INTO `Cart` (`cartId`, `userId`, `totalPrice`) VALUES ('$cartId', $userId, $totalPrice)";
+                $result = $conn->query($query);
+                if(!$result) $success = false;
+                foreach ($cart as $id => $quantity) {
+                    $query = "INSERT INTO `ItemCart` (`productId`,`cartId`,`quantity`) VALUES ($id, '$cartId', $quantity)";
+                    $result = $conn->query($query);
+                    if(!$result) $success = false;
+                }
+                $conn->close();
+
+            
+                if($success) {
+                    $_SESSION['cart'] = [];
+                }
+            }
+            else {
+                header('Location: ../../login');
+            }
+            header("Location: ../../cart-detail?id=".$cartId);
         } else {
             $result = '<div class="alert alert-danger"><strong>Payment status: </strong>' . $message .'/'.$localMessage. '</div>';
+            header("Location: ../../cart.php");
         }
     } else {
         $result = '<div class="alert alert-danger">This transaction could be hacked, please check your signature and returned signature</div>';
