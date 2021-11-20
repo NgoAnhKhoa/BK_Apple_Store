@@ -30,8 +30,8 @@
               </div>
               <div class="col-sm-12 col-md-6 text-right">
                   <form action="./payment/paymomo/init_payment.php" method="POST">
-                      <input type="text" name="amount" id="amount">
-                      <button class="btn btn-lg btn-block btn-success text-uppercase">Thanh toan</button>
+                      <input hidden type="text" name="amount" id="amount">
+                      <button class="btn btn-lg btn-block btn-success text-uppercase" id="checkout">Thanh toan</button>
                   </form>
               </div>
           </div>
@@ -42,6 +42,11 @@
 <script>
 $(document).ready(() => {
     $('#cart-table').load('cart_content.php');
+    $("#checkout").click(() => {
+        if ($("#amount").val() == 0) {
+            alert("Please choose a product to checkout");
+        }
+    });
 });
 </script>
 
