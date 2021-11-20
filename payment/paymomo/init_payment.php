@@ -12,8 +12,7 @@ if ($_SESSION["cart"] == []) {
     return;
 }
 
-$config = file_get_contents('../config.json');
-$array = json_decode($config, true);
+$array = parse_ini_file("../config.ini");
 
 
 $endpoint = "https://test-payment.momo.vn/gw_payment/transactionProcessor";
