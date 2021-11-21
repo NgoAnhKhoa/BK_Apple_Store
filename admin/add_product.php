@@ -13,6 +13,15 @@
     $correctUrl4 = true;
     $success = true;
 
+    
+    $name = '';
+    $price = '';
+    $des = '';
+    $url1 = '';
+    $url2 ='';
+    $url3 = '';
+    $url4 = '';
+
     if($_SERVER['REQUEST_METHOD'] == 'POST') {
         $name = $_POST['name'];
         $price = $_POST['price'];

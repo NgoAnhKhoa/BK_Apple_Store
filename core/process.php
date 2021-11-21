@@ -36,7 +36,7 @@
         return $result;
     }
 
-    function searchProduct($id, $q, $price) {
+    function searchProduct($id, $q, $price, $begin) {
         $conn = newConnection();
         $query = "SELECT * FROM `Products`";
         if($price) {
@@ -94,6 +94,7 @@
                 }
             }
         }
+        $query = $query." ORDER BY `rate` DESC LIMIT $begin,6";
         $result = $conn->query($query);
         $conn->close();
         return $result;
@@ -179,6 +180,30 @@
         $result = $conn->query($query);
         $conn->close();
         return $result;
+    }
+
+    function countResult($type){
+        $conn = newConnection();
+        $query = "SELECT * FROM `products` WHERE type='$type'";
+        $result = $conn->query($query);
+        $row_count = $result->num_rows;
+        $conn->close();
+        return $row_count;
+    }
+
+    
+    function getParams(){
+        return !empty( $_GET ) ? $_GET : [];
+    }
+    
+    function buildQuery( $params=array() ){
+        $tmp=array();
+        foreach( $params as $param => $value ){
+            if( is_array( $value ) ){
+                foreach( $value as $field => $fieldvalue )$tmp[]=sprintf('%s[]=%s',$param,$fieldvalue);
+            } else $tmp[]=sprintf('%s=%s',$param,$value);
+        }
+        return urldecode( implode( '&', $tmp ) );
     }
 
 ?>
