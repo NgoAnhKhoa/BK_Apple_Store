@@ -92,8 +92,9 @@
 <!-- navigation bar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-        <a class="navbar-brand" href="home">
-            <img src="./assets/images/apple_logo.jpeg" alt="logo" class="logo" style="width: 80px;">
+        <a class="navbar-brand" href="home" style="display: flex;">
+            <img src="./assets/images/apple_logo.jpeg" alt="logo" class="logo" style="width: 60px;">
+            <h1 style="margin: 10px 0px 0px 20px;">BK Apple Store</h1>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

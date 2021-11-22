@@ -32,9 +32,10 @@
     else{
         $begin = ($page-1)*6;
     }
-
-    $result = searchProduct($id, $q, $price, $begin);
-
+    if ($id != 0)
+        $result = searchProduct($id, $q, $price, $begin);
+    else
+        $result = getAllProduct(0, $q, $price);
     
 
 ?>
