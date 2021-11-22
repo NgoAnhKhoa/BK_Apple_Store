@@ -22,7 +22,7 @@
 
         <tr>
             <td class="img-container"><a href=<?php echo "'product.php?id=$id'"; ?>><img src=<?php echo "'$url'"; ?> class="img-cart" alt="image"/></a> </td>
-            <td class="product-name"><a href=<?php echo "'product.php?id=$id'"; ?>><?php echo $product['name']; ?></a></td>
+            <td class="product-name"><a style="text-decoration: none; color: black" href=<?php echo "'product.php?id=$id'"; ?>><?php echo $product['name']; ?></a></td>
             <td><input class="form-control quantity-product" id=<?php echo "'quantity$id'"; ?> type="number" value=<?php echo "$quantity"; ?> min="1" onchange="changeQuantity(<?php echo $id; ?>)"/></td>
             <td class="text-right price-item"><?php echo $price*$quantity; ?></td>
             <td class="text-right"><button class="btn btn-sm btn-danger" onclick="remove(<?php echo $id; ?>)"><i class="fa fa-trash"></i> </button> </td>
