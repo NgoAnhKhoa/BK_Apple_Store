@@ -138,8 +138,7 @@
                     </li>
                     <?php
                     $params=getParams();
-                    $number_of_rows = countResult($id);
-                    $number_page = ceil($number_of_rows/6);
+                    $number_page = ceil(countResult($id)/6);
                     for( $i=1; $i <= $number_page; $i++ ){
                         $params['page']=$i;
                         printf('<li class="page-item"><a class="page-link" href="?%2$s">%1$d</a></li>', $i, buildQuery( $params ));
