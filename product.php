@@ -1,5 +1,4 @@
 <?php
-
     include './core/process.php';
     $USER = 0;
     if(checkLogin()){
@@ -11,10 +10,10 @@
           $USER = 1;
         }
              
-      }
-      else{
+    }
+    else{
         include "include/header_notlogin.php";
-      }
+    }
 
 
     if(isset($_GET['id'])){
@@ -40,8 +39,11 @@
     }
 
 ?>
-
-<div class="container container-product">
+</body>
+<link rel="stylesheet" href="./assets/css/common.css">
+<body style="margin-top: -25px; padding: 0; font-family: Roboto, sans-serif;">
+<div class="container container-product padding-top">
+    <h2 class="title">Product info</h2>
     <div class="row">
         <div class="col-md-6">
             <div class="row">

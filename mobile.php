@@ -85,7 +85,7 @@
       </div>
       <?php } ?>
     </div>
-    <a class="btn btn-primary more-button" href="product-list?id=1">Xem thêm</a>
+    <a class="btn btn-primary more-button" href="product-list?id=1&page=1">Xem thêm</a>
   </div>
   <!-- End Smart Phone -->
 
@@ -119,7 +119,7 @@
       </div>
       <?php } ?>
     </div>
-    <a class="btn btn-primary more-button" href="product-list?id=2">Xem thêm</a>
+    <a class="btn btn-primary more-button" href="product-list?id=2&page=1">Xem thêm</a>
   </div>
   <!-- End Tablet -->
 
@@ -153,7 +153,7 @@
       </div>
       <?php } ?>
     </div>
-    <a class="btn btn-primary more-button" href="product-list?id=3">Xem thêm</a>
+    <a class="btn btn-primary more-button" href="product-list?id=3&page=1">Xem thêm</a>
   </div>
   <!-- End Smart watch -->
 
@@ -187,7 +187,7 @@
       </div>
       <?php } ?>
     </div>
-    <a class="btn btn-primary more-button" href="product-list?id=4">Xem thêm</a>
+    <a class="btn btn-primary more-button" href="product-list?id=4&page=1">Xem thêm</a>
   </div>
   <!-- End accessories -->
 

@@ -9,6 +9,7 @@
 ?>
 <link rel="stylesheet" href="./assets/css/common.css">
 <div class="container padding-top">
+    <h2 class="title">About</h2>
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">

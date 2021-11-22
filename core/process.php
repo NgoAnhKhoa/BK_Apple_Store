@@ -14,7 +14,7 @@
     function get_HightLight($typeId){
         $conn = newConnection();
         if($typeId == 0)
-            $query = "SELECT * FROM Products ORDER BY `rate` DESC LIMIT 3";
+            $query = "SELECT * FROM Products ORDER BY `rate` DESC LIMIT 6";
         elseif($typeId==15)
             $query = "SELECT * FROM Products WHERE `type`=8 OR `type`=9 OR `type`=10 OR `type`=11 ORDER BY `rate` DESC LIMIT 3";
         elseif($typeId==13)
@@ -59,7 +59,7 @@
                     break;
                 case 5:
                     $price1 = 2000;
-                    $price2 = 100000;
+                    $price2 = 1000000;
                     break;
                 default:
                     $price1 = 0;
@@ -123,7 +123,7 @@
                     break;
                 case 5:
                     $price1 = 2000;
-                    $price2 = 100000;
+                    $price2 = 1000000;
                     break;
                 default:
                     $price1 = 0;

@@ -14,7 +14,7 @@ CREATE TABLE `Users` (
 CREATE TABLE `Products` (
     `productId` INT AUTO_INCREMENT UNIQUE NOT NULL,
     `name`      VARCHAR(255) NOT NULL,
-    `price`     DECIMAL(10,2),
+    `price`     DECIMAL(10,0),
     `des`       TEXT,
     `type`      INT,
     `url1`      VARCHAR(500),
@@ -50,7 +50,7 @@ CREATE TABLE `Cart` (
     `cartId`    VARCHAR(255),
     `userId`    INT,
     `time`      DATETIME DEFAULT CURRENT_TIMESTAMP,
-    `totalPrice` DECIMAL(10,2),
+    `totalPrice` DECIMAL(10,0),
     PRIMARY KEY(`cartId`),
     FOREIGN KEY(`userId`) REFERENCES Users(`userId`)
 );

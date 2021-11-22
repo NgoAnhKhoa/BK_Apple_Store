@@ -34,7 +34,6 @@
         //     $title = "Liên hệ";
         //     break;
         case "/BK_Apple_Store/admin/add_user.php":
-            $route = "add_user";
             $title = "Admin | Thêm user";
             break;
         case "/BK_Apple_Store/admin/inbox.php":
@@ -47,16 +46,15 @@
         case "/BK_Apple_Store/admin/product.php":
             $title = "Admin | Sản phẩm";
             break;
-        case "/BK_Apple_Store/admin/user_info.php":
+        case "/BK_Apple_Store/admin/admin_info.php":
+            $route = "admin_info";
             $title = "Admin | Thông tin admin";
             break;
         case "/BK_Apple_Store/admin/edit_product.php":
             $title = "Admin | Chỉnh sửa sản phẩm";
             break;
-        case "/BK_Apple_Store/admin/edit_hightlight.php":
-            $title = "Admin | Chỉnh sửa thông tin nổi bật";
-            break;
-        case "/BK_Apple_Store/admin/cart_user.php":
+        case "/BK_Apple_Store/admin/user_order.php":
+            $route = "user_order";
             $title = "Admin | Đơn hàng người dùng";
             break;
         case "/BK_Apple_Store/admin/user_list.php":
@@ -107,9 +105,9 @@
 <body>
 
 <!-- scroll button -->
-<div class="scroll-up-btn">
+<!-- <div class="scroll-up-btn">
     <i class="fa fa-angle-up"></i>
-</div>
+</div> -->
 <!-- navigation bar -->
 <nav class="navbar navbar-expand-lg navbar-light" style="position: fixed; z-index: 100; margin-left: auto; width: 100%; margin-top: -15px; background-color: #afafaf; height: 90px">
     <div class="container">
@@ -128,7 +126,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class=<?php echo $route == 'home'? "'nav-item active'": "nav-item" ?>>
-                        <a class="nav-link" href="home">Trang chủ <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="home">Home page<span class="sr-only">(current)</span></a>
                     </li>
                     <!-- <li class=<?php echo $route == 'product'? "'nav-item active dropdown'": "'nav-item dropdown'" ?>>
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -144,17 +142,12 @@
                     </li> -->
                     <li class=<?php echo $route == 'product_list'? "'nav-item active'": "nav-item" ?>>
                         <a href="product-list" class="nav-link">
-                            Danh sách sản phẩm
-                        </a>
-                    </li>
-                    <li class=<?php echo $route == 'add_user'? "'nav-item active'": "nav-item" ?>>
-                        <a href="add-user" class="nav-link">
-                            Thêm User
+                            List of products
                         </a>
                     </li>
                     <li class=<?php echo $route == 'user_list'? "'nav-item active'": "nav-item" ?>>
                         <a href="user-list" class="nav-link">
-                           Danh sách User
+                           List of Users
                         </a>
                     </li>
                     <li class=<?php echo $route == 'inbox'? "'nav-item active'": "nav-item" ?>>
@@ -168,9 +161,9 @@
                            <?php echo $_SESSION['user']['userName'] ?>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="user-info">Thông tin admin</a>
-                            <a href="cart-user" class="dropdown-item">Đơn hàng người dùng</a>
-                            <a class="dropdown-item" href="../core/auth.php?logout=true">Đăng xuất</a>
+                            <a class="dropdown-item <?php echo $route == 'admin_info'? "active": "" ?>" href="admin-info">Admin info</a>
+                            <a class="dropdown-item <?php echo $route == 'user_order'? "active": "" ?>" href="user-order">Orders of Users</a>
+                            <a class="dropdown-item" href="../core/auth.php?logout=true">Logout</a>
                         </div>
                     </li>
                 </ul>

@@ -22,7 +22,7 @@
     <div class="row">
         
         <div class="col-12 col-md-4 col-lg-3 bg-light filter-left">
-            <h3 class="title-filter">Bộ lọc</h3>
+            <h3 class="title-filter">Filter</h3>
             <hr style="border: 1px solid gray;">
             <form action="" method="get">
                 <div class="from-group form-group-filter">
@@ -87,7 +87,7 @@
                 ?>
                     <div class='col-12 col-md-6 col-lg-4'>
                         <div class='card-product-list' style='margin-bottom: 20px'>
-                            <img class='card-img-top' src=<?php $url = $row['url1']; echo "'$url'";?> alt='Card image cap'>
+                            <a href=<?php echo "product.php?id=$productId"; ?>><img class='card-img-top' src=<?php $url = $row['url1']; echo "'$url'";?> alt='Card image cap'></a>
                             <div class='card-body'>
                                 <h4 class='card-title'><a href=<?php echo "product.php?id=$productId"; ?> title='View Product'><?php echo $row['name'];?></a></h4>
                                 <p class='card-text'><?php echo $row['des'];?></p>

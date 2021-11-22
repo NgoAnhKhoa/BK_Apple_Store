@@ -83,7 +83,7 @@
       </div>
       <?php } ?>
     </div>
-    <a class="btn btn-primary more-button" href="product-list?id=5">Xem thêm</a>
+    <a class="btn btn-primary more-button" href="product-list?id=5&page=1">Xem thêm</a>
   </div>
 <!-- End TVs -->
 
@@ -117,7 +117,7 @@
       </div>
       <?php } ?>
     </div>
-    <a class="btn btn-primary more-button" href="product-list?id=6">Xem thêm</a>
+    <a class="btn btn-primary more-button" href="product-list?id=6&page=1">Xem thêm</a>
   </div>
 <!-- End Lifestyle TVs -->
 
@@ -151,7 +151,7 @@
       </div>
       <?php } ?>
     </div>
-    <a class="btn btn-primary more-button" href="product-list?id=7">Xem thêm</a>
+    <a class="btn btn-primary more-button" href="product-list?id=7&page=1">Xem thêm</a>
   </div>
 <!-- End devices -->
 

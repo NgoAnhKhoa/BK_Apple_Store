@@ -83,9 +83,9 @@
 <body>
 
 <!-- scroll button -->
-<div class="scroll-up-btn">
+<!-- <div class="scroll-up-btn">
     <i class="fa fa-angle-up"></i>
-</div>
+</div> -->
 
 <!-- navigation bar -->
 <nav class="navbar navbar-expand-lg navbar-light" style="position: fixed; z-index: 100; margin-left: auto; width: 100%; margin-top: -15px; background-color: #afafaf; height:90px">
@@ -105,25 +105,25 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class=<?php echo $route == 'home'? "'nav-item active'": "nav-item" ?>>
-                        <a class="nav-link" href="home">Trang chủ <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="home">Home page<span class="sr-only">(current)</span></a>
                     </li>
                     <li class=<?php echo $route == 'product'? "'nav-item active dropdown'": "'nav-item dropdown'" ?>>
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Sản phẩm
+                            Products
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="mobile">Di động</a>
-                            <a class="dropdown-item" href="tvav">TV & AV</a>
-                            <a class="dropdown-item" href="appliance">Gia dụng</a>
-                            <a class="dropdown-item" href="screen">Màn hình</a>
+                            <a class="dropdown-item" href="mac">Mac</a>
+                            <a class="dropdown-item" href="ipad">iPad</a>
+                            <a class="dropdown-item" href="iphone">iPhone</a>
+                            <a class="dropdown-item" href="watch">Watch</a>
                         </div>
                     </li>
                     <li class=<?php echo $route == 'about'? "'nav-item active'": "nav-item" ?>>
-                        <a class="nav-link" href="about">Khám phá</a>
+                        <a class="nav-link" href="about">About</a>
                     </li>
                     <li class=<?php echo $route == 'contact'? "'nav-item active'": "nav-item" ?>>
-                        <a class="nav-link" href="contact">Liên hệ</a>
+                        <a class="nav-link" href="contact">Contact</a>
                     </li>
                     <li class="nav-item">
                         <form id="demo-2" action="product_list.php" method="GET">

@@ -85,7 +85,7 @@
       </div>
       <?php } ?>
     </div>
-    <a class="btn btn-primary more-button" href="product-list?id=8">Xem thêm</a>
+    <a class="btn btn-primary more-button" href="product-list?id=8&page=1">Xem thêm</a>
   </div>
   <!-- End fridge -->
 
@@ -119,7 +119,7 @@
       </div>
       <?php } ?>
     </div>
-    <a class="btn btn-primary more-button" href="product-list?id=9">Xem thêm</a>
+    <a class="btn btn-primary more-button" href="product-list?id=9&page=1">Xem thêm</a>
   </div>
   <!-- End washing machine -->
 
@@ -154,7 +154,7 @@
       </div>
       <?php } ?>
     </div>
-    <a class="btn btn-primary more-button" href="product-list?id=10">Xem thêm</a>
+    <a class="btn btn-primary more-button" href="product-list?id=10&page=1">Xem thêm</a>
   </div>
   <!-- End vacuum cleaner -->
 
@@ -188,7 +188,7 @@
       </div>
       <?php } ?>
     </div>
-    <a class="btn btn-primary more-button" href="product-list?id=11">Xem thêm</a>
+    <a class="btn btn-primary more-button" href="product-list?id=11&page=1">Xem thêm</a>
   </div>
     <!-- End kitchen -->
 

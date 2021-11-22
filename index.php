@@ -38,8 +38,6 @@
     else{
       include "include/header_notlogin.php";
     }
-
-    $hightlight = get_HightLight(0);
 ?>
 
 <!-- carousel -->
@@ -93,6 +91,7 @@
     <h2 class="title">Nổi bật</h2>
     <div class="row">
       <?php
+        $hightlight = get_HightLight(0);
         while($row = $hightlight->fetch_array(MYSQLI_BOTH)) {
           $url = $row['url1'];
           $name = $row['name'];

@@ -7,9 +7,9 @@
         include 'include/header_notlogin.php';
     }
 ?>
-
-<div class="container">
-    <h3>404 Not Found</h3>
+<link rel="stylesheet" href="./assets/css/common.css">
+<div class="container padding-top">
+    <h2 class="title">404 Not Found</h2>
 </div>
 
 <?php

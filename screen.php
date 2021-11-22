@@ -48,7 +48,7 @@
       </div>
       <?php } ?>
     </div>
-    <a class="btn btn-primary more-button" href="product-list?id=12">Xem thêm</a>
+    <a class="btn btn-primary more-button" href="product-list?id=12&page=1">Xem thêm</a>
   </div>
   <!-- End Screen -->
 

@@ -8,16 +8,16 @@
 
     $inboxList = getInbox();
 ?>
-
-<div class="container">
-    <h2 class="title">Hộp thư</h2>
+<link rel="stylesheet" href="../assets/css/common.css">
+<div class="container padding-top">
+    <h2 class="title">Inbox</h2>
     <table class="table">
         <thead class="thead-dark">
             <tr>
                 <th>Id</th>
                 <th>User</th>
-                <th>Thời gian</th>
-                <th>Xem</th>
+                <th>Time</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
@@ -31,7 +31,7 @@
                     echo "<td>$id</td>";
                     echo "<td>$userName</td>";
                     echo "<td>$time</td>";
-                    echo "<td><button class='btn btn-success' id='seeDetailBtn$id' value='1' onclick=".'"seeDetail('."'$msg'".", $id".')"'.">Xem</button></button>";
+                    echo "<td><button class='btn btn-success' id='seeDetailBtn$id' value='1' onclick=".'"seeDetail('."'$msg'".", $id".')"'.">View</button></button>";
                     echo "</tr>";
                     echo "<tr id='detail$id'></tr>";
                 }
