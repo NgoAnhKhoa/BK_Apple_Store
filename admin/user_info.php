@@ -39,8 +39,8 @@
 	$email = $_SESSION['user']['email'];
 	include "include/header.php";
 ?>
-
-<div class="container user-info-container">
+<link rel="stylesheet" href="../assets/css/common.css">
+<div class="container user-info-container padding-top">
 	<h2 class="title">Thông tin người dùng</h2>
   <form action="" id="user-info" method="POST" class="form-user">
 		<div class="form-group row">

@@ -14,10 +14,9 @@
         header("Location: login");
     }
 ?>
-
-<h2 class="title">Giỏ hàng</h2>
-
-<div class="container mb-4">
+<link rel="stylesheet" href="./assets/css/common.css">
+<div class="container mb-4 padding-top">
+    <h2 class="title">Giỏ hàng</h2>
   <div class="row">
       <div class="col-12">
           <div class="table-responsive" id="cart-table">

@@ -9,8 +9,8 @@
     $carts = getAllCart();
 
 ?>
-
-<div class="container">
+<link rel="stylesheet" href="../assets/css/common.css">
+<div class="container padding-top">
 <h2 class="title">Đơn hàng</h2>
     <table class="table">
         <thead class="thead-dark">

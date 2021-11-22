@@ -39,6 +39,7 @@
         <tbody>
             <?php
                 $i = 1;
+                $totalPrice = 0;
                 while($row = $item_list->fetch_array(MYSQLI_BOTH)){
                     $name = $row['name'];
                     $quantity = $row['quantity'];

@@ -81,6 +81,18 @@
     <link rel="stylesheet" href="./assets/css/style.css" type="text/css">
 
     <script src="./assets/js/script.js" type="text/javascript"></script>
+    <style>
+        .rainbow-text {
+	    font-family: Arial;
+	    font-weight: bold;
+	    font-size: 40px;
+	    -webkit-text-stroke-width: 1px;
+	    -webkit-text-fill-color: transparent;
+        }
+        .rainbow-text .block-line > span {
+        	display: inline-block;
+        }
+    </style>
 </head>
 <body>
 
@@ -90,11 +102,13 @@
 </div>
 
 <!-- navigation bar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light" style="position: fixed; z-index: 100; margin-left: auto; width: 100%; margin-top: -15px; background-color: #afafaf; height:90px">
     <div class="container">
         <a class="navbar-brand" href="home" style="display: flex;">
-            <img src="./assets/images/apple_logo.jpeg" alt="logo" class="logo" style="width: 60px;">
-            <h1 style="margin: 10px 0px 0px 20px;">BK Apple Store</h1>
+            <img src="./assets/images/logo_apple_1.png" alt="logo" class="logo" style="width: 60px;">
+            <div class="rainbow-text" style="text-align: center; margin: 5px 0px 0px 10px">
+	            <span class="block-line"><span><span style="color:#ff0000;">B</span><span style="color:#ff8000;">K&nbsp;</span></span><span><span style="color:#ffff00;">A</span><span style="color:#80ff00;">p</span><span style="color:#00ff00;">p</span><span style="color:#00ff80;">l</span><span style="color:#00ffff;">e&nbsp;</span></span><span><span style="color:#007fff;">S</span><span style="color:#0000ff;">t</span><span style="color:#7f00ff;">o</span><span style="color:#ff00ff;">r</span><span style="color:#ff0080;">e</span></span></span>
+            </div>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

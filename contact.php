@@ -14,8 +14,8 @@
     }
 
 ?>
-
-<div class="container">
+<link rel="stylesheet" href="./assets/css/common.css">
+<div class="container padding-top">
     <div class="row contact">
       <div class="col-md-4 contact-card">
         <div class="title-card-contact">

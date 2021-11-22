@@ -43,7 +43,8 @@
 ?>
 
 <!-- carousel -->
-<div class="container">
+<link rel="stylesheet" href="./assets/css/common.css">
+<div class="container padding-top">
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">

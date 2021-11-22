@@ -18,7 +18,8 @@
 
 
   <!-- Screen -->
-  <div class="container">
+  <link rel="stylesheet" href="./assets/css/common.css">
+  <div class="container padding-top">
     <h2 class="title">Màn hình</h2>
     <div class="row">
       <?php
