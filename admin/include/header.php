@@ -7,11 +7,11 @@
         case "/BK_Apple_Store/admin/index.php":
         case "/BK_Apple_Store":
             $route = "home";
-            $title = "Admin | Trang chủ";
+            $title = "Admin | Home page";
             break;
         case "/BK_Apple_Store/admin/product_list.php":
             $route = "product_list";
-            $title = "Admin | Danh sách sản phẩm";
+            $title = "Admin | List of products";
             break;
         // case "/BK_Apple_Store/tvav.php":
         //     $route = "product";
@@ -33,36 +33,36 @@
         //     // $route = "contact";
         //     $title = "Liên hệ";
         //     break;
-        case "/BK_Apple_Store/admin/add_user.php":
-            $title = "Admin | Thêm user";
+        case "/BK_Apple_Store/admin/add_account.php":
+            $title = "Admin | Add account";
             break;
         case "/BK_Apple_Store/admin/inbox.php":
             $route = "inbox";
-            $title = "Admin | Hộp thư";
+            $title = "Admin | Inbox";
             break;
         // case "/BK_Apple_Store/product_list.php":
         //     $title = "Danh sách sản phẩm";
         //     break;
         case "/BK_Apple_Store/admin/product.php":
-            $title = "Admin | Sản phẩm";
+            $title = "Admin | Product";
             break;
         case "/BK_Apple_Store/admin/admin_info.php":
             $route = "admin_info";
-            $title = "Admin | Thông tin admin";
+            $title = "Admin | Admin info";
             break;
         case "/BK_Apple_Store/admin/edit_product.php":
-            $title = "Admin | Chỉnh sửa sản phẩm";
+            $title = "Admin | Edit product";
             break;
         case "/BK_Apple_Store/admin/user_order.php":
             $route = "user_order";
-            $title = "Admin | Đơn hàng người dùng";
+            $title = "Admin | Orders of Users";
             break;
         case "/BK_Apple_Store/admin/user_list.php":
-            $title = "Admin | Danh sách User";
+            $title = "Admin | List of Users";
             $route = "user_list";
             break;
         case "/BK_Apple_Store/admin/add_product.php":
-            $title = "Admin | Thêm sản phẩm";
+            $title = "Admin | Add product";
             break;
     }
 
@@ -128,18 +128,6 @@
                     <li class=<?php echo $route == 'home'? "'nav-item active'": "nav-item" ?>>
                         <a class="nav-link" href="home">Home page<span class="sr-only">(current)</span></a>
                     </li>
-                    <!-- <li class=<?php echo $route == 'product'? "'nav-item active dropdown'": "'nav-item dropdown'" ?>>
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Sản phẩm
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="mobile.php">Di động</a>
-                            <a class="dropdown-item" href="tvav.php">TV & AV</a>
-                            <a class="dropdown-item" href="appliance.php">Gia dụng</a>
-                            <a class="dropdown-item" href="screen.php">Màn hình</a>
-                        </div>
-                    </li> -->
                     <li class=<?php echo $route == 'product_list'? "'nav-item active'": "nav-item" ?>>
                         <a href="product-list" class="nav-link">
                             List of products
@@ -156,7 +144,7 @@
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        <a class="nav-link dropdown-toggle <?php echo in_array($route, array('admin_info', 'user_order'))? "active" : "" ?>" href="#" id="navbarDropdown" role="button"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                            <?php echo $_SESSION['user']['userName'] ?>
                         </a>

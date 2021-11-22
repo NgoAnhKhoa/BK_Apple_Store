@@ -7,52 +7,52 @@
         case "/BK_Apple_Store/index.php":
         case "/BK_Apple_Store":
             $route = "home";
-            $title = "Trang chủ";
+            $title = "Home page";
             break;
-        case "/BK_Apple_Store/mobile.php":
-            $route = "product";
-            $title = "Di động";
+        case "/BK_Apple_Store/mac.php":
+            $route = "mac";
+            $title = "Mac";
             break;
-        case "/BK_Apple_Store/tvav.php":
-            $route = "product";
-            $title = "TV & AV";
+        case "/BK_Apple_Store/ipad.php":
+            $route = "ipad";
+            $title = "iPad";
             break;
-        case "/BK_Apple_Store/appliance.php":
-            $route = "product";
-            $title = "Gia dụng";
+        case "/BK_Apple_Store/iphone.php":
+            $route = "iphone";
+            $title = "iPhone";
             break;
-        case "/BK_Apple_Store/screen.php":
-            $title = "Màn hình";
-            $route = "product";
+        case "/BK_Apple_Store/watch.php":
+            $route = "watch";
+            $title = "Watch";
             break;
         case "/BK_Apple_Store/about.php":
             $route = "about";
-            $title = "Khám phá";
+            $title = "About";
             break;
         case "/BK_Apple_Store/contact.php":
             $route = "contact";
-            $title = "Liên hệ";
+            $title = "Contact";
             break;
         case "/BK_Apple_Store/cart.php":
             $route = "cart";
-            $title = "Giỏ hàng";
+            $title = "Cart";
             break;
         case "/BK_Apple_Store/product_list.php":
-            $title = "Danh sách sản phẩm";
+            $title = "List of products";
             break;
         case "/BK_Apple_Store/product.php":
-            $title = "Sản phẩm";
+            $title = "Product";
             break;
         case "/BK_Apple_Store/user_info.php":
             $route = "user_info";
-            $title = "Thông tin người dùng";
+            $title = "User info";
             break;
         case "/BK_Apple_Store/cart_history.php":
             $route = "cart_history";
-            $title = "Lịch sử mua hàng";
+            $title = "Order history";
             break;
         case "/BK_Apple_Store/cart-detail.php":
-            $title = "Chi tiết đơn hàng";
+            $title = "Order details";
             break;
         default:
             $title = "404 Not Found";
@@ -123,7 +123,7 @@
                     <li class=<?php echo $route == 'home'? "'nav-item active'": "nav-item" ?>>
                         <a class="nav-link" href="home">Home page <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class=<?php echo $route == 'product'? "'nav-item active dropdown'": "'nav-item dropdown'" ?>>
+                    <li class=<?php echo in_array($route, array('mac', 'ipad', 'iphone', 'watch'))? "'nav-item active dropdown'": "'nav-item dropdown'" ?>>
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Products
@@ -135,10 +135,10 @@
                             <a class="dropdown-item" href="screen">Màn hình</a>
                         </div> -->
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="mac">Mac</a>
-                            <a class="dropdown-item" href="ipad">iPad</a>
-                            <a class="dropdown-item" href="iphone">iPhone</a>
-                            <a class="dropdown-item" href="watch">Watch</a>
+                            <a class="dropdown-item <?php echo ($route == 'mac')? "active" : "" ?>" href="mac">Mac</a>
+                            <a class="dropdown-item <?php echo ($route == 'ipad')? "active" : "" ?>" href="ipad">iPad</a>
+                            <a class="dropdown-item <?php echo ($route == 'iphone')? "active" : "" ?>" href="iphone">iPhone</a>
+                            <a class="dropdown-item <?php echo ($route == 'watch')? "active" : "" ?>" href="watch">Watch</a>
                         </div>
                     </li>
                     <li class=<?php echo $route == 'about'? "'nav-item active'": "nav-item" ?>>
@@ -160,14 +160,14 @@
                             <i class="fa fa-shopping-cart"></i>
                         </a>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class=<?php echo in_array($route, array('user_info', 'cart_history'))? "'nav-item active dropdown'": "'nav-item dropdown'" ?>>
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                            <?php echo $_SESSION['user']['userName'] ?>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item <?php echo $route == 'user_info'? "active": "" ?>" href="user-info">User infomation</a>
-                            <a href="cart-history" class="dropdown-item <?php echo $route == 'cart_history'? "active": "" ?>">Order history</a>
+                            <a class="dropdown-item <?php echo $route == 'cart_history'? "active": "" ?>" href="cart-history">Order history</a>
                             <a class="dropdown-item" href="core/auth.php?logout=true">Logout</a>
                         </div>
                     </li>

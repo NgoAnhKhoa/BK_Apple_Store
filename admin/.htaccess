@@ -1,7 +1,7 @@
 RewriteEngine on
 
 RewriteRule ^home index.php [NC,L]
-RewriteRule ^add-user add_user.php [NC,L]
+RewriteRule ^add-account add_account.php [NC,L]
 RewriteRule ^user-order user_order.php [NC,L]
 RewriteRule ^inbox inbox.php [NC,L]
 RewriteRule ^login login.php [NC,L]

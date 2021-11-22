@@ -10,7 +10,7 @@
 ?>
 <link rel="stylesheet" href="../assets/css/common.css">
 <div class="container padding-top">
-    <h2 class="title">List of users</h2>
+    <h2 class="title">List of Users</h2>
     <table class="table">
         <thead class="thead-dark">
             <tr>
