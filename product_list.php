@@ -2,28 +2,40 @@
 <?php
 
     include './core/process.php';
-    
     if(checkLogin()){
         if(checkAdmin()) {
           header('Location: admin/product-list');
         }
         else {
-          include "include/header.php";   
+          include "include/header.php"; 
         }
              
       }
       else{
         include "include/header_notlogin.php";
-      }
+      }    
+
 
     $id = NULL;
     $q = NULL;
     $price = NULL;
+    $begin = NULL;
     if(isset($_GET['id'])) $id = $_GET['id'];
     if(isset($_GET['q'])) $q = $_GET['q'];
     if(isset($_GET['price'])) $price = $_GET['price'];
-    $result = searchProduct($id, $q, $price);
+    
+    $page = isset($_GET['page']) ? $_GET['page'] : 1;
+    
+    if($page=='' || $page==1){
+        $begin = 0;
+    }
+    else{
+        $begin = ($page-1)*6;
+    }
 
+    $result = searchProduct($id, $q, $price, $begin);
+
+    
 
 ?>
 
@@ -106,14 +118,7 @@
                                         <div class='price-product-list'><?php echo $row['price']; ?> $</div>
                                     </div>
                                     <div class='col'>
-                                        <?php
-                                            if($USER == 1) {
-                                        ?>
-                                            <form action="core/add_to_cart.php" method="POST">
-                                                <input type="hidden" name="id" value=<?php echo "$productId";?>>
-                                                <button class='btn btn-success btn-block'>Thêm vào giỏ hàng</button>
-                                            </form>
-                                        <?php }?>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -123,6 +128,29 @@
                     } }
                 ?>
             </div>
+            <?php 
+            if($id!=NULL && intval($id)!=0){
+            ?>
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-end">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">Previous</a>
+                    </li>
+                    <?php
+                    $params=getParams();
+                    $number_of_rows = countResult($id);
+                    $number_page = ceil($number_of_rows/6);
+                    for( $i=1; $i <= $number_page; $i++ ){
+                        $params['page']=$i;
+                        printf('<li class="page-item"><a class="page-link" href="?%2$s">%1$d</a></li>', $i, buildQuery( $params ));
+                    }
+                    ?>
+                    <li class="page-item">
+                      <a class="page-link" href="#">Next</a>
+                    </li>
+                </ul>
+            </nav>
+            <?php } ?>
         </div>
     </div>
 </div>
