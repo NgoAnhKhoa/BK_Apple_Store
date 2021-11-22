@@ -40,7 +40,7 @@
             } ?>
         </tbody>
     </table>
-    <a class="btn btn-primary more-button" href="add-user">Add Account</a>
+    <a class="btn btn-primary more-button" href="add-account">Add Account</a>
 </div>
 
 <?php include 'include/footer.php'; ?>
