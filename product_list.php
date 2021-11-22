@@ -91,6 +91,7 @@
                         <input type="radio" name="price" id="option5" value="5" <?php if(intval($price)==5) echo "checked"; ?>>
                         <label for="option5">Trên 2000$</label><br>
                     </div>
+                    <input hidden type="text" name="page" value="1">
                 </div>
                 <input class="btn btn-primary btn-filter" type="submit" value="Lọc">
             </form>
@@ -133,7 +134,7 @@
             ?>
             <nav aria-label="Page navigation example">
                 <ul class="pagination justify-content-end">
-                    <li class="page-item disabled">
+                    <li class="page-item" id="btn-prev">
                         <a class="page-link" href="#" tabindex="-1">Previous</a>
                     </li>
                     <?php
@@ -141,10 +142,10 @@
                     $number_page = ceil(countResult($id)/6);
                     for( $i=1; $i <= $number_page; $i++ ){
                         $params['page']=$i;
-                        printf('<li class="page-item"><a class="page-link" href="?%2$s">%1$d</a></li>', $i, buildQuery( $params ));
+                        printf('<li class="page-item page-num" id="page-%1$d"><a class="page-link" href="?%2$s">%1$d</a></li>', $i, buildQuery( $params ));
                     }
                     ?>
-                    <li class="page-item">
+                    <li class="page-item" id="btn-next">
                       <a class="page-link" href="#">Next</a>
                     </li>
                 </ul>
@@ -153,6 +154,23 @@
         </div>
     </div>
 </div>
+
+<script>
+    $(document).ready(() => {
+        var searchParam = new URLSearchParams(window.location.search);
+        var id = searchParam.get("id");
+        var page = searchParam.get("page");
+        if (page == 1 || page == null) {
+            $("#btn-prev").addClass("disabled");
+        }
+        if (page == $(".page-num").length || page == null) {
+            $("#btn-next").addClass("disabled");
+        }
+        $("#page-" + page).addClass("disabled");
+        $("#btn-next a").attr("href", `?id=${id}&page=${parseInt(page)+1}`);
+        $("#btn-prev a").attr("href", `?id=${id}&page=${parseInt(page)-1}`);
+    });
+</script>
 
 <?php
     include 'include/footer.php';

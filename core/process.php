@@ -247,7 +247,7 @@
 
     function countResult($type){
         $conn = newConnection();
-        $query = "SELECT * FROM `products` WHERE type='$type'";
+        $query = "SELECT * FROM `Products` WHERE type=$type";
         $result = $conn->query($query);
         $row_count = $result->num_rows;
         $conn->close();
