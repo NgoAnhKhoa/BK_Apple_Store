@@ -100,6 +100,69 @@
         return $result;
     }
 
+    function getAllProduct($id, $q, $price) {
+        $conn = newConnection();
+        $query = "SELECT * FROM `Products`";
+        if($price) {
+            switch(intval($price)){
+                case 1:
+                    $price1 = 0;
+                    $price2 = 100;
+                    break;
+                case 2:
+                    $price1 = 100;
+                    $price2 = 500;
+                    break;
+                case 3:
+                    $price1 = 500;
+                    $price2 = 1000;
+                    break;
+                case 4:
+                    $price1 = 1000;
+                    $price2 = 2000;
+                    break;
+                case 5:
+                    $price1 = 2000;
+                    $price2 = 100000;
+                    break;
+                default:
+                    $price1 = 0;
+                    $price2 = 100000;
+                    break;
+            }
+        }
+        if($id && intval($id)!=0) {
+            $query = $query." WHERE `type`=$id";
+            if($q){
+                $query = $query." AND (`name` LIKE '%$q%' OR `des` LIKE '%$q%')";
+                if($price){
+                    $query=$query." AND (`price` BETWEEN $price1 AND $price2)";
+                }
+            }
+            else {
+                if($price){
+                    $query=$query." AND (`price` BETWEEN $price1 AND $price2)";
+                }
+            }
+        }
+        else{
+            if($q){
+                $query = $query." WHERE (`name` LIKE '%$q%' OR `des` LIKE '%$q%')";
+                if($price){
+                    $query=$query." AND (`price` BETWEEN $price1 AND $price2)";
+                }
+            }
+            else{
+                if($price){
+                    $query=$query." WHERE (`price` BETWEEN $price1 AND $price2)";
+                }
+            }
+        }
+        $result = $conn->query($query);
+        $conn->close();
+        return $result;
+    }
+
     function getProduct($id){
         $conn = newConnection();
         $query = "SELECT * FROM `Products` WHERE `productId`=$id";

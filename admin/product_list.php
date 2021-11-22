@@ -13,7 +13,7 @@
     if(isset($_GET['id'])) $id = $_GET['id'];
     if(isset($_GET['q'])) $q = $_GET['q'];
     if(isset($_GET['price'])) $price = $_GET['price'];
-    $result = searchProduct($id, $q, $price);
+    $result = getAllProduct($id, $q, $price);
 
 
 ?>
