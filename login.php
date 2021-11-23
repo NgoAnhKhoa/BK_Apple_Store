@@ -35,21 +35,21 @@
         <div class="txt_field">
             <input type="password" name="password" id="password" required>
             <span></span>
-            <label for="password">Mật khẩu</label>
+            <label for="password">Password</label>
         </div>
-        <div class="pass"><a href="#">Quên mật khẩu?</a> </div>
+        <div class="pass"><a href="#">Forgot password?</a> </div>
         <?php
           if($log!="") {
             echo "<small class='log-fail'>$log</small>";
           }
         ?>
-        <input type="submit" value="Đăng nhập">
+        <input type="submit" value="Login">
         <div class="signup_link">
-            Bạn chưa có tài khoản ?
-            <a href="signup">Đăng ký</a>
+            Do not have account ?
+            <a href="signup">Sign up</a>
         </div>
         <div class="signup_link">
-          <a href="home">Về trang chủ</a>
+          <a href="home">Go to Home</a>
         </div>
     </form>
 </div>

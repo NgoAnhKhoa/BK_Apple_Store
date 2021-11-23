@@ -32,7 +32,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng ký</title>
+    <title>Sign up</title>
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/login.css">
     
@@ -41,7 +41,7 @@
 </head>
 <body>
   <div class="center">
-    <h1>Đăng ký</h1>
+    <h1>Sign up</h1>
     <form action="" method="post" id="signup">
         <div class="txt_field">
             <input type="email" name="email" id="email" required value=<?php echo $email;?>>
@@ -52,35 +52,35 @@
         <div class="txt_field">
             <input type="text" name="username" id="username" required value=<?php echo $name;?>>
             <span></span>
-            <label for="username">Tên đăng nhập</label>
+            <label for="username">Username</label>
         </div>
         <div class="txt_field">
             <input type="password" name="password" id="password" required>
             <span></span>
-            <label for="password">Mật khẩu</label>
+            <label for="password">Password</label>
         </div>
         <div class="txt_field" id="text_field">
             <input type="password" name="confirm_password" id="confirm_password" required onkeyup="check();">
             <span></span>
-            <label for="confirm_password" id="label_confirm">Nhập lại mật khẩu</label>
+            <label for="confirm_password" id="label_confirm">Confirm password</label>
         </div>
         <div>
         
         </div>
         <small id="log" class="log-fail"></small>
         <?php if($noSuccess) {?>
-            <small class="log-fail">Tạo tài khoản không thành công.</small>
+            <small class="log-fail">Sign up failed.</small>
         <?php }?>
         <?php if($isExistEmail) {?>
-            <small class="log-fail">Email đã tồn tại.</small>
+            <small class="log-fail">Email is existed.</small>
         <?php }?>
-        <input type="submit" value="Đăng ký">
+        <input type="submit" value="Sign up">
         <div class="signup_link">
-            Bạn đã có tài khoản?
-            <a href="login">Đăng nhập</a>
+            Had account ?
+            <a href="login">Login</a>
         </div>
         <div class="signup_link">
-          <a href="home">Về trang chủ</a>
+          <a href="home">Go to Home</a>
         </div>
     </form>
 </div>

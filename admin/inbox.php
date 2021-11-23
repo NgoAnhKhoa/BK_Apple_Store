@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="../assets/css/common.css">
 <div class="container padding-top">
     <h2 class="title">Inbox</h2>
-    <table class="table">
+    <table class="table table-striped">
         <thead class="thead-dark">
             <tr>
                 <th>Id</th>

@@ -119,6 +119,10 @@ $('#load-comment-admin').click(() => {
 
 $('#send-message').click(() => {
     var msg = $('#message').val();
+    if (msg == "") {
+        alert("Please input message");
+        return;
+    }
     $.post("./core/ratingAndCmt.php", {type: "msg", msg : msg})
     .done((data) => {
         console.log(data);

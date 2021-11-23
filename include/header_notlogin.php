@@ -7,37 +7,37 @@
         case "/BK_Apple_Store":
         case "/BK_Apple_Store//":
             $route = "home";
-            $title = "Trang chủ";
+            $title = "Home page";
             break;
-        case "/BK_Apple_Store/mobile.php":
+        case "/BK_Apple_Store/mac.php":
             $route = "product";
-            $title = "Di động";
+            $title = "Mac";
             break;
-        case "/BK_Apple_Store/tvav.php":
+        case "/BK_Apple_Store/ipad.php":
             $route = "product";
-            $title = "TV & AV";
+            $title = "iPad";
             break;
-        case "/BK_Apple_Store/appliance.php":
+        case "/BK_Apple_Store/iphone.php":
             $route = "product";
-            $title = "Gia dụng";
+            $title = "iPhone";
             break;
-        case "/BK_Apple_Store/screen.php":
-            $title = "Màn hình";
+        case "/BK_Apple_Store/watch.php":
             $route = "product";
+            $title = "Watch";
             break;
         case "/BK_Apple_Store/about.php":
             $route = "about";
-            $title = "Khám phá";
+            $title = "About";
             break;
         case "/BK_Apple_Store/contact.php":
             $route = "contact";
-            $title = "Liên hệ";
+            $title = "Contact";
             break;
         case "/BK_Apple_Store/product_list.php":
-            $title = "Danh sách sản phẩm";
+            $title = "List of products";
             break;
         case "/BK_Apple_Store/product.php":
-            $title = "Sản phẩm";
+            $title = "Product";
             break;
         default:
             $title = "404 Not Found";

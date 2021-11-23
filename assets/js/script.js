@@ -54,12 +54,12 @@ function seeDetail(content, id) {
     if($("#seeDetailBtn" + id).attr('value')==1) {
         $("#detail" + id).show();
         $("#detail" + id).html("<td colspan='6'>" + content + "</td>");
-        $("#seeDetailBtn" + id).html("Ẩn");
+        $("#seeDetailBtn" + id).html("Hide");
         $("#seeDetailBtn" + id).attr('value', 0);
     }
     else {
         $("#detail" + id).hide();
-        $("#seeDetailBtn" + id).html("Xem");
+        $("#seeDetailBtn" + id).html("View");
         $("#seeDetailBtn" + id).attr('value', 1); 
     }
 }
