@@ -4,7 +4,7 @@
         $host = "localhost";
         $username = "root";
         $password = '';
-        $database = 'samsungDb';
+        $database = 'bk_apple_db';
         return new mysqli($host, $username, $password, $database);
     }
 

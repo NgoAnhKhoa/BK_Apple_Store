@@ -10,19 +10,19 @@
             $title = "Home page";
             break;
         case "/BK_Apple_Store/mac.php":
-            $route = "product";
+            $route = "mac";
             $title = "Mac";
             break;
         case "/BK_Apple_Store/ipad.php":
-            $route = "product";
+            $route = "ipad";
             $title = "iPad";
             break;
         case "/BK_Apple_Store/iphone.php":
-            $route = "product";
+            $route = "iphone";
             $title = "iPhone";
             break;
         case "/BK_Apple_Store/watch.php":
-            $route = "product";
+            $route = "watch";
             $title = "Watch";
             break;
         case "/BK_Apple_Store/about.php":
@@ -107,16 +107,16 @@
                     <li class=<?php echo $route == 'home'? "'nav-item active'": "nav-item" ?>>
                         <a class="nav-link" href="home">Home page<span class="sr-only">(current)</span></a>
                     </li>
-                    <li class=<?php echo $route == 'product'? "'nav-item active dropdown'": "'nav-item dropdown'" ?>>
+                    <li class=<?php echo in_array($route, array('mac', 'ipad', 'iphone', 'watch'))? "'nav-item active dropdown'": "'nav-item dropdown'" ?>>
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Products
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="mac">Mac</a>
-                            <a class="dropdown-item" href="ipad">iPad</a>
-                            <a class="dropdown-item" href="iphone">iPhone</a>
-                            <a class="dropdown-item" href="watch">Watch</a>
+                            <a class="dropdown-item <?php echo ($route == 'mac')? "active" : "" ?>" href="mac">Mac</a>
+                            <a class="dropdown-item <?php echo ($route == 'ipad')? "active" : "" ?>" href="ipad">iPad</a>
+                            <a class="dropdown-item <?php echo ($route == 'iphone')? "active" : "" ?>" href="iphone">iPhone</a>
+                            <a class="dropdown-item <?php echo ($route == 'watch')? "active" : "" ?>" href="watch">Watch</a>
                         </div>
                     </li>
                     <li class=<?php echo $route == 'about'? "'nav-item active'": "nav-item" ?>>

@@ -51,7 +51,7 @@
                     <h2 class="black">
                         Galaxy S21|S21+ 5G
                     </h2>
-                    <a href="product.php?id=3" class="btn btn-carousel-dark">Chi tiết</a>
+                    <a href="product.php?id=3" class="btn btn-carousel-dark">Detail</a>
                 </div>
             </div>
             <div class="carousel-item">
@@ -60,7 +60,7 @@
                     <h2 class="white">
                         Neo QLED
                     </h2>
-                    <a href="product.php?id=25" class="btn btn-carousel-dark">Chi tiết</a>
+                    <a href="product.php?id=25" class="btn btn-carousel-dark">Detail</a>
                 </div>
             </div>
             <div class="carousel-item">
@@ -69,7 +69,7 @@
                     <h2 class="white">
                         Samsung AI
                     </h2>
-                    <a href="product.php?id=53" class="btn btn-carousel-light">Chi tiết</a>
+                    <a href="product.php?id=53" class="btn btn-carousel-light">Detail</a>
                 </div>
             </div>
         </div>
@@ -110,7 +110,7 @@
                 <?php echo $des; ?>
               </p>
               <br>
-              <a href=<?php echo "product.php?id=$id"; ?> class="btn btn-primary btn-card">Chi tiết</a>
+              <a href=<?php echo "product.php?id=$id"; ?> class="btn btn-primary btn-card">Detail</a>
             </div>
           </div>
         </a>

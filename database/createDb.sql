@@ -1,5 +1,5 @@
-CREATE DATABASE samsungDb;
-USE samsungDb;
+CREATE DATABASE bk_apple_db;
+USE bk_apple_db;
 
 CREATE TABLE `Users` (
     `userId`    INT AUTO_INCREMENT UNIQUE NOT NULL,

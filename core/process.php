@@ -16,11 +16,13 @@
         if($typeId == 0)
             $query = "SELECT * FROM Products ORDER BY `rate` DESC LIMIT 6";
         elseif($typeId==15)
-            $query = "SELECT * FROM Products WHERE `type`=8 OR `type`=9 OR `type`=10 OR `type`=11 ORDER BY `rate` DESC LIMIT 3";
-        elseif($typeId==13)
-            $query = "SELECT * FROM Products WHERE `type`=1 OR `type`=2 OR `type`=3 OR `type`=4 ORDER BY `rate` DESC LIMIT 3";
-        elseif($typeId==14)
-            $query = "SELECT * FROM Products WHERE `type`=5 OR `type`=6 OR `type`=7 ORDER BY `rate` DESC LIMIT 3";
+            $query = "SELECT * FROM Products WHERE `type`=1 OR `type`=2 OR `type`=3 ORDER BY `rate` DESC LIMIT 3";
+        elseif($typeId==16)
+            $query = "SELECT * FROM Products WHERE `type`=4 OR `type`=5 OR `type`=6 ORDER BY `rate` DESC LIMIT 3";
+        elseif($typeId==17)
+            $query = "SELECT * FROM Products WHERE `type`=7 OR `type`=8 OR `type`=9 ORDER BY `rate` DESC LIMIT 3";
+        elseif($typeId==18)
+            $query = "SELECT * FROM Products WHERE `type`=10 OR `type`=11 OR `type`=12 OR `type`=13 ORDER BY `rate` DESC LIMIT 3";
         else
             $query = "SELECT * FROM Products WHERE `type`=$typeId ORDER BY `rate` DESC LIMIT 3";
         $result = $conn->query($query);
