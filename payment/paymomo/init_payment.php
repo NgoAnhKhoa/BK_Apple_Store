@@ -62,7 +62,7 @@ if (!empty($_POST)) {
     $jsonResult = json_decode($result, true);  // decode json
 
     //Just a example, please check more in there
-
+    
     header('Location: ' . $jsonResult['payUrl']);
 }
 ?>
