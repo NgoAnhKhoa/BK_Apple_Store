@@ -8,6 +8,7 @@ if (!checkLogin()) {
     return;
 }
 if ($_SESSION["cart"] == []) {
+    sleep(3);
     header("Location: ../../home");
     return;
 }

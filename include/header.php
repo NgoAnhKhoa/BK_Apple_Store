@@ -81,8 +81,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="./assets/css/style.css" type="text/css">
-
+    <link rel="stylesheet" href="./assets/css/toast.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <script src="./assets/js/script.js" type="text/javascript"></script>
+    <script src="./assets/js/toast.js"></script>
     <style>
         .rainbow-text {
 	    font-family: Arial;
@@ -129,17 +131,11 @@
                             Products
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="mobile">Di động</a>
-                            <a class="dropdown-item" href="tvav">TV & AV</a>
-                            <a class="dropdown-item" href="appliance">Gia dụng</a>
-                            <a class="dropdown-item" href="screen">Màn hình</a>
-                        </div>
-                        <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item <?php echo ($route == 'mac')? "active" : "" ?>" href="mac">Mac</a>
                             <a class="dropdown-item <?php echo ($route == 'ipad')? "active" : "" ?>" href="ipad">iPad</a>
                             <a class="dropdown-item <?php echo ($route == 'iphone')? "active" : "" ?>" href="iphone">iPhone</a>
                             <a class="dropdown-item <?php echo ($route == 'watch')? "active" : "" ?>" href="watch">Watch</a>
-                        </div> -->
+                        </div>
                     </li>
                     <li class=<?php echo $route == 'about'? "'nav-item active'": "nav-item" ?>>
                         <a class="nav-link" href="about">About</a>

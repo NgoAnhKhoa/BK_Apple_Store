@@ -99,11 +99,6 @@ $('#send-respone').click(() => {
     }
 });
 
-$("#add-to-cart").click(() => {
-    alert("Please login to add product to cart");
-    window.location.href = "../../login.php";
-});
-
 $('#load-comment').click(() => {
     var id = parseInt($('#id').val(), 10);
     $('#cmt-item').load("comment.php?id=" + id);

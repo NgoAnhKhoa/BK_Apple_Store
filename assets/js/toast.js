@@ -45,3 +45,11 @@ function toast({ title = "", message = "", type = "info", duration = 3000 }) {
     }
   }
   
+  function showToast(title, message, type, duration) {
+    toast({
+        title: title,
+        message: message,
+        type: type,
+        duration: duration
+    });
+}

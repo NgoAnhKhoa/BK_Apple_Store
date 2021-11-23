@@ -44,6 +44,7 @@
 <body style="margin-top: -25px; padding: 0; font-family: Roboto, sans-serif;">
 <div class="container container-product padding-top">
     <h2 class="title">Product info</h2>
+    <div id="toast"></div>
     <div class="row">
         <div class="col-md-6">
             <div class="row">
@@ -91,7 +92,7 @@
                     }
                     else if ($USER == 0) {
                 ?>
-                        <a class="btn btn-primary btn-add-to-cart" type="submit" href=<?php echo "login.php"; ?> id="add-to-cart">Thêm vào giỏ hàng</a>
+                        <a class="btn btn-primary btn-add-to-cart" id="add-to-cart">Thêm vào giỏ hàng</a>
                 <?php
                     }
                     else if($USER == 2){
@@ -168,6 +169,14 @@
     </div>
 </div>
 <script src="./assets/js/product.js"></script>
+<script>
+    $(document).ready(() => {
+        $("#add-to-cart").click(() => {
+            showToast("Add to cart failed !", "Please login to add product to cart", "error", 3000);
+            setTimeout(() => {window.location.href = "./login.php"}, 3000);
+        });
+    });
+</script>
 
 <?php
     include 'include/footer.php';
