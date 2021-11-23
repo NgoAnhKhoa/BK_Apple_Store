@@ -18,7 +18,8 @@
 
 
   <!-- Screen -->
-  <div class="container">
+  <link rel="stylesheet" href="./assets/css/common.css">
+  <div class="container padding-top">
     <h2 class="title">Màn hình</h2>
     <div class="row">
       <?php
@@ -47,7 +48,7 @@
       </div>
       <?php } ?>
     </div>
-    <a class="btn btn-primary more-button" href="product-list?id=12">Xem thêm</a>
+    <a class="btn btn-primary more-button" href="product-list?id=12&page=1">Xem thêm</a>
   </div>
   <!-- End Screen -->
 

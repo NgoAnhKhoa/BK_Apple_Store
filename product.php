@@ -1,5 +1,4 @@
 <?php
-
     include './core/process.php';
     $USER = 0;
     if(checkLogin()){
@@ -11,10 +10,10 @@
           $USER = 1;
         }
              
-      }
-      else{
+    }
+    else{
         include "include/header_notlogin.php";
-      }
+    }
 
 
     if(isset($_GET['id'])){
@@ -40,8 +39,11 @@
     }
 
 ?>
-
-<div class="container container-product">
+</body>
+<link rel="stylesheet" href="./assets/css/common.css">
+<body style="margin-top: -25px; padding: 0; font-family: Roboto, sans-serif;">
+<div class="container container-product padding-top">
+    <h2 class="title">Product info</h2>
     <div class="row">
         <div class="col-md-6">
             <div class="row">
@@ -87,6 +89,11 @@
                     </form>
                 <?php 
                     }
+                    else if ($USER == 0) {
+                ?>
+                        <a class="btn btn-primary btn-add-to-cart" type="submit" href=<?php echo "login.php"; ?> id="add-to-cart">Thêm vào giỏ hàng</a>
+                <?php
+                    }
                     else if($USER == 2){
                 ?>
                     <a class="btn btn-primary btn-add-to-cart" type="submit" href=<?php echo "'edit_product.php?id=$id'"; ?>>Chỉnh sửa</a>
@@ -99,10 +106,9 @@
     </div> 
 </div>
 
+<input type="hidden" name="id" id="id" value=<?php echo "$id"; ?>>
 <?php if($USER > 0) { ?>
-
 <div class="container">
-    <input type="hidden" name="id" id="id" value=<?php echo "$id"; ?>>
     <?php if($USER == 1) { ?>
     <div class="row">
         <div class="feedback">
@@ -149,6 +155,10 @@
         </div>
     </div>
     
+</div>
+
+<?php } ?>
+<div class="container">
     <div class="row">
         <div class="comment">
             <button class="btn btn-primary" class="load-comment" id="load-comment">Xem bình luận</button>
@@ -157,9 +167,6 @@
         </div>
     </div>
 </div>
-
-<?php } ?>
-
 <script src="./assets/js/product.js"></script>
 
 <?php

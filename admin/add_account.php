@@ -27,8 +27,9 @@
     }
 
 ?>
-
-<div class="container">
+<link rel="stylesheet" href="../assets/css/common.css">
+<div class="container padding-top">
+    <h2 class="title">Add User</h2>
     <form action="" method="POST" id="add-user">
     <div class="form-group">
         <label for="name">Username:</label>

@@ -7,11 +7,11 @@
         case "/BK_Apple_Store/admin/index.php":
         case "/BK_Apple_Store":
             $route = "home";
-            $title = "Admin | Trang chủ";
+            $title = "Admin | Home page";
             break;
         case "/BK_Apple_Store/admin/product_list.php":
             $route = "product_list";
-            $title = "Admin | Danh sách sản phẩm";
+            $title = "Admin | List of products";
             break;
         // case "/BK_Apple_Store/tvav.php":
         //     $route = "product";
@@ -33,38 +33,36 @@
         //     // $route = "contact";
         //     $title = "Liên hệ";
         //     break;
-        case "/BK_Apple_Store/admin/add_user.php":
-            $route = "add_user";
-            $title = "Admin | Thêm user";
+        case "/BK_Apple_Store/admin/add_account.php":
+            $title = "Admin | Add account";
             break;
         case "/BK_Apple_Store/admin/inbox.php":
             $route = "inbox";
-            $title = "Admin | Hộp thư";
+            $title = "Admin | Inbox";
             break;
         // case "/BK_Apple_Store/product_list.php":
         //     $title = "Danh sách sản phẩm";
         //     break;
         case "/BK_Apple_Store/admin/product.php":
-            $title = "Admin | Sản phẩm";
+            $title = "Admin | Product";
             break;
-        case "/BK_Apple_Store/admin/user_info.php":
-            $title = "Admin | Thông tin admin";
+        case "/BK_Apple_Store/admin/admin_info.php":
+            $route = "admin_info";
+            $title = "Admin | Admin info";
             break;
         case "/BK_Apple_Store/admin/edit_product.php":
-            $title = "Admin | Chỉnh sửa sản phẩm";
+            $title = "Admin | Edit product";
             break;
-        case "/BK_Apple_Store/admin/edit_hightlight.php":
-            $title = "Admin | Chỉnh sửa thông tin nổi bật";
-            break;
-        case "/BK_Apple_Store/admin/cart_user.php":
-            $title = "Admin | Đơn hàng người dùng";
+        case "/BK_Apple_Store/admin/user_order.php":
+            $route = "user_order";
+            $title = "Admin | Orders of Users";
             break;
         case "/BK_Apple_Store/admin/user_list.php":
-            $title = "Admin | Danh sách User";
+            $title = "Admin | List of Users";
             $route = "user_list";
             break;
         case "/BK_Apple_Store/admin/add_product.php":
-            $title = "Admin | Thêm sản phẩm";
+            $title = "Admin | Add product";
             break;
     }
 
@@ -91,19 +89,33 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../assets/css/style.css" type="text/css">
     <script src="../assets/js/script.js" type="text/javascript"></script>
+    <style>
+        .rainbow-text {
+	    font-family: Arial;
+	    font-weight: bold;
+	    font-size: 40px;
+	    -webkit-text-stroke-width: 1px;
+	    -webkit-text-fill-color: transparent;
+        }
+        .rainbow-text .block-line > span {
+        	display: inline-block;
+        }
+    </style>
 </head>
 <body>
 
 <!-- scroll button -->
-<div class="scroll-up-btn">
+<!-- <div class="scroll-up-btn">
     <i class="fa fa-angle-up"></i>
-</div>
-
+</div> -->
 <!-- navigation bar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light" style="position: fixed; z-index: 100; margin-left: auto; width: 100%; margin-top: -15px; background-color: #afafaf; height: 90px">
     <div class="container">
-        <a class="navbar-brand" href="home">
-        <img src="../assets/images/apple_logo.jpeg" alt="logo" class="logo" style="width: 80px;">
+        <a class="navbar-brand" href="home" style="display: flex;">
+            <img src="../assets/images/logo_apple_1.png" alt="logo" class="logo" style="width: 60px;">
+            <div class="rainbow-text" style="text-align: center; margin: 5px 0px 0px 10px">
+	            <span class="block-line"><span><span style="color:#ff0000;">B</span><span style="color:#ff8000;">K&nbsp;</span></span><span><span style="color:#ffff00;">A</span><span style="color:#80ff00;">p</span><span style="color:#00ff00;">p</span><span style="color:#00ff80;">l</span><span style="color:#00ffff;">e&nbsp;</span></span><span><span style="color:#007fff;">S</span><span style="color:#0000ff;">t</span><span style="color:#7f00ff;">o</span><span style="color:#ff00ff;">r</span><span style="color:#ff0080;">e</span></span></span>
+            </div>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -114,33 +126,16 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class=<?php echo $route == 'home'? "'nav-item active'": "nav-item" ?>>
-                        <a class="nav-link" href="home">Trang chủ <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="home">Home page<span class="sr-only">(current)</span></a>
                     </li>
-                    <!-- <li class=<?php echo $route == 'product'? "'nav-item active dropdown'": "'nav-item dropdown'" ?>>
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Sản phẩm
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="mobile.php">Di động</a>
-                            <a class="dropdown-item" href="tvav.php">TV & AV</a>
-                            <a class="dropdown-item" href="appliance.php">Gia dụng</a>
-                            <a class="dropdown-item" href="screen.php">Màn hình</a>
-                        </div>
-                    </li> -->
                     <li class=<?php echo $route == 'product_list'? "'nav-item active'": "nav-item" ?>>
                         <a href="product-list" class="nav-link">
-                            Danh sách sản phẩm
-                        </a>
-                    </li>
-                    <li class=<?php echo $route == 'add_user'? "'nav-item active'": "nav-item" ?>>
-                        <a href="add-user" class="nav-link">
-                            Thêm User
+                            List of products
                         </a>
                     </li>
                     <li class=<?php echo $route == 'user_list'? "'nav-item active'": "nav-item" ?>>
                         <a href="user-list" class="nav-link">
-                           Danh sách User
+                           List of Users
                         </a>
                     </li>
                     <li class=<?php echo $route == 'inbox'? "'nav-item active'": "nav-item" ?>>
@@ -149,14 +144,14 @@
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        <a class="nav-link dropdown-toggle <?php echo in_array($route, array('admin_info', 'user_order'))? "active" : "" ?>" href="#" id="navbarDropdown" role="button"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                            <?php echo $_SESSION['user']['userName'] ?>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="user-info">Thông tin admin</a>
-                            <a href="cart-user" class="dropdown-item">Đơn hàng người dùng</a>
-                            <a class="dropdown-item" href="../core/auth.php?logout=true">Đăng xuất</a>
+                            <a class="dropdown-item <?php echo $route == 'admin_info'? "active": "" ?>" href="admin-info">Admin info</a>
+                            <a class="dropdown-item <?php echo $route == 'user_order'? "active": "" ?>" href="user-order">Orders of Users</a>
+                            <a class="dropdown-item" href="../core/auth.php?logout=true">Logout</a>
                         </div>
                     </li>
                 </ul>

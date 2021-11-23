@@ -276,12 +276,13 @@ body {
 }
 
 .contact-card {
-  /* margin: 5px; */
   max-width: 33%;
   padding: 20px;
-  border-color: #bbb;
-  border-radius: 10px;
-  border: 1px solid;
+  /* border-color: #bbb; */
+  /* border-radius: 10px; */
+  /* border: 1px solid; */
+  text-align: center;
+  margin: auto;
 }
 
 .title-card-contact {
@@ -313,7 +314,7 @@ body {
 
 .social {
   color: #000;
-  font-size: 1.5em;
+  font-size: 1.8em;
 }
 
 /* 1.3. Jumbotron: noi dung trong container slide */

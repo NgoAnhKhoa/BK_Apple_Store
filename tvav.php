@@ -20,7 +20,8 @@
 ?>
 
 <!-- Hightlight -->
-  <div class="container">
+<link rel="stylesheet" href="./assets/css/common.css">
+  <div class="container padding-top">
     <h2 class="title">Nổi bật</h2>
     <div class="row">
       <?php
@@ -82,7 +83,7 @@
       </div>
       <?php } ?>
     </div>
-    <a class="btn btn-primary more-button" href="product-list?id=5">Xem thêm</a>
+    <a class="btn btn-primary more-button" href="product-list?id=5&page=1">Xem thêm</a>
   </div>
 <!-- End TVs -->
 
@@ -116,7 +117,7 @@
       </div>
       <?php } ?>
     </div>
-    <a class="btn btn-primary more-button" href="product-list?id=6">Xem thêm</a>
+    <a class="btn btn-primary more-button" href="product-list?id=6&page=1">Xem thêm</a>
   </div>
 <!-- End Lifestyle TVs -->
 
@@ -150,7 +151,7 @@
       </div>
       <?php } ?>
     </div>
-    <a class="btn btn-primary more-button" href="product-list?id=7">Xem thêm</a>
+    <a class="btn btn-primary more-button" href="product-list?id=7&page=1">Xem thêm</a>
   </div>
 <!-- End devices -->
 

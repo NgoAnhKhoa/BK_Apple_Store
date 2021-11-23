@@ -8,8 +8,9 @@
     $user = getUserList();
 
 ?>
-<div class="container">
-    <h2 class="title">Danh sách User</h2>
+<link rel="stylesheet" href="../assets/css/common.css">
+<div class="container padding-top">
+    <h2 class="title">List of Users</h2>
     <table class="table">
         <thead class="thead-dark">
             <tr>
@@ -39,6 +40,7 @@
             } ?>
         </tbody>
     </table>
+    <a class="btn btn-primary more-button" href="add-account">Add Account</a>
 </div>
 
 <?php include 'include/footer.php'; ?>

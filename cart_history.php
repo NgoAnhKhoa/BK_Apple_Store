@@ -17,9 +17,9 @@
 
     include "include/header.php";   
 ?>
-
-<div class="container">
-    <h2 class="title">Lịch sử mua hàng</h2>
+<link rel="stylesheet" href="./assets/css/common.css">
+<div class="container padding-top">
+    <h2 class="title">Order history</h2>
     <table class="table table-striped">
         <thead class="thead-dark">
             <tr>

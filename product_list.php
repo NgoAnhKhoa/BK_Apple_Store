@@ -32,19 +32,19 @@
     else{
         $begin = ($page-1)*6;
     }
-
-    $result = ($id != 0) ? searchProduct($id, $q, $price, $begin) : getAllProduct($id, $q, $price);
-
+    if ($id != 0)
+        $result = searchProduct($id, $q, $price, $begin);
+    else
+        $result = getAllProduct(0, $q, $price);
     
 
 ?>
 
-
-<div class="container product-list-container">
+<div class="container product-list-container" style="padding-top: 130px;">
     <div class="row">
         
         <div class="col-12 col-md-4 col-lg-3 bg-light filter-left">
-            <h3 class="title-filter">Bộ lọc</h3>
+            <h3 class="title-filter">Filter</h3>
             <hr style="border: 1px solid gray;">
             <form action="" method="get">
                 <div class="from-group form-group-filter">
@@ -105,14 +105,14 @@
                         echo "<i style='margin-left:20px;'>Không tìm thấy sản phẩm.</i>";
                     }
                     else {
-                    while($row = $result->fetch_array(MYSQLI_BOTH)){
+                    while($row = $result->fetch_array(MYSQLI_BOTH)) {
                         $productId = $row['productId'];
                 ?>
                     <div class='col-12 col-md-6 col-lg-4'>
                         <div class='card-product-list' style='margin-bottom: 20px'>
-                            <img class='card-img-top' src=<?php $url = $row['url1']; echo "'$url'";?> alt='Card image cap'>
+                            <a href=<?php echo "product.php?id=$productId"; ?>><img class='card-img-top' src=<?php $url = $row['url1']; echo "'$url'";?> alt='Card image cap'></a>
                             <div class='card-body'>
-                                <h4 class='card-title'><a href=<?php echo "product.php?id=$productId"; ?> title='View Product'><?php echo $row['name'];?></a></h4>
+                                <h4 class='card-title'><a style="text-decoration: none; color:black" href=<?php echo "product.php?id=$productId"; ?> title='View Product'><?php echo $row['name'];?></a></h4>
                                 <p class='card-text'><?php echo $row['des'];?></p>
                                 <div class='row'>
                                     <div class='col'>
@@ -130,16 +130,21 @@
                 ?>
             </div>
             <?php 
-            if($id!=NULL && intval($id)!=0){
+            if($id!=NULL && intval($id)!=0 && $result->num_rows!=0){
             ?>
             <nav aria-label="Page navigation example">
-                <ul class="pagination justify-content-end">
+                <ul class="pagination justify-content-center">
                     <li class="page-item" id="btn-prev">
                         <a class="page-link" href="#" tabindex="-1">Previous</a>
                     </li>
                     <?php
                     $params=getParams();
-                    $number_page = ceil(countResult($id)/6);
+                    $all_product_with_id = getAllProduct($id, $q, $price);
+                    $number_page = 0;
+                    if ($q != null || $price != null)
+                        $number_page = ceil($all_product_with_id->num_rows/6);
+                    else
+                        $number_page = ceil(countResult($id)/6);
                     for( $i=1; $i <= $number_page; $i++ ){
                         $params['page']=$i;
                         printf('<li class="page-item page-num" id="page-%1$d"><a class="page-link" href="?%2$s">%1$d</a></li>', $i, buildQuery( $params ));

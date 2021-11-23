@@ -1,8 +1,8 @@
 RewriteEngine on
 
 Options -Indexes
-ErrorDocument 403 http://localhost/BK_Apple_Store/404.php
-ErrorDocument 404 http://localhost/BK_Apple_Store/404.php
+ErrorDocument 403 http://localhost:8080/BK_Apple_Store/404.php
+ErrorDocument 404 http://localhost:8080/BK_Apple_Store/404.php
 
 RewriteCond %{REQUEST_URI} ^/404/$
 RewriteRule ^(.*)$ /404.php [L]

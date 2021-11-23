@@ -7,50 +7,52 @@
         case "/BK_Apple_Store/index.php":
         case "/BK_Apple_Store":
             $route = "home";
-            $title = "Trang chủ";
+            $title = "Home page";
             break;
-        case "/BK_Apple_Store/mobile.php":
-            $route = "product";
-            $title = "Di động";
+        case "/BK_Apple_Store/mac.php":
+            $route = "mac";
+            $title = "Mac";
             break;
-        case "/BK_Apple_Store/tvav.php":
-            $route = "product";
-            $title = "TV & AV";
+        case "/BK_Apple_Store/ipad.php":
+            $route = "ipad";
+            $title = "iPad";
             break;
-        case "/BK_Apple_Store/appliance.php":
-            $route = "product";
-            $title = "Gia dụng";
+        case "/BK_Apple_Store/iphone.php":
+            $route = "iphone";
+            $title = "iPhone";
             break;
-        case "/BK_Apple_Store/screen.php":
-            $title = "Màn hình";
-            $route = "product";
+        case "/BK_Apple_Store/watch.php":
+            $route = "watch";
+            $title = "Watch";
             break;
         case "/BK_Apple_Store/about.php":
             $route = "about";
-            $title = "Khám phá";
+            $title = "About";
             break;
         case "/BK_Apple_Store/contact.php":
             $route = "contact";
-            $title = "Liên hệ";
+            $title = "Contact";
             break;
         case "/BK_Apple_Store/cart.php":
             $route = "cart";
-            $title = "Giỏ hàng";
+            $title = "Cart";
             break;
         case "/BK_Apple_Store/product_list.php":
-            $title = "Danh sách sản phẩm";
+            $title = "List of products";
             break;
         case "/BK_Apple_Store/product.php":
-            $title = "Sản phẩm";
+            $title = "Product";
             break;
         case "/BK_Apple_Store/user_info.php":
-            $title = "Thông tin người dùng";
+            $route = "user_info";
+            $title = "User info";
             break;
         case "/BK_Apple_Store/cart_history.php":
-            $title = "Lịch sử mua hàng";
+            $route = "cart_history";
+            $title = "Order history";
             break;
         case "/BK_Apple_Store/cart-detail.php":
-            $title = "Chi tiết đơn hàng";
+            $title = "Order details";
             break;
         default:
             $title = "404 Not Found";
@@ -81,19 +83,34 @@
     <link rel="stylesheet" href="./assets/css/style.css" type="text/css">
 
     <script src="./assets/js/script.js" type="text/javascript"></script>
+    <style>
+        .rainbow-text {
+	    font-family: Arial;
+	    font-weight: bold;
+	    font-size: 40px;
+	    -webkit-text-stroke-width: 1px;
+	    -webkit-text-fill-color: transparent;
+        }
+        .rainbow-text .block-line > span {
+        	display: inline-block;
+        }
+    </style>
 </head>
 <body>
 
 <!-- scroll button -->
-<div class="scroll-up-btn">
+<!-- <div class="scroll-up-btn">
     <i class="fa fa-angle-up"></i>
-</div>
+</div> -->
 
 <!-- navigation bar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light" style="position: fixed; z-index: 100; margin-left: auto; width: 100%; margin-top: -15px; background-color: #afafaf; height:90px">
     <div class="container">
-        <a class="navbar-brand" href="home">
-            <img src="./assets/images/apple_logo.jpeg" alt="logo" class="logo" style="width: 80px;">
+        <a class="navbar-brand" href="home" style="display: flex;">
+            <img src="./assets/images/logo_apple_1.png" alt="logo" class="logo" style="width: 60px;">
+            <div class="rainbow-text" style="text-align: center; margin: 5px 0px 0px 10px">
+	            <span class="block-line"><span><span style="color:#ff0000;">B</span><span style="color:#ff8000;">K&nbsp;</span></span><span><span style="color:#ffff00;">A</span><span style="color:#80ff00;">p</span><span style="color:#00ff00;">p</span><span style="color:#00ff80;">l</span><span style="color:#00ffff;">e&nbsp;</span></span><span><span style="color:#007fff;">S</span><span style="color:#0000ff;">t</span><span style="color:#7f00ff;">o</span><span style="color:#ff00ff;">r</span><span style="color:#ff0080;">e</span></span></span>
+            </div>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -104,25 +121,31 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class=<?php echo $route == 'home'? "'nav-item active'": "nav-item" ?>>
-                        <a class="nav-link" href="home">Trang chủ <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="home">Home page <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class=<?php echo $route == 'product'? "'nav-item active dropdown'": "'nav-item dropdown'" ?>>
+                    <li class=<?php echo in_array($route, array('mac', 'ipad', 'iphone', 'watch'))? "'nav-item active dropdown'": "'nav-item dropdown'" ?>>
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Sản phẩm
+                            Products
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="mobile">Di động</a>
                             <a class="dropdown-item" href="tvav">TV & AV</a>
                             <a class="dropdown-item" href="appliance">Gia dụng</a>
                             <a class="dropdown-item" href="screen">Màn hình</a>
+                        </div> -->
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item <?php echo ($route == 'mac')? "active" : "" ?>" href="mac">Mac</a>
+                            <a class="dropdown-item <?php echo ($route == 'ipad')? "active" : "" ?>" href="ipad">iPad</a>
+                            <a class="dropdown-item <?php echo ($route == 'iphone')? "active" : "" ?>" href="iphone">iPhone</a>
+                            <a class="dropdown-item <?php echo ($route == 'watch')? "active" : "" ?>" href="watch">Watch</a>
                         </div>
                     </li>
                     <li class=<?php echo $route == 'about'? "'nav-item active'": "nav-item" ?>>
-                        <a class="nav-link" href="about">Khám phá</a>
+                        <a class="nav-link" href="about">About</a>
                     </li>
                     <li class=<?php echo $route == 'contact'? "'nav-item active'": "nav-item" ?>>
-                        <a class="nav-link" href="contact">Liên hệ</a>
+                        <a class="nav-link" href="contact">Contact</a>
                     </li>
                     <li class="nav-item">
                         <form id="demo-2" action="product_list.php" method="GET">
@@ -137,15 +160,15 @@
                             <i class="fa fa-shopping-cart"></i>
                         </a>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class=<?php echo in_array($route, array('user_info', 'cart_history'))? "'nav-item active dropdown'": "'nav-item dropdown'" ?>>
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                            <?php echo $_SESSION['user']['userName'] ?>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="user-info">Thông tin tài khoản</a>
-                            <a href="cart-history" class="dropdown-item">Lịch sử mua hàng</a>
-                            <a class="dropdown-item" href="core/auth.php?logout=true">Đăng xuất</a>
+                            <a class="dropdown-item <?php echo $route == 'user_info'? "active": "" ?>" href="user-info">User infomation</a>
+                            <a class="dropdown-item <?php echo $route == 'cart_history'? "active": "" ?>" href="cart-history">Order history</a>
+                            <a class="dropdown-item" href="core/auth.php?logout=true">Logout</a>
                         </div>
                     </li>
                 </ul>
