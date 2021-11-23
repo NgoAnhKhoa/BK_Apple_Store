@@ -33,7 +33,7 @@
         $begin = ($page-1)*6;
     }
 
-    $result = searchProduct($id, $q, $price, $begin);
+    $result = ($id != 0) ? searchProduct($id, $q, $price, $begin) : getAllProduct($id, $q, $price);
 
     
 
