@@ -9,7 +9,7 @@ RewriteRule ^(.*)$ /404.php [L]
 
 
 RewriteRule ^home index.php [NC,L]
-RewriteRule ^about about.php [NC,L]
+RewriteRule ^news news.php [NC,L]
 RewriteRule ^watch watch.php [NC,L]
 RewriteRule ^cart-history cart_history.php [NC,L]
 RewriteRule ^contact contact.php [NC,L]

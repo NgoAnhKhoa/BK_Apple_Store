@@ -24,9 +24,9 @@
         <thead class="thead-dark">
             <tr>
                 <th>STT</th>
-                <th>Thời gian</th>
-                <th>Tổng tiền</th>
-                <th>Chi tiết</th>
+                <th>Time</th>
+                <th>Total</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
@@ -40,7 +40,7 @@
                     echo "<td>$i</td>";
                     echo "<td>$time</td>";
                     echo "<td>$price</td>";
-                    echo "<td><a href='cart-detail?id=$id'>Xem chi tiết</a></td>";
+                    echo "<td><a href='cart-detail?id=$id'>Detail</a></td>";
                     echo "</tr>";
                     $i++;
                 }

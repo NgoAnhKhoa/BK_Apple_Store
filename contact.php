@@ -134,11 +134,11 @@
                 <div class="form-group">
                     <label for="message" class="sr-only">Message</label>
                     <textarea name="message" id="message" cols="30" rows="10" class="form-control"
-                              placeholder="Viết tin nhắn của bạn"></textarea>
+                              placeholder="Write your message"></textarea>
                     
                 </div>
                 <div class="form-group">
-                    <button class="btn btn-primary btn-lg" id="send-message">Gửi tin nhắn</button>
+                    <button class="btn btn-primary btn-lg" id="send-message">Send message</button>
                 </div>
               </div>
               <div class="thankyou" id="thankyou">Thank you for you message!</div>

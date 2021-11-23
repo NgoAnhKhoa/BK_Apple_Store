@@ -25,9 +25,9 @@
             $route = "watch";
             $title = "Watch";
             break;
-        case "/BK_Apple_Store/about.php":
-            $route = "about";
-            $title = "About";
+        case "/BK_Apple_Store/news.php":
+            $route = "news";
+            $title = "News";
             break;
         case "/BK_Apple_Store/contact.php":
             $route = "contact";
@@ -121,8 +121,8 @@
                             <a class="dropdown-item <?php echo ($route == 'watch')? "active" : "" ?>" href="watch">Watch</a>
                         </div>
                     </li>
-                    <li class=<?php echo $route == 'about'? "'nav-item active'": "nav-item" ?>>
-                        <a class="nav-link" href="about">About</a>
+                    <li class=<?php echo $route == 'news'? "'nav-item active'": "nav-item" ?>>
+                        <a class="nav-link" href="news">News</a>
                     </li>
                     <li class=<?php echo $route == 'contact'? "'nav-item active'": "nav-item" ?>>
                         <a class="nav-link" href="contact">Contact</a>

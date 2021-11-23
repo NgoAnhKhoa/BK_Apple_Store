@@ -89,9 +89,15 @@
 
 <div class="container">
     <h2 class="title">Highlights</h2>
+    <?php
+        // array("Mac")
+        for ($i = 15; $i <= 18; $i++) {
+            $type = 
+            $hightlight = get_HightLight($i);
+            if ($hightlight->num_rows != 0) {
+    ?>
     <div class="row">
       <?php
-        $hightlight = get_HightLight(0);
         while($row = $hightlight->fetch_array(MYSQLI_BOTH)) {
           $url = $row['url1'];
           $name = $row['name'];
@@ -101,7 +107,7 @@
       <div class="col-md-4">
         <a href=<?php echo "product.php?id=$id"; ?> class="card-link">
           <div class="card">
-            <img src=<?php echo "$url"; ?> alt="hight light image" class="card-img-top">
+            <img src=<?php echo "$url"; ?> alt="hight light image" class="card-img-top" height="300px">
             <div class="card-body">
               <h5 class="card-title">
                 <?php echo $name; ?>
@@ -117,6 +123,10 @@
       </div>
       <?php } ?>
     </div>
+    <?php 
+            }
+        }
+    ?>
   </div>
 
 <!-- end category -->

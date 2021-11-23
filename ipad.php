@@ -35,7 +35,7 @@
       <div class="col-md-4">
         <a href=<?php echo "product.php?id=$id"; ?> class="card-link">
           <div class="card">
-            <img src=<?php echo "$url"; ?> alt="hight light image" class="card-img-top">
+            <img src=<?php echo "$url"; ?> alt="hight light image" class="card-img-top" height="300px">
             <div class="card-body">
               <h5 class="card-title">
                 <?php echo $name; ?>
@@ -68,7 +68,7 @@
       <div class="col-md-4">
         <a href=<?php echo "product.php?id=$id"; ?> class="card-link">
           <div class="card">
-            <img src=<?php echo "$url"; ?> alt="hight light image" class="card-img-top">
+            <img src=<?php echo "$url"; ?> alt="hight light image" class="card-img-top" height="300px">
             <div class="card-body">
               <h5 class="card-title">
                 <?php echo $name; ?>
@@ -102,7 +102,7 @@
       <div class="col-md-4">
         <a href=<?php echo "product.php?id=$id"; ?> class="card-link">
           <div class="card">
-            <img src=<?php echo "$url"; ?> alt="hight light image" class="card-img-top">
+            <img src=<?php echo "$url"; ?> alt="hight light image" class="card-img-top" height="300px">
             <div class="card-body">
               <h5 class="card-title">
                 <?php echo $name; ?>
@@ -136,7 +136,7 @@
       <div class="col-md-4">
         <a href=<?php echo "product.php?id=$id"; ?> class="card-link">
           <div class="card">
-            <img src=<?php echo "$url"; ?> alt="hight light image" class="card-img-top">
+            <img src=<?php echo "$url"; ?> alt="hight light image" class="card-img-top" height="300px">
             <div class="card-body">
               <h5 class="card-title">
                 <?php echo $name; ?>

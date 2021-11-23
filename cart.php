@@ -31,7 +31,7 @@
                 <div class="col-sm-12 col-md-6 text-right">
                     <form action="./payment/paymomo/init_payment.php" method="POST">
                         <input hidden type="text" name="amount" id="amount">
-                        <button class="btn btn-lg btn-block btn-success text-uppercase" id="checkout">Thanh toan</button>
+                        <button class="btn btn-lg btn-block btn-success text-uppercase" id="checkout">Checkout</button>
                     </form>
                 </div>
             </div>

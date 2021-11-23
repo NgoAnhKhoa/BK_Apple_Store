@@ -36,7 +36,7 @@
       <div class="col-md-4">
         <a href=<?php echo "product.php?id=$id"; ?> class="card-link">
           <div class="card">
-            <img src=<?php echo "$url"; ?> alt="hight light image" class="card-img-top">
+            <img src=<?php echo "$url"; ?> alt="hight light image" class="card-img-top" height="300px">
             <div class="card-body">
               <h5 class="card-title">
                 <?php echo $name; ?>
@@ -69,7 +69,7 @@
       <div class="col-md-4">
         <a href=<?php echo "product.php?id=$id"; ?> class="card-link">
           <div class="card">
-            <img src=<?php echo "$url"; ?> alt="hight light image" class="card-img-top">
+            <img src=<?php echo "$url"; ?> alt="hight light image" class="card-img-top" height="300px">
             <div class="card-body">
               <h5 class="card-title">
                 <?php echo $name; ?>
@@ -103,7 +103,7 @@
       <div class="col-md-4">
         <a href=<?php echo "product.php?id=$id"; ?> class="card-link">
           <div class="card">
-            <img src=<?php echo "$url"; ?> alt="hight light image" class="card-img-top">
+            <img src=<?php echo "$url"; ?> alt="hight light image" class="card-img-top" height="300px">
             <div class="card-body">
               <h5 class="card-title">
                 <?php echo $name; ?>
@@ -137,7 +137,7 @@
       <div class="col-md-4">
         <a href=<?php echo "product.php?id=$id"; ?> class="card-link">
           <div class="card">
-            <img src=<?php echo "$url"; ?> alt="hight light image" class="card-img-top">
+            <img src=<?php echo "$url"; ?> alt="hight light image" class="card-img-top" height="300px">
             <div class="card-body">
               <h5 class="card-title">
                 <?php echo $name; ?>
@@ -162,7 +162,7 @@
     <h2 class="title">Apple Watch Nike</h2>
     <div class="row">
       <?php
-        while($row = $watchSeries3->fetch_array(MYSQLI_BOTH)) {
+        while($row = $watchNike->fetch_array(MYSQLI_BOTH)) {
           $url = $row['url1'];
           $name = $row['name'];
           $id = $row['productId'];
@@ -171,7 +171,7 @@
       <div class="col-md-4">
         <a href=<?php echo "product.php?id=$id"; ?> class="card-link">
           <div class="card">
-            <img src=<?php echo "$url"; ?> alt="hight light image" class="card-img-top">
+            <img src=<?php echo "$url"; ?> alt="hight light image" class="card-img-top" height="300px">
             <div class="card-body">
               <h5 class="card-title">
                 <?php echo $name; ?>

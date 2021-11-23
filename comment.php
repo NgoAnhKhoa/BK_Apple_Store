@@ -4,7 +4,7 @@
     $id = $_GET['id'];
     $comment = loadComment($id);
     if ($comment->num_rows == 0){
-        echo "<i id='log-cmt'>Không có bình luận để  hiển thị.</i>";
+        echo "<i id='log-cmt'>No comment.</i>";
     }
     else {
         while($row = $comment->fetch_array(MYSQLI_BOTH)) {

@@ -67,7 +67,7 @@
                     <?php echo $price; ?> $
                 </div>
                 <div class="rate">
-                    <span class="rate-title">Đánh giá:</span>
+                    <span class="rate-title">Rating:</span>
                     <span class="star">
                         <span style="margin-right: 5px;">
                             <?php echo $product['rate']; ?>
@@ -82,22 +82,22 @@
                     if($USER == 1) {
                 ?>
                     <form action="core/add_to_cart.php" method="POST">
-                        <label for="quantity">Nhập số lượng:</label>
+                        <label for="quantity">Input quantity:</label>
                         <input type="number" name="quantity" id="quantity" value="1" class="quantity" min="1">
                         <br>
                         <input type="hidden" name="id" value=<?php echo "'$id'"; ?>>
-                        <input class="btn btn-primary btn-add-to-cart" type="submit" value="Thêm vào giỏ hàng"></input>
+                        <input class="btn btn-primary btn-add-to-cart" type="submit" value="Add to cart"></input>
                     </form>
                 <?php 
                     }
                     else if ($USER == 0) {
                 ?>
-                        <a class="btn btn-primary btn-add-to-cart" id="add-to-cart">Thêm vào giỏ hàng</a>
+                        <a class="btn btn-primary btn-add-to-cart" id="add-to-cart">Add to cart</a>
                 <?php
                     }
                     else if($USER == 2){
                 ?>
-                    <a class="btn btn-primary btn-add-to-cart" type="submit" href=<?php echo "'edit_product.php?id=$id'"; ?>>Chỉnh sửa</a>
+                    <a class="btn btn-primary btn-add-to-cart" type="submit" href=<?php echo "'edit_product.php?id=$id'"; ?>>Edit</a>
                 <?php
                     }
                 ?>
@@ -114,7 +114,7 @@
     <div class="row">
         <div class="feedback">
             <section class='rating-widget'>
-                <h5 class="rate-title">Đánh giá:</h5>
+                <h5 class="rate-title">Rating:</h5>
                 <div class='rating-stars text-center'>
                     <ul id='stars'>
                         <li class='star' title='Poor' data-value='1'>
@@ -135,7 +135,7 @@
                     </ul>
                 </div>
                 
-                <button class="btn btn-primary" id="send-rating">Gửi đánh giá</button>
+                <button class="btn btn-primary" id="send-rating">Send Rating</button>
             </section>
             <div class="success-box">
                 <div class='clearfix'></div>
@@ -146,12 +146,12 @@
     </div>
     <?php } ?>
     <div class="row">
-        <h5 class="cmt-title">Bình luận:</h5>
+        <h5 class="cmt-title">Comment:</h5>
         <div class="comment" id="comment-box">
             <div class="form-group">
                 <textarea name="cmt" id="cmt" rows="5" class="form-control" placeholder="Viết đánh giá..."></textarea>
             </div>
-            <button class="btn btn-primary" id="send-cmt">Gửi bình luận</button>
+            <button class="btn btn-primary" id="send-cmt">Send comment</button>
 
         </div>
     </div>
@@ -162,7 +162,7 @@
 <div class="container">
     <div class="row">
         <div class="comment">
-            <button class="btn btn-primary" class="load-comment" id="load-comment">Xem bình luận</button>
+            <button class="btn btn-primary" class="load-comment" id="load-comment">Show comment</button>
             <div class="cmt-item" id="cmt-item">
             </div>
         </div>

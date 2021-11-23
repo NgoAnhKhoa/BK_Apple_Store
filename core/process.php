@@ -14,14 +14,14 @@
     function get_HightLight($typeId){
         $conn = newConnection();
         if($typeId == 0)
-            $query = "SELECT * FROM Products ORDER BY `rate` DESC LIMIT 6";
-        elseif($typeId==15)
+            $query = "SELECT * FROM Products ORDER BY `rate` DESC LIMIT 3";
+        elseif($typeId==15) // Mac
             $query = "SELECT * FROM Products WHERE `type`=1 OR `type`=2 OR `type`=3 ORDER BY `rate` DESC LIMIT 3";
-        elseif($typeId==16)
+        elseif($typeId==16) // iPad
             $query = "SELECT * FROM Products WHERE `type`=4 OR `type`=5 OR `type`=6 ORDER BY `rate` DESC LIMIT 3";
-        elseif($typeId==17)
+        elseif($typeId==17) // iPhone
             $query = "SELECT * FROM Products WHERE `type`=7 OR `type`=8 OR `type`=9 ORDER BY `rate` DESC LIMIT 3";
-        elseif($typeId==18)
+        elseif($typeId==18) // Watch
             $query = "SELECT * FROM Products WHERE `type`=10 OR `type`=11 OR `type`=12 OR `type`=13 ORDER BY `rate` DESC LIMIT 3";
         else
             $query = "SELECT * FROM Products WHERE `type`=$typeId ORDER BY `rate` DESC LIMIT 3";

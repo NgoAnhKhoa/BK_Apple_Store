@@ -31,9 +31,9 @@
         <thead class="thead-dark">
             <tr>
                 <th>STT</th>
-                <th>Tên sản phẩm</th>
-                <th>Số lượng</th>
-                <th>Đơn giá</th>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Unit Price</th>
             </tr>
         </thead>
         <tbody>
@@ -56,7 +56,7 @@
                 echo "<tr>";
                 echo "<td></td>";
                 echo "<td></td>";
-                echo '<td class="text-right">Tổng</td>';
+                echo '<td class="text-right">Total price</td>';
                 echo '<td>$ ' . $totalPrice . '</td>';
                 echo "</tr>";
 
@@ -64,7 +64,7 @@
                 echo "<tr>";
                 echo "<td></td>";
                 echo "<td></td>";
-                echo '<td class="text-right">Ship</td>';
+                echo '<td class="text-right">Shipping fee</td>';
                 echo '<td>$ ' . $ship . '</td>';
                 echo "</tr>";
 
@@ -72,7 +72,7 @@
                 echo "<tr>";
                 echo "<td></td>";
                 echo "<td></td>";
-                echo '<td class="text-right"><strong>Tổng cộng</strong></td>';
+                echo '<td class="text-right"><strong>Total</strong></td>';
                 echo '<td>$ ' . $totalPrice . '</td>';
                 echo "</tr>";
             ?>
