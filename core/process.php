@@ -45,27 +45,27 @@
             switch(intval($price)){
                 case 1:
                     $price1 = 0;
-                    $price2 = 100000;
+                    $price2 = 10000000;
                     break;
                 case 2:
-                    $price1 = 100000;
-                    $price2 = 500000;
+                    $price1 = 10000000;
+                    $price2 = 20000000;
                     break;
                 case 3:
-                    $price1 = 500000;
-                    $price2 = 1000000;
+                    $price1 = 20000000;
+                    $price2 = 30000000;
                     break;
                 case 4:
-                    $price1 = 1000000;
-                    $price2 = 2000000;
+                    $price1 = 30000000;
+                    $price2 = 40000000;
                     break;
                 case 5:
-                    $price1 = 2000000;
+                    $price1 = 40000000;
                     $price2 = 1000000000;
                     break;
                 default:
                     $price1 = 0;
-                    $price2 = 100000;
+                    $price2 = 10000000;
                     break;
             }
         }
@@ -109,27 +109,27 @@
             switch(intval($price)){
                 case 1:
                     $price1 = 0;
-                    $price2 = 100000;
+                    $price2 = 10000000;
                     break;
                 case 2:
-                    $price1 = 100000;
-                    $price2 = 500000;
+                    $price1 = 10000000;
+                    $price2 = 20000000;
                     break;
                 case 3:
-                    $price1 = 500000;
-                    $price2 = 1000000;
+                    $price1 = 20000000;
+                    $price2 = 30000000;
                     break;
                 case 4:
-                    $price1 = 1000000;
-                    $price2 = 2000000;
+                    $price1 = 30000000;
+                    $price2 = 40000000;
                     break;
                 case 5:
-                    $price1 = 2000000;
+                    $price1 = 40000000;
                     $price2 = 1000000000;
                     break;
                 default:
                     $price1 = 0;
-                    $price2 = 100000;
+                    $price2 = 10000000;
                     break;
             }
         }
@@ -196,7 +196,7 @@
         // if($row['userId'] != $_SESSION['user']['userId']){
         //     header('Location: cart_history.php');
         // }
-        $query = "SELECT * FROM `ItemCartView` WHERE `cartId`='$cartId'";
+        $query = "SELECT * FROM `ItemCart` WHERE `cartId`='$cartId'";
         $result = $conn->query($query);
         $conn->close();
         return $result;

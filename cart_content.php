@@ -49,7 +49,7 @@
             <td></td>
             <td></td>
             <td><strong>Total</strong></td>
-            <td class="text-right" id="total-and-ship"><strong>0 ₫</strong></td>
+            <td class="text-right" id="total-and-ship" style="font-weight: bold;">0 ₫</td>
         </tr>
     </tbody>
 </table>

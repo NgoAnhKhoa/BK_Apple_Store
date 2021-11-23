@@ -57,7 +57,7 @@
                 echo "<td></td>";
                 echo "<td></td>";
                 echo '<td class="text-right">Total price</td>';
-                echo '<td>$ ' . $totalPrice . '</td>';
+                echo '<td class=text-right>' . $totalPrice . ' ₫</td>';
                 echo "</tr>";
 
                 $ship = round($totalPrice*0.05, 2);
@@ -65,7 +65,7 @@
                 echo "<td></td>";
                 echo "<td></td>";
                 echo '<td class="text-right">Shipping fee</td>';
-                echo '<td>$ ' . $ship . '</td>';
+                echo '<td class=text-right>' . $ship . ' ₫</td>';
                 echo "</tr>";
 
                 $totalPrice = round($totalPrice + $ship, 2);
@@ -73,7 +73,7 @@
                 echo "<td></td>";
                 echo "<td></td>";
                 echo '<td class="text-right"><strong>Total</strong></td>';
-                echo '<td>$ ' . $totalPrice . '</td>';
+                echo '<td class=text-right><strong>' . $totalPrice . ' ₫</strong></td>';
                 echo "</tr>";
             ?>
         </tbody>

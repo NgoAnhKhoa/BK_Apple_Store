@@ -162,7 +162,7 @@
                            <?php echo $_SESSION['user']['userName'] ?>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item <?php echo $route == 'user_info'? "active": "" ?>" href="user-info">User infomation</a>
+                            <a class="dropdown-item <?php echo $route == 'user_info'? "active": "" ?>" href="user-info">My profile</a>
                             <a class="dropdown-item <?php echo $route == 'cart_history'? "active": "" ?>" href="cart-history">Order history</a>
                             <a class="dropdown-item" href="core/auth.php?logout=true">Logout</a>
                         </div>

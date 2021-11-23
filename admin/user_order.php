@@ -17,7 +17,7 @@
             <tr>
                 <th>STT</th>
                 <th>User</th>
-                <th>Total price</th>
+                <th>Total</th>
                 <th>Time</th>
             </tr>
         </thead>
@@ -31,7 +31,7 @@
                     echo "<tr>";
                     echo "<td>$i</td>";
                     echo "<td>$username</td>";
-                    echo "<td>$price</td>";
+                    echo "<td>$price ₫</td>";
                     echo "<td>$time</td>";
                     echo "</tr>";
                     $i++;

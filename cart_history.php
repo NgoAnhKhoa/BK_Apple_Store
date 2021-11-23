@@ -39,7 +39,7 @@
                     echo "<tr>";
                     echo "<td>$i</td>";
                     echo "<td>$time</td>";
-                    echo "<td>$price</td>";
+                    echo "<td>$price ₫</td>";
                     echo "<td><a href='cart-detail?id=$id'>Detail</a></td>";
                     echo "</tr>";
                     $i++;

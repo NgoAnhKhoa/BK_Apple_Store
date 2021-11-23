@@ -2,12 +2,14 @@
 <?php
 
     include './core/process.php';
+    $USER = 0;
     if(checkLogin()){
         if(checkAdmin()) {
           header('Location: admin/product-list');
         }
         else {
-          include "include/header.php"; 
+          include "include/header.php";
+          $USER = 1;
         }
              
       }
@@ -41,70 +43,17 @@
 ?>
 
 <div class="container product-list-container" style="padding-top: 130px;">
+    <div id="toast"></div>
     <div class="row">
         
-        <div class="col-12 col-md-4 col-lg-3 bg-light filter-left">
-            <h3 class="title-filter">Filter</h3>
-            <hr style="border: 1px solid gray;">
-            <form action="" method="get">
-                <div class="from-group form-group-filter">
-                    <input type="text" class="form-control search" name="q" id="search" placeholder="Search..." value=<?php if($q) echo "'$q'";?>>
-                    <div class="type-select" class="form-control">
-                        <div class="title-type-search">Product type:</div>
-                        <input type="radio" name="id" id="all" value="0" <?php if($id==NULL || intval($id)==0) echo "checked"; ?>>
-                        <label for="all">All</label><br>
-                        <input type="radio" name="id" id="mac-air" value="1" <?php if(intval($id)==1) echo "checked"; ?>>
-                        <label for="mac-air">MacBook Air</label><br>
-                        <input type="radio" name="id" id="mac-pro" value="2" <?php if(intval($id)==2) echo "checked"; ?>>
-                        <label for="mac-pro">MacBook Pro</label><br>
-                        <input type="radio" name="id" id="imac" value="3" <?php if(intval($id)==3) echo "checked"; ?>>
-                        <label for="imac">iMac</label><br>
-                        <input type="radio" name="id" id="ipad-air" value="4" <?php if(intval($id)==4) echo "checked";?>>
-                        <label for="ipad-air">iPad Air</label><br>
-                        <input type="radio" name="id" id="ipad-pro" value="5" <?php if(intval($id)==5) echo "checked"; ?>>
-                        <label for="ipad-pro">iPad Pro</label><br>
-                        <input type="radio" name="id" id="ipad-mini" value="6" <?php if(intval($id)==6) echo "checked"; ?>>
-                        <label for="ipad-mini">iPad Mini</label><br>
-                        <input type="radio" name="id" id="iphone-13" value="7" <?php if(intval($id)==7) echo "checked"; ?>>
-                        <label for="iphone-13">iPhone 13</label><br>
-                        <input type="radio" name="id" id="iphone-12" value="8" <?php if(intval($id)==8) echo "checked"; ?>>
-                        <label for="iphone-12">iPhone 12</label><br>
-                        <input type="radio" name="id" id="iphone-11" value="9" <?php if(intval($id)==9) echo "checked"; ?>>
-                        <label for="iphone-11">iPhone 11</label><br>
-                        <input type="radio" name="id" id="watch-series-7" value="10" <?php if(intval($id)==10) echo "checked"; ?>>
-                        <label for="watch-series-7">Apple Watch Series 7</label><br>
-                        <input type="radio" name="id" id="watch-se" value="11" <?php if(intval($id)==11) echo "checked"; ?>>
-                        <label for="watch-se">Apple Watch SE</label><br>
-                        <input type="radio" name="id" id="watch-series-3" value="12" <?php if(intval($id)==12) echo "checked"; ?>>
-                        <label for="watch-series-3">Apple Watch Series 3</label><br>
-                        <input type="radio" name="id" id="watch-nike" value="13" <?php if(intval($id)==13) echo "checked"; ?>>
-                        <label for="watch-nike">Apple Watch Nike</label><br>
-                    </div>
-                    <div class="type-select" class="form-control">
-                        <div class="title-type-search">Price:</div>
-                        <input type="radio" name="price" id="option1" value="1" <?php if(intval($price)==1) echo "checked"; ?>>
-                        <label for="option1">Less than 100.000 ₫</label><br>
-                        <input type="radio" name="price" id="option2" value="2" <?php if(intval($price)==2) echo "checked"; ?>>
-                        <label for="option2">Between 100.000 and 500.000 ₫</label><br>
-                        <input type="radio" name="price" id="option3" value="3" <?php if(intval($price)==3) echo "checked"; ?>>
-                        <label for="option3">Between 500.000 and 1.000.000 ₫</label><br>
-                        <input type="radio" name="price" id="option4" value="4" <?php if(intval($price)==4) echo "checked"; ?>>
-                        <label for="option4">Between 1.000.000 and 2.000.000 ₫</label><br>
-                        <input type="radio" name="price" id="option5" value="5" <?php if(intval($price)==5) echo "checked"; ?>>
-                        <label for="option5">Greater than 2.000.000 ₫</label><br>
-                    </div>
-                    <input hidden type="text" name="page" value="1">
-                </div>
-                <input class="btn btn-primary btn-filter" type="submit" value="Lọc">
-            </form>
-        </div>
+        <?php include 'include/filter.php'; ?>
 
         <div class="col">
             <div class="row">
             
                 <?php
                     if($result->num_rows==0){
-                        echo "<i style='margin-left:20px;'>Không tìm thấy sản phẩm.</i>";
+                        echo "<i style='margin-left:20px;'>No product found.</i>";
                     }
                     else {
                     while($row = $result->fetch_array(MYSQLI_BOTH)) {
@@ -114,16 +63,33 @@
                         <div class='card-product-list' style='margin-bottom: 20px'>
                             <a href=<?php echo "product.php?id=$productId"; ?>><img class='card-img-top' src=<?php $url = $row['url1']; echo "'$url'";?> alt='Card image cap' height="350px"></a>
                             <div class='card-body'>
-                                <h4 class='card-title'><a style="text-decoration: none; color:black" href=<?php echo "product.php?id=$productId"; ?> title='View Product'><?php echo $row['name'];?></a></h4>
-                                <p class='card-text'><?php echo $row['des'];?></p>
-                                <div class='row'>
-                                    <div class='col'>
-                                        <div class='price-product-list'><?php echo $row['price']; ?> $</div>
+                                <a style="text-decoration: none; color: black;" href=<?php echo "product.php?id=$productId"; ?> title='View Product'>
+                                    <h4 class='card-title'><?php echo $row['name'];?></h4>
+                                    <p class='card-text'><?php echo $row['des'];?></p>
+                                    <div class='row' style="margin-top: 15px;">
+                                        <div class='col'>
+                                            <div class='price-product-list'><?php echo $row['price']; ?> ₫</div>
+                                        </div>
+                                        <div class='col'>
+                                        <?php
+                                            if($USER == 1) {
+                                        ?>
+                                            <form action="core/add_to_cart.php" method="POST">
+                                                <input hidden type="number" name="quantity" id="quantity" value="1" class="quantity" min="1">
+                                                <input type="hidden" name="id" value=<?php echo "'$productId'"; ?>>
+                                                <input class="btn btn-primary btn-add-to-cart" style="width: 100%; margin-top: 5px" type="submit" value="Add to cart"></input>
+                                            </form>
+                                        <?php 
+                                            }
+                                            else if ($USER == 0) {
+                                        ?>
+                                                <a class="btn btn-primary btn-add-to-cart" id="add-to-cart" style="width: 100%; margin-top: 5px">Add to cart</a>
+                                        <?php
+                                            }
+                                        ?>
+                                        </div>
                                     </div>
-                                    <div class='col'>
-                                        
-                                    </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -176,6 +142,10 @@
         $("#page-" + page).addClass("disabled");
         $("#btn-next a").attr("href", `?id=${id}&page=${parseInt(page)+1}`);
         $("#btn-prev a").attr("href", `?id=${id}&page=${parseInt(page)-1}`);
+        $("#add-to-cart").click(() => {
+            showToast("Add to cart failed !", "Please login to add product to cart", "error", 3000);
+            setTimeout(() => {window.location.href = "./login.php"}, 3000);
+        });
     });
 </script>
 

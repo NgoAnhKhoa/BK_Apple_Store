@@ -56,7 +56,12 @@ if (!empty($_GET)) {
                 $result = $conn->query($query);
                 if(!$result) $success = false;
                 foreach ($cart as $id => $quantity) {
-                    $query = "INSERT INTO `ItemCart` (`productId`,`cartId`,`quantity`) VALUES ($id, '$cartId', $quantity)";
+                    $query = "SELECT * FROM `Products` WHERE `productId`=$id";
+                    $result = $conn->query($query);
+                    $row = $result->fetch_array(MYSQLI_BOTH);
+                    $name = $row['name'];
+                    $price = $row['price'];
+                    $query = "INSERT INTO `ItemCart` (`name`,`price`,`cartId`,`quantity`) VALUES ('$name', $price, '$cartId', $quantity)";
                     $result = $conn->query($query);
                     if(!$result) $success = false;
                 }

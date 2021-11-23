@@ -31,7 +31,7 @@
                     echo "<td>$id</td>";
                     echo "<td>$userName</td>";
                     echo "<td>$time</td>";
-                    echo "<td><button class='btn btn-success' id='seeDetailBtn$id' value='1' onclick=".'"seeDetail('."'$msg'".", $id".')"'.">View</button></button>";
+                    echo "<td><button class='btn btn-primary' id='seeDetailBtn$id' value='1' onclick=".'"seeDetail('."'$msg'".", $id".')"'.">View</button></td>";
                     echo "</tr>";
                     echo "<tr id='detail$id'></tr>";
                 }
