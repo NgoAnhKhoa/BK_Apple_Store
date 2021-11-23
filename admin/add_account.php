@@ -29,36 +29,36 @@
 ?>
 <link rel="stylesheet" href="../assets/css/common.css">
 <div class="container padding-top">
-    <h2 class="title">Add User</h2>
+    <h2 class="title">Add account</h2>
     <form action="" method="POST" id="add-user">
     <div class="form-group">
         <label for="name">Username:</label>
-        <input type="text" name="name" id="name" class="form-control" placeholder="Nhập username" required>
+        <input type="text" name="name" id="name" class="form-control" placeholder="Username..." required>
         <small class="log-fail" id="name-log"></small>
     </div>
     <div class="form-group">
         <label for="email">Email:</label>
-        <input type="email" name="email" id="email" class="form-control" placeholder="Nhập email" required>
+        <input type="email" name="email" id="email" class="form-control" placeholder="Email..." required>
         <?php if($wrongEmail) { ?>
-            <small class="log-fail" id="email-log">Email đã tồn tại.</small>
+            <small class="log-fail" id="email-log">Email is existed.</small>
         <?php } ?>
     </div>
     <div class="form-row">
         <div class="form-group col-md-6">
-            <label for="password">Mật khẩu:</label>
-            <input type="password" name="password" id="password" class="form-control" placeholder="Mật khẩu" required>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" class="form-control" placeholder="Password..." required>
             <small class="log-fail" id="password-log"></small>
         </div>
         <div class="form-group col-md-6">
-            <label for="confirm-password" id='label_confirm'>Nhập lại mật khẩu:</label>
-            <input type="password" name="confirm_password" id="confirm_password" class="form-control" placeholder="Nhập lại mật khẩu" required onkeyup="check();">
+            <label for="confirm-password" id='label_confirm'>Confirm password:</label>
+            <input type="password" name="confirm_password" id="confirm_password" class="form-control" placeholder="Confirm password..." required onkeyup="check();">
             <small class="log-fail" id="password-match"></small>
         </div>
     </div>
     <div class="form-group">
-        <label for="type">Loại tài khoản</label>
+        <label for="type">Role</label>
         <select name="type" id="type" class="custom-select">
-            <option value="0">Người dùng bình thường</option>
+            <option value="0">User</option>
             <option value="1">Admin</option>
         </select>
     </div>

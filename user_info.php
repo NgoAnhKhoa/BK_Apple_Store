@@ -52,8 +52,8 @@
 		<div class="form-group row">
 			<label for="username" class="col-sm-2 col-form-label">Username</label>
 			<div class="col-sm-10">
-				<input  type="text" class="form-control form-user-edit" name="name" id="username" placeholder="Tên" readonly="readonly" required value=<?php echo "'$name'";?>>
-				<a class="btn btn-primary" onclick="editEnable('username')" id="username-change">Thay đổi</a>
+				<input  type="text" class="form-control form-user-edit" name="name" id="username" placeholder="Name..." readonly="readonly" required value=<?php echo "'$name'";?>>
+				<a class="btn btn-primary" onclick="editEnable('username')" id="username-change">Change username</a>
 				
 			</div>
 			<div><small id="wrong-name" class="log-fail" style='color: red;'></small></div>
@@ -62,24 +62,24 @@
 		<div class="form-group row">
 			<label for="email" class="col-sm-2 col-form-label">Email</label>
     		<div class="col-sm-10">
-				<input type="email" class="form-control form-user-edit" name="email" id="email" placeholder="Email" readonly="readonly" required value=<?php echo "'$email'";?>>
+				<input type="email" class="form-control form-user-edit" name="email" id="email" placeholder="Email..." readonly="readonly" required value=<?php echo "'$email'";?>>
     		</div>
 		</div>			
 		<div class="form-group row" id="current-password">
-			<label for="oldPassword" class="col-sm-2 col-form-label">Mật khẩu hiện tại</label>
+			<label for="oldPassword" class="col-sm-2 col-form-label">Current password</label>
 			<div class="col-sm-10">
-				<input  type="password" class="form-control form-user-edit" name="oldPass" id="oldPassword" placeholder="Mật khẩu cũ">
+				<input  type="password" class="form-control form-user-edit" name="oldPass" id="oldPassword" placeholder="Current password...">
 			</div>
 		</div>
-		<a class="btn btn-primary" onclick="changePasswordShow()" id="changePasswordButton">Đổi mật khẩu</a>
+		<a class="btn btn-primary" onclick="changePasswordShow()" id="changePasswordButton">Change password</a>
 		<div id="changePassword">
 			<div class="form-group row">
-				<label for="password" class="col-sm-2 col-form-label">Mật khẩu mới</label>
+				<label for="password" class="col-sm-2 col-form-label">New password</label>
 				<div class="col-sm-4">
-					<input  type="password" class="form-control form-user-edit" name="newPass" id="password" placeholder="Mật khẩu mới">
+					<input  type="password" class="form-control form-user-edit" name="newPass" id="password" placeholder="New password...">
 				</div>
 				<div class="col-sm-4">
-					<input  type="password" class="form-control form-user-edit" name="confirmPass" id="confirm_password" onkeyup="check();" placeholder="Nhập lại mật khẩu mới">
+					<input  type="password" class="form-control form-user-edit" name="confirmPass" id="confirm_password" onkeyup="check();" placeholder="Confirm password...">
 				</div>
 			</div>
 			
@@ -87,7 +87,7 @@
 		<div>
 			<small id="wrong-confirm" style='color: red;'></small>
 			<?php if($wrong_pass) {?>
-				<small class="log-fail" style="color: red;">Sai mật khẩu.</small>
+				<small class="log-fail" style="color: red;">Wrong password.</small>
 			<?php }?>
 			
 			<?php if($log!=NULL) {
@@ -99,7 +99,7 @@
 				
 			}?>
 		</div>
-		<input type="submit" class="btn btn-primary" id="button-submit" value="Xong">
+		<input type="submit" class="btn btn-primary" id="button-submit" value="Update">
 	</form>
 </div>
 

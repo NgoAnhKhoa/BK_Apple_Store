@@ -20,7 +20,7 @@
                     <h2 class="black">
                         Galaxy S21|S21+ 5G
                     </h2>
-                    <a href="product.php?id=3" class="btn btn-carousel-dark">Xem ngay</a>
+                    <a href="product.php?id=3" class="btn btn-carousel-dark">Detail</a>
                 </div>
             </div>
             <div class="carousel-item">
@@ -29,7 +29,7 @@
                     <h2 class="white">
                         Neo QLED
                     </h2>
-                    <a href="product.php?id=25" class="btn btn-carousel-dark">Xem ngay</a>
+                    <a href="product.php?id=25" class="btn btn-carousel-dark">Detail</a>
                 </div>
             </div>
             <div class="carousel-item">
@@ -38,7 +38,7 @@
                     <h2 class="white">
                         Samsung AI
                     </h2>
-                    <a href="product.php?id=53" class="btn btn-carousel-light">Xem ngay</a>
+                    <a href="product.php?id=53" class="btn btn-carousel-light">Detail</a>
                 </div>
             </div>
         </div>
@@ -57,7 +57,7 @@
 <!-- Category -->
 
 <div class="container">
-    <h2 class="title">Nổi bật</h2>
+    <h2 class="title">Highlights</h2>
     <div class="row">
       <?php
         while($row = $hightlight->fetch_array(MYSQLI_BOTH)) {
@@ -78,7 +78,7 @@
                 <?php echo $des; ?>
               </p>
               <br>
-              <a href=<?php echo "product.php?id=$id"; ?> class="btn btn-primary btn-card">Xem ngay</a>
+              <a href=<?php echo "product.php?id=$id"; ?> class="btn btn-primary btn-card">Detail</a>
             </div>
           </div>
         </a>

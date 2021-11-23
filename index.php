@@ -88,7 +88,7 @@
 <!-- Category -->
 
 <div class="container">
-    <h2 class="title">Nổi bật</h2>
+    <h2 class="title">Highlights</h2>
     <div class="row">
       <?php
         $hightlight = get_HightLight(0);

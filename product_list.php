@@ -50,46 +50,48 @@
                 <div class="from-group form-group-filter">
                     <input type="text" class="form-control search" name="q" id="search" placeholder="Search..." value=<?php if($q) echo "'$q'";?>>
                     <div class="type-select" class="form-control">
-                        <div class="title-type-search">Loại sản phẩm:</div>
+                        <div class="title-type-search">Product type:</div>
                         <input type="radio" name="id" id="all" value="0" <?php if($id==NULL || intval($id)==0) echo "checked"; ?>>
-                        <label for="all">Tất cả</label><br>
-                        <input type="radio" name="id" id="smart-phone" value="1" <?php if(intval($id)==1) echo "checked"; ?>>
-                        <label for="smart-phone">Điện thoại thông minh</label><br>
-                        <input type="radio" name="id" id="tablet" value="2" <?php if(intval($id)==2) echo "checked"; ?>>
-                        <label for="tablet">Máy tính bảng</label><br>
-                        <input type="radio" name="id" id="smart-watch" value="3" <?php if(intval($id)==3) echo "checked"; ?>>
-                        <label for="smart-watch">Đồng hồ thông minh</label><br>
-                        <input type="radio" name="id" id="accessories" value="4" <?php if(intval($id)==4) echo "checked";?>>
-                        <label for="accessories">Phụ kiện</label><br>
-                        <input type="radio" name="id" id="tvs" value="5" <?php if(intval($id)==5) echo "checked"; ?>>
-                        <label for="tvs">TVs</label><br>
-                        <input type="radio" name="id" id="lifestyleTvs" value="6" <?php if(intval($id)==6) echo "checked"; ?>>
-                        <label for="lifestyleTvs">Lifestyle TVs</label><br>
-                        <input type="radio" name="id" id="devices" value="7" <?php if(intval($id)==7) echo "checked"; ?>>
-                        <label for="devices">Thiết bị nghe nhìn</label><br>
-                        <input type="radio" name="id" id="fridge" value="8" <?php if(intval($id)==8) echo "checked"; ?>>
-                        <label for="fridge">Tủ lạnh</label><br>
-                        <input type="radio" name="id" id="washing-machine" value="9" <?php if(intval($id)==9) echo "checked"; ?>>
-                        <label for="washing-machine">Máy giặt</label><br>
-                        <input type="radio" name="id" id="cleaner" value="10" <?php if(intval($id)==10) echo "checked"; ?>>
-                        <label for="cleaner">Máy hút bụi</label><br>
-                        <input type="radio" name="id" id="kitchen" value="11" <?php if(intval($id)==11) echo "checked"; ?>>
-                        <label for="kitchen">Dụng cụ nhà bếp</label><br>
-                        <input type="radio" name="id" id="screen" value="12" <?php if(intval($id)==12) echo "checked"; ?>>
-                        <label for="screen">Màn hình</label><br>
+                        <label for="all">All</label><br>
+                        <input type="radio" name="id" id="mac-air" value="1" <?php if(intval($id)==1) echo "checked"; ?>>
+                        <label for="mac-air">MacBook Air</label><br>
+                        <input type="radio" name="id" id="mac-pro" value="2" <?php if(intval($id)==2) echo "checked"; ?>>
+                        <label for="mac-pro">MacBook Pro</label><br>
+                        <input type="radio" name="id" id="imac" value="3" <?php if(intval($id)==3) echo "checked"; ?>>
+                        <label for="imac">iMac</label><br>
+                        <input type="radio" name="id" id="ipad-air" value="4" <?php if(intval($id)==4) echo "checked";?>>
+                        <label for="ipad-air">iPad Air</label><br>
+                        <input type="radio" name="id" id="ipad-pro" value="5" <?php if(intval($id)==5) echo "checked"; ?>>
+                        <label for="ipad-pro">iPad Pro</label><br>
+                        <input type="radio" name="id" id="ipad-mini" value="6" <?php if(intval($id)==6) echo "checked"; ?>>
+                        <label for="ipad-mini">iPad Mini</label><br>
+                        <input type="radio" name="id" id="iphone-13" value="7" <?php if(intval($id)==7) echo "checked"; ?>>
+                        <label for="iphone-13">iPhone 13</label><br>
+                        <input type="radio" name="id" id="iphone-12" value="8" <?php if(intval($id)==8) echo "checked"; ?>>
+                        <label for="iphone-12">iPhone 12</label><br>
+                        <input type="radio" name="id" id="iphone-11" value="9" <?php if(intval($id)==9) echo "checked"; ?>>
+                        <label for="iphone-11">iPhone 11</label><br>
+                        <input type="radio" name="id" id="watch-series-7" value="10" <?php if(intval($id)==10) echo "checked"; ?>>
+                        <label for="watch-series-7">Apple Watch Series 7</label><br>
+                        <input type="radio" name="id" id="watch-se" value="11" <?php if(intval($id)==11) echo "checked"; ?>>
+                        <label for="watch-se">Apple Watch SE</label><br>
+                        <input type="radio" name="id" id="watch-series-3" value="12" <?php if(intval($id)==12) echo "checked"; ?>>
+                        <label for="watch-series-3">Apple Watch Series 3</label><br>
+                        <input type="radio" name="id" id="watch-nike" value="13" <?php if(intval($id)==13) echo "checked"; ?>>
+                        <label for="watch-nike">Apple Watch Nike</label><br>
                     </div>
                     <div class="type-select" class="form-control">
-                        <div class="title-type-search">Giá:</div>
+                        <div class="title-type-search">Price:</div>
                         <input type="radio" name="price" id="option1" value="1" <?php if(intval($price)==1) echo "checked"; ?>>
-                        <label for="option1">Dưới 100$</label><br>
+                        <label for="option1">Less than 100.000 ₫</label><br>
                         <input type="radio" name="price" id="option2" value="2" <?php if(intval($price)==2) echo "checked"; ?>>
-                        <label for="option2">Từ 100 đến 500$</label><br>
+                        <label for="option2">Between 100.000 and 500.000 ₫</label><br>
                         <input type="radio" name="price" id="option3" value="3" <?php if(intval($price)==3) echo "checked"; ?>>
-                        <label for="option3">Từ 500 đến 1000$</label><br>
+                        <label for="option3">Between 500.000 and 1.000.000 ₫</label><br>
                         <input type="radio" name="price" id="option4" value="4" <?php if(intval($price)==4) echo "checked"; ?>>
-                        <label for="option4">Từ 1000 đến 2000$</label><br>
+                        <label for="option4">Between 1.000.000 and 2.000.000 ₫</label><br>
                         <input type="radio" name="price" id="option5" value="5" <?php if(intval($price)==5) echo "checked"; ?>>
-                        <label for="option5">Trên 2000$</label><br>
+                        <label for="option5">Greater than 2.000.000 ₫</label><br>
                     </div>
                     <input hidden type="text" name="page" value="1">
                 </div>

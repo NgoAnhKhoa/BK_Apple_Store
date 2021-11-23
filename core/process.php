@@ -45,23 +45,23 @@
             switch(intval($price)){
                 case 1:
                     $price1 = 0;
-                    $price2 = 100;
+                    $price2 = 100000;
                     break;
                 case 2:
-                    $price1 = 100;
-                    $price2 = 500;
+                    $price1 = 100000;
+                    $price2 = 500000;
                     break;
                 case 3:
-                    $price1 = 500;
-                    $price2 = 1000;
+                    $price1 = 500000;
+                    $price2 = 1000000;
                     break;
                 case 4:
-                    $price1 = 1000;
-                    $price2 = 2000;
+                    $price1 = 1000000;
+                    $price2 = 2000000;
                     break;
                 case 5:
-                    $price1 = 2000;
-                    $price2 = 1000000;
+                    $price1 = 2000000;
+                    $price2 = 1000000000;
                     break;
                 default:
                     $price1 = 0;
@@ -109,23 +109,23 @@
             switch(intval($price)){
                 case 1:
                     $price1 = 0;
-                    $price2 = 100;
+                    $price2 = 100000;
                     break;
                 case 2:
-                    $price1 = 100;
-                    $price2 = 500;
+                    $price1 = 100000;
+                    $price2 = 500000;
                     break;
                 case 3:
-                    $price1 = 500;
-                    $price2 = 1000;
+                    $price1 = 500000;
+                    $price2 = 1000000;
                     break;
                 case 4:
-                    $price1 = 1000;
-                    $price2 = 2000;
+                    $price1 = 1000000;
+                    $price2 = 2000000;
                     break;
                 case 5:
-                    $price1 = 2000;
-                    $price2 = 1000000;
+                    $price1 = 2000000;
+                    $price2 = 1000000000;
                     break;
                 default:
                     $price1 = 0;

@@ -17,7 +17,7 @@
                 <th>ID</th>
                 <th>User name</th>
                 <th>Email</th>
-                <th>Khóa</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
@@ -31,10 +31,10 @@
                 echo "<td>$name</td>";
                 echo "<td>$email</td>";
                 if($state) {
-                    echo "<td><a href='lock_user.php?id=$id' style='color: red;'>Khóa</a></td>";
+                    echo "<td><a href='lock_user.php?id=$id' style='color: red;'>Lock</a></td>";
                 }
                 else {
-                    echo "<td><a href='unlock_user.php?id=$id' style='color: green;'>Mở khóa</a></td>";
+                    echo "<td><a href='unlock_user.php?id=$id' style='color: green;'>Unlock</a></td>";
                 }
                 echo "</tr>";
             } ?>

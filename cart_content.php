@@ -6,9 +6,9 @@
     <thead>
         <tr>
             <th scope="col"> </th>
-            <th scope="col">Sản phẩm</th>
-            <th scope="col" class="text-center">Số lượng</th>
-            <th scope="col" class="text-right">Giá ($)</th>
+            <th scope="col">Product</th>
+            <th scope="col" class="text-center">Quantity</th>
+            <th scope="col" class="text-right">Price (₫)</th>
             <th>  </th>
         </tr>
     </thead>
@@ -34,22 +34,22 @@
             <td></td>
             <td></td>
             <td></td>
-            <td>Tổng</td>
-            <td class="text-right" id="total">$ 0</td>
+            <td>Total price</td>
+            <td class="text-right" id="total">0 ₫</td>
         </tr>
         <tr>
             <td></td>
             <td></td>
             <td></td>
-            <td>Phí ship</td>
-            <td class="text-right" id="ship">$ 0</td>
+            <td>Shipping fee</td>
+            <td class="text-right" id="ship">0 ₫</td>
         </tr>
         <tr>
             <td></td>
             <td></td>
             <td></td>
-            <td><strong>Tổng cộng</strong></td>
-            <td class="text-right" id="total-and-ship"><strong>$  0</strong></td>
+            <td><strong>Total</strong></td>
+            <td class="text-right" id="total-and-ship"><strong>0 ₫</strong></td>
         </tr>
     </tbody>
 </table>
