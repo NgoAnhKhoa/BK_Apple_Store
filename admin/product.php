@@ -38,7 +38,7 @@
     <div class="row">
         <div class="col-md-6">
             <div class="row">
-            <img src=<?php echo "$url1"; ?> id="img1" class="img-large img-focus" alt="">
+            <img src=<?php echo "$url1"; ?> id="img1" class="img-large img-focus" alt="" height="500px">
             <img src=<?php echo "$url1"; ?> id="img2" class="img-small col-md-3" alt="">
             <img src=<?php echo "$url2"; ?> id="img3" class="img-small col-md-3" alt="">
             <img src=<?php echo "$url3"; ?> id="img4" class="img-small col-md-3" alt="">

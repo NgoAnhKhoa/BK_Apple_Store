@@ -112,7 +112,7 @@
                 ?>
                     <div class='col-12 col-md-6 col-lg-4'>
                         <div class='card-product-list' style='margin-bottom: 20px'>
-                            <a href=<?php echo "product.php?id=$productId"; ?>><img class='card-img-top' src=<?php $url = $row['url1']; echo "'$url'";?> alt='Card image cap'></a>
+                            <a href=<?php echo "product.php?id=$productId"; ?>><img class='card-img-top' src=<?php $url = $row['url1']; echo "'$url'";?> alt='Card image cap' height="350px"></a>
                             <div class='card-body'>
                                 <h4 class='card-title'><a style="text-decoration: none; color:black" href=<?php echo "product.php?id=$productId"; ?> title='View Product'><?php echo $row['name'];?></a></h4>
                                 <p class='card-text'><?php echo $row['des'];?></p>
