@@ -252,6 +252,13 @@ body {
   width: 100px;
 }
 
+p.card-text{
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  display: -webkit-box;
+}
+
 .btn-add-to-cart {
   margin-top: 15px;
 }

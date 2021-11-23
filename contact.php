@@ -42,7 +42,7 @@
         </div>
         <div class="des-card-contact">
             <p class="des-card-contact-content">
-              Phone: ...
+              Phone: 0943318796
             </p>
             <a href="https://www.facebook.com/profile.php?id=100009602137301" class="link">
               <i class="fa fa-facebook social"></i>

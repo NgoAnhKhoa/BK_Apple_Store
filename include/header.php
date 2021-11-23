@@ -128,18 +128,18 @@
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Products
                         </a>
-                        <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="mobile">Di động</a>
                             <a class="dropdown-item" href="tvav">TV & AV</a>
                             <a class="dropdown-item" href="appliance">Gia dụng</a>
                             <a class="dropdown-item" href="screen">Màn hình</a>
-                        </div> -->
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        </div>
+                        <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item <?php echo ($route == 'mac')? "active" : "" ?>" href="mac">Mac</a>
                             <a class="dropdown-item <?php echo ($route == 'ipad')? "active" : "" ?>" href="ipad">iPad</a>
                             <a class="dropdown-item <?php echo ($route == 'iphone')? "active" : "" ?>" href="iphone">iPhone</a>
                             <a class="dropdown-item <?php echo ($route == 'watch')? "active" : "" ?>" href="watch">Watch</a>
-                        </div>
+                        </div> -->
                     </li>
                     <li class=<?php echo $route == 'about'? "'nav-item active'": "nav-item" ?>>
                         <a class="nav-link" href="about">About</a>
