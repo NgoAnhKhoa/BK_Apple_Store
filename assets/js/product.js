@@ -33,10 +33,10 @@ $(document).ready(function(){
         for (i = 0; i < onStar; i++) {
             $(stars[i]).addClass('selected');
         }
-        
-        $('#send-rating').show();
-        
     });
+    // var id = parseInt($('#id').val(), 10);
+    // $('#send-rating').show();
+    // $("#cmt-item").load("comment.php?id=" + id);
 });
 
 $(function() {
@@ -50,6 +50,9 @@ $(function() {
 
 $('#send-rating').click(() => {
     var ratingValue = parseInt($('#stars li.selected').last().data('value'), 10);
+    if (isNaN(ratingValue)) {
+        return;
+    }
     var id = parseInt($('#id').val(), 10);
     $.post("./core/ratingAndCmt.php", {type: "rate", id: id, rate: ratingValue})
     .done(() =>{
@@ -61,7 +64,7 @@ $('#send-rating').click(() => {
             msg = "We will improve ourselves. You rated this " + ratingValue + " stars.";
         }
 
-        $('.rating-widget').hide();
+        // $('.rating-widget').hide();
         responseMessage(msg);
     });
 });
@@ -77,10 +80,8 @@ $('#send-cmt').click(() => {
     if(cmt!=''){
         $.post("./core/ratingAndCmt.php", {type: 'cmt', cmt : cmt, id: id})
         .done(() => {
-            $('span#log-cmt').hide();
-            $('#comment-box').hide();
+            $('#cmt').val("");
             $('#cmt-item').load("comment.php?id=" + id);
-            $('#load-comment').hide();
         });
     }
 });
@@ -91,10 +92,8 @@ $('#send-respone').click(() => {
     if(cmt!=''){
         $.post("../core/ratingAndCmt.php", {type: 'cmt', cmt : cmt, id: id})
         .done(() => {
-            $('span#log-cmt').hide();
-            $('#comment-box').hide();
-            $('#cmt-item').load("comment.php?id=" + id);
-            $('#load-comment').hide();
+            $('#respone').val("");
+            $('#cmt-item').load("../comment.php?id=" + id);
         });
     }
 });

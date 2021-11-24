@@ -55,13 +55,23 @@ CREATE TABLE `Cart` (
     FOREIGN KEY(`userId`) REFERENCES Users(`userId`)
 );
 
+-- CREATE TABLE `ItemCart` (
+--     `itemId`    INT AUTO_INCREMENT UNIQUE NOT NULL,
+--     `productId` INT,
+--     `cartId`    VARCHAR(255),
+--     `quantity`  INT,
+--     PRIMARY KEY(`itemId`),
+--     FOREIGN KEY(`productId`) REFERENCES Products(`productId`),
+--     FOREIGN KEY(`cartId`) REFERENCES Cart(`cartId`)
+-- );
+
 CREATE TABLE `ItemCart` (
     `itemId`    INT AUTO_INCREMENT UNIQUE NOT NULL,
-    `productId` INT,
+    `name`      VARCHAR(255) NOT NULL,
+    `price`     DECIMAL(10, 0),
     `cartId`    VARCHAR(255),
     `quantity`  INT,
     PRIMARY KEY(`itemId`),
-    FOREIGN KEY(`productId`) REFERENCES Products(`productId`),
     FOREIGN KEY(`cartId`) REFERENCES Cart(`cartId`)
 );
 
@@ -76,12 +86,6 @@ CREATE VIEW MessageView AS
 SELECT `messageId`, `userName`, `time`, `content`
 FROM `Message`, `Users`
 WHERE Message.userId = Users.userId;
-
-CREATE VIEW ItemCartView AS 
-SELECT `quantity`, `name`, `price`, `cartId`
-FROM `ItemCart`, `Products`
-WHERE ItemCart.productId = Products.productId;
-
 
 CREATE VIEW CartView AS
 SELECT `userName`, `totalPrice`, `time`

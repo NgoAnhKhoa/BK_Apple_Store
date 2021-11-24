@@ -19,43 +19,9 @@
     $iphone11 = get_HightLight(9);
     
 ?>
-
-  <!-- Hightlight -->
+  <!-- iphone13 -->
   <link rel="stylesheet" href="./assets/css/common.css">
   <div class="container padding-top">
-    <h2 class="title">Nổi bật</h2>
-    <div class="row">
-      <?php
-        while($row = $hightlight->fetch_array(MYSQLI_BOTH)) {
-          $url = $row['url1'];
-          $name = $row['name'];
-          $id = $row['productId'];
-          $des = $row['des'];
-      ?>
-      <div class="col-md-4">
-        <a href=<?php echo "product.php?id=$id"; ?> class="card-link">
-          <div class="card">
-            <img src=<?php echo "$url"; ?> alt="hight light image" class="card-img-top" height="350px">
-            <div class="card-body">
-              <h5 class="card-title">
-                <?php echo $name; ?>
-              </h5>
-              <p class="card-text">
-                <?php echo $des; ?>
-              </p>
-              <br>
-              <a href=<?php echo "product.php?id=$id"; ?> class="btn btn-primary btn-card">Detail</a>
-            </div>
-          </div>
-        </a>
-      </div>
-      <?php } ?>
-    </div>
-  </div>
-  <!-- Hightlight -->
-
-  <!-- iphone13 -->
-  <div class="container">
     <h2 class="title">iPhone 13</h2>
     <div class="row">
       <?php
@@ -77,14 +43,14 @@
                 <?php echo $des; ?>
               </p>
               <br>
-              <a href=<?php echo "product.php?id=$id"; ?> class="btn btn-primary btn-card">Detail</a>
+              <a style="width: 100%;" href=<?php echo "product.php?id=$id"; ?> class="btn btn-primary btn-card">Detail</a>
             </div>
           </div>
         </a>
       </div>
       <?php } ?>
     </div>
-    <a class="btn btn-primary more-button" href="product-list?id=1&page=1">See more</a>
+    <a class="btn btn-primary more-button" href="product-list?id=7&page=1">See more</a>
   </div>
   <!-- End iphone13 -->
 
@@ -111,14 +77,14 @@
                 <?php echo $des; ?>
               </p>
               <br>
-              <a href=<?php echo "product.php?id=$id"; ?> class="btn btn-primary btn-card">Detail</a>
+              <a style="width: 100%;" href=<?php echo "product.php?id=$id"; ?> class="btn btn-primary btn-card">Detail</a>
             </div>
           </div>
         </a>
       </div>
       <?php } ?>
     </div>
-    <a class="btn btn-primary more-button" href="product-list?id=2&page=1">See more</a>
+    <a class="btn btn-primary more-button" href="product-list?id=8&page=1">See more</a>
   </div>
   <!-- End iphone12 -->
 
@@ -145,14 +111,14 @@
                 <?php echo $des; ?>
               </p>
               <br>
-              <a href=<?php echo "product.php?id=$id"; ?> class="btn btn-primary btn-card">Detail</a>
+              <a style="width: 100%;" href=<?php echo "product.php?id=$id"; ?> class="btn btn-primary btn-card">Detail</a>
             </div>
           </div>
         </a>
       </div>
       <?php } ?>
     </div>
-    <a class="btn btn-primary more-button" href="product-list?id=3&page=1">See more</a>
+    <a class="btn btn-primary more-button" href="product-list?id=9&page=1">See more</a>
   </div>
   <!-- End iphone11 -->
 

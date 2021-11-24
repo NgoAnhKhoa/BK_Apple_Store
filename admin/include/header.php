@@ -149,7 +149,7 @@
                            <?php echo $_SESSION['user']['userName'] ?>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item <?php echo $route == 'admin_info'? "active": "" ?>" href="admin-info">Admin info</a>
+                            <a class="dropdown-item <?php echo $route == 'admin_info'? "active": "" ?>" href="admin-info">My profile</a>
                             <a class="dropdown-item <?php echo $route == 'user_order'? "active": "" ?>" href="user-order">Orders of Users</a>
                             <a class="dropdown-item" href="../core/auth.php?logout=true">Logout</a>
                         </div>

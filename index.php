@@ -116,7 +116,7 @@
                 <?php echo $des; ?>
               </p>
               <br>
-              <a href=<?php echo "product.php?id=$id"; ?> class="btn btn-primary btn-card">Detail</a>
+              <a style="width: 100%;" href=<?php echo "product.php?id=$id"; ?> class="btn btn-primary btn-card">Detail</a>
             </div>
           </div>
         </a>

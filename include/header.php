@@ -107,8 +107,7 @@
 
 <!-- navigation bar -->
 <nav class="navbar navbar-expand-lg navbar-light" style="position: fixed; z-index: 100; margin-left: auto; width: 100%; margin-top: -15px; background-color: #afafaf; height:90px">
-    
-    <div class="container mobile"">
+    <div class="container mobile">
         <a class="navbar-brand" href="home" style="display: flex;">
             <img src="./assets/images/logo_apple_1.png" alt="logo" class="logo" style="width: 60px;">
             <div class="rainbow-text" style="text-align: center; margin: 5px 0px 0px 10px">
@@ -163,7 +162,7 @@
                            <?php echo $_SESSION['user']['userName'] ?>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item <?php echo $route == 'user_info'? "active": "" ?>" href="user-info">User infomation</a>
+                            <a class="dropdown-item <?php echo $route == 'user_info'? "active": "" ?>" href="user-info">My profile</a>
                             <a class="dropdown-item <?php echo $route == 'cart_history'? "active": "" ?>" href="cart-history">Order history</a>
                             <a class="dropdown-item" href="core/auth.php?logout=true">Logout</a>
                         </div>

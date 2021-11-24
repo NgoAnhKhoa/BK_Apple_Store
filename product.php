@@ -64,7 +64,7 @@
                     <?php echo $des; ?>
                 </div>
                 <div class="price-product">
-                    <?php echo $price; ?> $
+                    <?php echo $price; ?> ₫
                 </div>
                 <div class="rate">
                     <span class="rate-title">Rating:</span>
@@ -86,13 +86,13 @@
                         <input type="number" name="quantity" id="quantity" value="1" class="quantity" min="1">
                         <br>
                         <input type="hidden" name="id" value=<?php echo "'$id'"; ?>>
-                        <input class="btn btn-primary btn-add-to-cart" type="submit" value="Add to cart"></input>
+                        <input class="btn btn-primary btn-add-to-cart" style="width: 30%;" type="submit" value="Add to cart"></input>
                     </form>
                 <?php 
                     }
                     else if ($USER == 0) {
                 ?>
-                        <a class="btn btn-primary btn-add-to-cart" id="add-to-cart">Add to cart</a>
+                        <a class="btn btn-primary btn-add-to-cart" id="add-to-cart" style="width: 30%;">Add to cart</a>
                 <?php
                     }
                     else if($USER == 2){
@@ -135,9 +135,9 @@
                     </ul>
                 </div>
                 
-                <button class="btn btn-primary" id="send-rating">Send Rating</button>
+                <button class="btn btn-primary" id="send-rating" style="display: block;">Send Rating</button>
             </section>
-            <div class="success-box">
+            <div class="success-box" style="margin-top: 10px">
                 <div class='clearfix'></div>
                 <div class='text-message'></div>
                 <div class='clearfix'></div>
@@ -145,11 +145,12 @@
         </div>
     </div>
     <?php } ?>
+    <br>
     <div class="row">
-        <h5 class="cmt-title">Comment:</h5>
-        <div class="comment" id="comment-box">
+        <h5 class="rate-title">Comment:</h5>
+        <div class="comment" id="comment-box" style="margin-top: 0px;">
             <div class="form-group">
-                <textarea name="cmt" id="cmt" rows="5" class="form-control" placeholder="Viết đánh giá..."></textarea>
+                <textarea name="cmt" id="cmt" rows="5" class="form-control" placeholder="Write your comment..."></textarea>
             </div>
             <button class="btn btn-primary" id="send-cmt">Send comment</button>
 
@@ -162,7 +163,6 @@
 <div class="container">
     <div class="row">
         <div class="comment">
-            <button class="btn btn-primary" class="load-comment" id="load-comment">Show comment</button>
             <div class="cmt-item" id="cmt-item">
             </div>
         </div>
@@ -175,6 +175,8 @@
             showToast("Add to cart failed !", "Please login to add product to cart", "error", 3000);
             setTimeout(() => {window.location.href = "./login.php"}, 3000);
         });
+        var id = parseInt($("#id").val(), 10);
+        $("#cmt-item").load("comment.php?id=" + id);
     });
 </script>
 
