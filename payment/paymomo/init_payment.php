@@ -29,8 +29,8 @@ $partnerCode = $array["partnerCode"];
 $accessKey = $array["accessKey"];
 $secretKey = $array["secretKey"];
 $orderInfo = $array["orderInfo"];
-$returnUrl = $array["returnUrl"];
-$notifyUrl = $array["notifyUrl"];
+$returnUrl = "http://" . $_SERVER['HTTP_HOST'] . $array["returnUrl"];
+$notifyUrl = "http://" . $_SERVER['HTTP_HOST'] . $array["notifyUrl"];
 $extraData = $array["extraData"];
 $requestType = $array["requestType"];
 

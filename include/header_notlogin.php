@@ -7,7 +7,7 @@
         case "/BK_Apple_Store":
         case "/BK_Apple_Store//":
             $route = "home";
-            $title = "Home page";
+            $title = "BK Apple Store";
             break;
         case "/BK_Apple_Store/mac.php":
             $route = "mac";
