@@ -50,6 +50,6 @@
                     </div>
                     <input hidden type="text" name="page" value="1">
                 </div>
-                <input class="btn btn-primary btn-filter" type="submit" value="Lọc">
+                <input class="btn btn-primary btn-filter" type="submit" value="Filter">
             </form>
         </div>
