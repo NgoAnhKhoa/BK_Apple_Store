@@ -74,7 +74,7 @@
         <?php if($isExistEmail) {?>
             <small class="log-fail">Email is EXISTED.</small>
         <?php }?>
-        <input type="submit" value="Đăng ký">
+        <input type="submit" value="Signup">
         <div class="signup_link">
             Had account ?
             <a href="login">Login</a>

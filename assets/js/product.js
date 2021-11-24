@@ -34,9 +34,6 @@ $(document).ready(function(){
             $(stars[i]).addClass('selected');
         }
     });
-    // var id = parseInt($('#id').val(), 10);
-    // $('#send-rating').show();
-    // $("#cmt-item").load("comment.php?id=" + id);
 });
 
 $(function() {
@@ -57,14 +54,7 @@ $('#send-rating').click(() => {
     $.post("./core/ratingAndCmt.php", {type: "rate", id: id, rate: ratingValue})
     .done(() =>{
         var msg = "";
-        if (ratingValue > 1) {
-            msg = "Thanks! You rated this " + ratingValue + " stars.";
-        }
-        else {
-            msg = "We will improve ourselves. You rated this " + ratingValue + " stars.";
-        }
-
-        // $('.rating-widget').hide();
+        msg = "Thanks for your rating";
         responseMessage(msg);
     });
 });

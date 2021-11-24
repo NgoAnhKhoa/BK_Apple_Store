@@ -21,5 +21,4 @@ RewriteRule ^iphone iphone.php [NC,L]
 RewriteRule ^user-info user_info.php [NC,L]
 RewriteRule ^product-list product_list.php [NC,L]
 RewriteRule ^cart-detail cart-detail.php [NC,L]
-RewriteRule ^checkout checkout.php [NC,L]
 
