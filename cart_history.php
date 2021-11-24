@@ -25,7 +25,7 @@
             <tr>
                 <th>STT</th>
                 <th>Time</th>
-                <th>Total</th>
+                <th>Total (₫)</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -39,7 +39,7 @@
                     echo "<tr>";
                     echo "<td>$i</td>";
                     echo "<td>$time</td>";
-                    echo "<td>$price ₫</td>";
+                    echo "<td>". number_format($price, 0, '' ,'.') ."</td>";
                     echo "<td><a href='cart-detail?id=$id'>Detail</a></td>";
                     echo "</tr>";
                     $i++;

@@ -38,7 +38,7 @@
     else{
       include "include/header_notlogin.php";
     }
-?>
+    ?>
 
 <!-- highlight -->
 <link rel="stylesheet" href="./assets/css/common.css">

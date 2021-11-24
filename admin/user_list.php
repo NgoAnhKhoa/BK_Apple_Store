@@ -35,7 +35,7 @@
                     echo '<td class="text-center"><a href="lock_user.php?id=' . $id . '"><i class="fa fa-unlock" style="color: green;"></i></a></td>';
                 }
                 else {
-                    echo '<td><a href="unlock_user.php?id=' . $id . '"><i class="fa fa-lock" style="color: red;"></i></a></td>';
+                    echo '<td class="text-center"><a href="unlock_user.php?id=' . $id . '"><i class="fa fa-lock" style="color: red;"></i></a></td>';
                 }
                 echo '<td><a style="color:red;text-decoration:none;" href="delete_user.php?id=' . $id . '">Delete</td>';
                 echo "</tr>";

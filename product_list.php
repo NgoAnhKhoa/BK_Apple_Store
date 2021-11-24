@@ -68,16 +68,16 @@
                                     <p class='card-text'><?php echo $row['des'];?></p>
                                     <div class='row' style="margin-top: 15px;">
                                         <div class='col'>
-                                            <div class='price-product-list'><?php echo $row['price']; ?> ₫</div>
+                                            <div class='price-product-list'><?php echo number_format($row['price'], 0, '' ,'.'); ?> ₫</div>
                                         </div>
-                                        <div class='col'>
+                                        <div class='col-md-5'>
                                         <?php
                                             if($USER == 1) {
                                         ?>
                                             <form action="core/add_to_cart.php" method="POST">
                                                 <input hidden type="number" name="quantity" id="quantity" value="1" class="quantity" min="1">
                                                 <input type="hidden" name="id" value=<?php echo "'$productId'"; ?>>
-                                                <input class="btn btn-primary btn-add-to-cart" style="width: 100%; margin-top: 5px" type="submit" value="Add to cart"></input>
+                                                <input class="btn btn-primary btn-add-to-cart" style="width: 100%; margin-top: 5px;" type="submit" value="Add to cart"></input>
                                             </form>
                                         <?php 
                                             }

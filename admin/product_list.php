@@ -43,9 +43,9 @@
                             </a>
                                 <div class='row' style="margin-top: 15px;">
                                     <div class='col'>
-                                        <div class='price-product-list'><?php echo $row['price']; ?> ₫</div>
+                                        <div class='price-product-list'><?php echo number_format($row['price'], 0, '' ,'.'); ?> ₫</div>
                                     </div>
-                                    <div class='col-5'>
+                                    <div class='col-md-5'>
                                         <a href=<?php echo "edit-product?id=$productId"; ?> class='btn btn-warning btn-block'>Edit</a>
                                         <a href=<?php echo "delete_product.php?id=$productId"; ?> class='btn btn-danger btn-block'>Delete</a>
                                     </div>

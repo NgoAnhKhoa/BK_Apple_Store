@@ -32,8 +32,8 @@
             <tr>
                 <th>STT</th>
                 <th>Product</th>
-                <th>Quantity</th>
-                <th>Unit Price</th>
+                <th class="text-center">Quantity</th>
+                <th class="text-right">Unit Price (₫)</th>
             </tr>
         </thead>
         <tbody>
@@ -48,8 +48,8 @@
                     echo "<tr>";
                     echo "<td>$i</td>";
                     echo "<td>$name</td>";
-                    echo "<td>$quantity</td>";
-                    echo "<td>$price</td>";
+                    echo "<td class='text-center'>$quantity</td>";
+                    echo "<td class='text-right'>". number_format($price, 0, '' ,'.') ."</td>";
                     echo "</tr>";
                     $i++;
                 }
@@ -57,15 +57,15 @@
                 echo "<td></td>";
                 echo "<td></td>";
                 echo '<td class="text-right">Total price</td>';
-                echo '<td class=text-right>' . $totalPrice . ' ₫</td>';
+                echo '<td class=text-right>' . number_format($totalPrice, 0, '' ,'.') . '</td>';
                 echo "</tr>";
 
-                $ship = round($totalPrice*0.05, 2);
+                $ship = round($totalPrice*0.02, 2);
                 echo "<tr>";
                 echo "<td></td>";
                 echo "<td></td>";
                 echo '<td class="text-right">Shipping fee</td>';
-                echo '<td class=text-right>' . $ship . ' ₫</td>';
+                echo '<td class=text-right>' . number_format($ship, 0, '' ,'.') . '</td>';
                 echo "</tr>";
 
                 $totalPrice = round($totalPrice + $ship, 2);
@@ -73,7 +73,7 @@
                 echo "<td></td>";
                 echo "<td></td>";
                 echo '<td class="text-right"><strong>Total</strong></td>';
-                echo '<td class=text-right><strong>' . $totalPrice . ' ₫</strong></td>';
+                echo '<td class=text-right><strong>' . number_format($totalPrice, 0, '' ,'.') . '</strong></td>';
                 echo "</tr>";
             ?>
         </tbody>

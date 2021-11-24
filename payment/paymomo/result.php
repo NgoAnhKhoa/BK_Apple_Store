@@ -50,7 +50,7 @@ if (!empty($_GET)) {
                     $row = $result->fetch_array(MYSQLI_BOTH);
                     $totalPrice += $row['price']*intval($quantity);
                 }
-                $ship = round($totalPrice*0.05, 2);
+                $ship = round($totalPrice*0.02, 2);
                 $totalPrice = round($totalPrice + $ship, 2);
                 $query = "INSERT INTO `Cart` (`cartId`, `userId`, `totalPrice`) VALUES ('$cartId', $userId, $totalPrice)";
                 $result = $conn->query($query);

@@ -19,7 +19,7 @@
     <h2 class="title">Contact</h2>
     <div class="row contact">
       <div class="col-md-3 contact-card">
-          <a href="https://www.facebook.com/anhkhoa.ngo1704/"><img style="border-radius: 50%; width: 80%" src="https://scontent.fsgn5-8.fna.fbcdn.net/v/t1.6435-9/96949143_1272860759576198_6761997971111280640_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=MTB9PJonHQkAX8r8Q1u&tn=HUy4RpLVWeZ3FFMa&_nc_ht=scontent.fsgn5-8.fna&oh=55e27f725f4099cba52c59c85e74957d&oe=61C01AB5" alt="img-khoa"></a>
+          <a href="https://www.facebook.com/anhkhoa.ngo1704/"><img style="border-radius: 50%; width: 80%" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/p206x206/257810196_692291292155029_6480226400005052616_n.png?_nc_cat=109&ccb=1-5&_nc_sid=aee45a&_nc_ohc=BPQ-lAQpcH0AX_eASll&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=6d3c5847ce33b147baf815f6af216928&oe=61C45B2D" alt="img-khoa"></a>
         <div class="title-card-contact small-letter">
           Khoa Ngo
         </div>
