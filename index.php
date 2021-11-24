@@ -64,16 +64,18 @@
               $des = $row['des'];
               $idx++;
             ?>
-            <div class="carousel-item <?php echo ($idx == 0)? "active": ""; ?>">
-                <img class="d-block w-40" src=<?php echo $url ?> height="400" style="margin: auto;">
-                <p style="height: 150px;"></p>
-                <div class="carousel-caption d-none d-md-block" style="text-align: center;">
-                    <h2 class="black">
-                        <?php echo $name ?>
-                    </h2>
-                    <a href="product.php?id=<?php echo $id ?>" class="btn btn-carousel-dark" style="width: 30%;">Detail</a>
+            <a href="product.php?id=<?php echo $id ?>" style="text-decoration: none">
+                <div class="carousel-item <?php echo ($idx == 0)? "active": ""; ?>">
+                    <img class="d-block w-30" src=<?php echo $url ?> height="300" style="margin: auto;">
+                    <p style="height: 150px;"></p>
+                    <div class="carousel-caption d-none d-md-block" style="text-align: center;">
+                        <h2 class="black">
+                            <?php echo $name ?>
+                        </h2>
+                        <a href="product.php?id=<?php echo $id ?>" class="btn btn-carousel-dark" style="width: 30%;">Detail</a>
+                    </div>
                 </div>
-            </div>
+            </a>
             <?php } ?>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -86,6 +88,9 @@
         </a>
     </div>
 </div>
+<?php if ($i != 18) { ?>
+<hr style="width:50%; border-top: 1px solid #9e9e9e">
+<?php } ?>
 <p style="height: 50px;"></p>
 <?php 
             }

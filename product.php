@@ -86,13 +86,13 @@
                         <input type="number" name="quantity" id="quantity" value="1" class="quantity" min="1">
                         <br>
                         <input type="hidden" name="id" value=<?php echo "'$id'"; ?>>
-                        <input class="btn btn-primary btn-add-to-cart" style="width: 30%;" type="submit" value="Add to cart"></input>
+                        <input class="btn btn-primary btn-add-to-cart" style="width: 50%;" type="submit" value="Add to cart"></input>
                     </form>
                 <?php 
                     }
                     else if ($USER == 0) {
                 ?>
-                        <a class="btn btn-primary btn-add-to-cart" id="add-to-cart" style="width: 30%;">Add to cart</a>
+                        <a class="btn btn-primary btn-add-to-cart" id="add-to-cart" style="width: 50%;">Add to cart</a>
                 <?php
                     }
                     else if($USER == 2){

@@ -37,16 +37,18 @@
               $des = $row['des'];
               $idx++;
             ?>
-            <div class="carousel-item <?php echo ($idx == 0)? "active": ""; ?>">
-                <img class="d-block w-30" src=<?php echo $url ?> height="300" style="margin: auto;">
-                <p style="height: 150px;"></p>
-                <div class="carousel-caption d-none d-md-block" style="text-align: center;">
-                    <h2 class="black">
-                        <?php echo $name ?>
-                    </h2>
-                    <a href="product.php?id=<?php echo $id ?>" class="btn btn-carousel-dark" style="width: 30%;">Detail</a>
+            <a href="product.php?id=<?php echo $id ?>" style="text-decoration: none">
+                <div class="carousel-item <?php echo ($idx == 0)? "active": ""; ?>">
+                    <img class="d-block w-30" src=<?php echo $url ?> height="300" style="margin: auto;">
+                    <p style="height: 150px;"></p>
+                    <div class="carousel-caption d-none d-md-block" style="text-align: center;">
+                        <h2 class="black">
+                            <?php echo $name ?>
+                        </h2>
+                        <a href="product.php?id=<?php echo $id ?>" class="btn btn-carousel-dark" style="width: 30%;">Detail</a>
+                    </div>
                 </div>
-            </div>
+            </a>
             <?php } ?>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -60,6 +62,7 @@
     </div>
     </div>
     <!-- End highlights -->
+    <hr style="width:50%; border-top: 1px solid #9e9e9e">
     <!-- macAir -->
     <div class="container">
     <?php } else { ?>
@@ -96,7 +99,7 @@
     <a class="btn btn-primary more-button" href="product-list?id=10&page=1">See more</a>
   </div>
   <!-- End watchSeries7 -->
-
+  <hr style="width:50%; border-top: 1px solid #9e9e9e">
     <!-- watchSE -->
   <div class="container">
     <h2 class="title">Apple Watch SE</h2>
@@ -130,7 +133,7 @@
     <a class="btn btn-primary more-button" href="product-list?id=11&page=1">See more</a>
   </div>
   <!-- End watchSE -->
-
+  <hr style="width:50%; border-top: 1px solid #9e9e9e">
   <!-- watchSeries3 -->
   <div class="container">
     <h2 class="title">Apple Watch Series 3</h2>
@@ -164,7 +167,7 @@
     <a class="btn btn-primary more-button" href="product-list?id=12&page=1">See more</a>
   </div>
   <!-- End watchSeries3 -->
-
+  <hr style="width:50%; border-top: 1px solid #9e9e9e">
   <!-- watchNike -->
   <div class="container">
     <h2 class="title">Apple Watch Nike</h2>

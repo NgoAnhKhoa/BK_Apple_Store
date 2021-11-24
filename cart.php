@@ -45,6 +45,11 @@ $(document).ready(() => {
     $("#checkout").click(() => {
         if ($("#amount").val() == 0) {
             showToast("Checkout Failed !", "Please choose product to checkout", "error", 3000);
+            return;
+        }
+        if ($("#amount").val() < 10000 || $("#amount").val() > 50000000) {
+            showToast("Checkout Failed !", "Momo limits payment from 10.000 to 50.000.000 VND", "error", 3000);
+            return;
         }
     });
 });

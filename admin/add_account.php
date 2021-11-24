@@ -65,19 +65,19 @@
     <div>
         <?php if($log!=-1) {
             if($log==1)
-                echo "<i class='log-success' style='color: green'>Thành công</i>";
+                echo "<i class='log-success' style='color: green'>SUCCESSFULLY</i>";
             elseif($log == 2)
-                echo "<i class='log-fail'>Email đã tồn tại. Vui lòng kiểm tra lại</i>";
+                echo "<i class='log-fail'>Email is EXISTED</i>";
             else
-                echo "<i class='log-fail'>Thất bại. Vui lòng kiểm tra lại</i>";
+                echo "<i class='log-fail'>FAIL</i>";
         } ?>
     </div>
-    <input class="btn btn-primary" value="Xong" type="submit"/>
+    <input class="btn btn-primary" value="Add" type="submit"/>
     </form>
 </div>
 
 <script src="../assets/js/check.js"></script>
-
+<p style="height: 60px;"></p>
 <?php
     include 'include/footer.php';
 ?>
