@@ -110,7 +110,7 @@
 </div> -->
 <!-- navigation bar -->
 <nav class="navbar navbar-expand-lg navbar-light" style="position: fixed; z-index: 100; margin-left: auto; width: 100%; margin-top: -15px; background-color: #afafaf; height: 90px">
-    <div class="container">
+    <div class="container mobile">
         <a class="navbar-brand" href="home" style="display: flex;">
             <img src="../assets/images/logo_apple_1.png" alt="logo" class="logo" style="width: 60px;">
             <div class="rainbow-text" style="text-align: center; margin: 5px 0px 0px 10px">
