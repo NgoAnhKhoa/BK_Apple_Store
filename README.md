@@ -46,7 +46,9 @@ Web assignment - HK211
 4. Admin:
 
    - Add user.
+   - Lock/Unlock user.
    - See order list.
    - Add product.
    - Edit product.
-   - See user's messages.
+   - Delete product
+   - See inbox.
