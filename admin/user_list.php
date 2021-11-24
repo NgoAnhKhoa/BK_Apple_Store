@@ -44,5 +44,5 @@
     </table>
     <a class="btn btn-primary more-button" href="add-account">Add Account</a>
 </div>
-
+<p style="height: 336px;"></p>
 <?php include 'include/footer.php'; ?>

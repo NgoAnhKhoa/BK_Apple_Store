@@ -48,5 +48,5 @@
         </tbody>
     </table>
 </div>
-
+<p style="height: 390px;"></p>
 <?php include 'include/footer.php'; ?>

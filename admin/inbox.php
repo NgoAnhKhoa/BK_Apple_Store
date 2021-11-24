@@ -41,7 +41,7 @@
 </div>
 
 <script src="./assets/js/script.js"></script>
-
+<p style="height: 390px;"></p>
 <?php
     include 'include/footer.php';
 ?>

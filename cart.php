@@ -49,6 +49,7 @@ $(document).ready(() => {
     });
 });
 </script>
+<p style="height: 163px;"></p>
 <?php
     include 'include/footer.php';
 ?>
