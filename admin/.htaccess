@@ -12,3 +12,4 @@ RewriteRule ^add-product add_product.php [NC,L]
 RewriteRule ^edit-product edit_product.php [NC,L]
 RewriteRule ^product-list product_list.php [NC,L]
 
+
