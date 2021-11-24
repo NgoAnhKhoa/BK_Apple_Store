@@ -137,6 +137,12 @@ body {
   margin: auto;
 }
 
+.table .thead-dark th {
+    
+    background-color: rgb(100, 100, 100);
+    border-color: rgb(100, 100, 100);
+}
+
 .price-product {
   font-size: 1.6em;
   font-weight: 700;
