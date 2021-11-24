@@ -137,6 +137,12 @@ body {
   margin: auto;
 }
 
+.table .thead-dark th {
+    
+    background-color: rgb(100, 100, 100);
+    border-color: rgb(100, 100, 100);
+}
+
 .price-product {
   font-size: 1.6em;
   font-weight: 700;
@@ -149,11 +155,11 @@ body {
 
 .link-footer,
 .nav-footer {
-  color: white;
+  color: black;
 }
 
 .footer-bar {
-  background: #333;
+  background: #afafaf;
 }
 
 .text-footer {
@@ -1147,6 +1153,10 @@ input::-webkit-input-placeholder {
 
   .col-md-3 {
     max-width: 25%;
+  }
+
+  .small-letter {
+      font-size: 20px;
   }
 
   .mobile{

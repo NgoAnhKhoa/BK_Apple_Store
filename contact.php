@@ -19,100 +19,41 @@
     <h2 class="title">Contact</h2>
     <div class="row contact">
       <div class="col-md-3 contact-card">
-          <img style="border-radius: 50%; width: 80%" src="https://scontent.fsgn5-8.fna.fbcdn.net/v/t1.6435-9/96949143_1272860759576198_6761997971111280640_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=MTB9PJonHQkAX8r8Q1u&tn=HUy4RpLVWeZ3FFMa&_nc_ht=scontent.fsgn5-8.fna&oh=55e27f725f4099cba52c59c85e74957d&oe=61C01AB5" alt="img-khoa">
-        <div class="title-card-contact">
+          <a href="https://www.facebook.com/anhkhoa.ngo1704/"><img style="border-radius: 50%; width: 80%" src="https://scontent.fsgn5-8.fna.fbcdn.net/v/t1.6435-9/96949143_1272860759576198_6761997971111280640_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=MTB9PJonHQkAX8r8Q1u&tn=HUy4RpLVWeZ3FFMa&_nc_ht=scontent.fsgn5-8.fna&oh=55e27f725f4099cba52c59c85e74957d&oe=61C01AB5" alt="img-khoa"></a>
+        <div class="title-card-contact small-letter">
           Khoa Ngo
         </div>
         <div class="des-card-contact">
-            <p class="des-card-contact-content">
-              Phone: 0797977273
-            </p>
-            <a href="https://www.facebook.com/anhkhoa.ngo1704/" class="link">
-              <i class="fa fa-facebook social"></i>
-            </a>
-            <a href="https://www.facebook.com/anhkhoa.ngo1704/" class="link">
-              <i class="fa fa-instagram social"></i>
-            </a>
+            Finance Manager
         </div>
       </div>
       <div class="col-md-3 contact-card">
-          <img style="border-radius: 50%; width: 80%" src="https://scontent.fsgn5-8.fna.fbcdn.net/v/t1.6435-9/50434605_2179557445707639_6824014949518409728_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=174925&_nc_ohc=7xHCEihwFRMAX_BvH3A&_nc_ht=scontent.fsgn5-8.fna&oh=67a0e5657e4f07b43bb87784ba122977&oe=61C35C45" alt="img-khoa">
-        <div class="title-card-contact">
+      <a href="https://www.facebook.com/profile.php?id=100009602137301"><img style="border-radius: 50%; width: 80%" src="https://scontent.fsgn5-8.fna.fbcdn.net/v/t1.6435-9/50434605_2179557445707639_6824014949518409728_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=174925&_nc_ohc=7xHCEihwFRMAX_BvH3A&_nc_ht=scontent.fsgn5-8.fna&oh=67a0e5657e4f07b43bb87784ba122977&oe=61C35C45" alt="img-khoa"></a>
+        <div class="title-card-contact small-letter">
           Khoa Tran
         </div>
         <div class="des-card-contact">
-            <p class="des-card-contact-content">
-              Phone: 0943318796
-            </p>
-            <a href="https://www.facebook.com/profile.php?id=100009602137301" class="link">
-              <i class="fa fa-facebook social"></i>
-            </a>
-            <a href="https://www.facebook.com/profile.php?id=100009602137301" class="link">
-              <i class="fa fa-instagram social"></i>
-            </a>
+            Marketing Manager
         </div>
       </div>
       <div class="col-md-3 contact-card">
-          <img style="border-radius: 50%; width: 80%" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/p206x206/256387596_631983037836192_2415708734992561212_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=aee45a&_nc_ohc=__FTJ-ZebVIAX9mlCa9&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=40a9d9d31a71da43707c00da923c9db7&oe=61C25476" alt="img-khang">
-        <div class="title-card-contact">
+      <a href="https://www.facebook.com/khangmin0812"><img style="border-radius: 50%; width: 80%" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/p206x206/256387596_631983037836192_2415708734992561212_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=aee45a&_nc_ohc=__FTJ-ZebVIAX9mlCa9&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=40a9d9d31a71da43707c00da923c9db7&oe=61C25476" alt="img-khang"></a>
+        <div class="title-card-contact small-letter">
             Khang Nguyen
         </div>
         <div class="des-card-contact">
-            <p class="des-card-contact-content">
-              Phone: ...
-            </p>
-            <a href="https://www.facebook.com/khangmin0812" class="link">
-              <i class="fa fa-facebook social"></i>
-            </a>
-            <a href="https://www.facebook.com/khangmin0812" class="link">
-              <i class="fa fa-instagram social"></i>
-            </a>
+            Leasing Manager
         </div>
       </div>
       <div class="col-md-3 contact-card">
-          <img style="border-radius: 50%; width: 80%" src="https://scontent.fsgn5-10.fna.fbcdn.net/v/t1.18169-9/27858226_2002217240039299_3532918632429742634_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=QV2f4LPu9JMAX9dpqCI&_nc_ht=scontent.fsgn5-10.fna&oh=d2dfed0150b0c587cad5a72fa052fe5b&oe=61C0E57C" alt="img-khang">
-        <div class="title-card-contact">
+      <a href="https://www.facebook.com/michael.pham.1401933"><img style="border-radius: 50%; width: 80%" src="https://scontent.fsgn5-10.fna.fbcdn.net/v/t1.18169-9/27858226_2002217240039299_3532918632429742634_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=QV2f4LPu9JMAX9dpqCI&_nc_ht=scontent.fsgn5-10.fna&oh=d2dfed0150b0c587cad5a72fa052fe5b&oe=61C0E57C" alt="img-khang"></a>
+        <div class="title-card-contact small-letter">
             Khang Pham
         </div>
         <div class="des-card-contact">
-            <p class="des-card-contact-content">
-              Phone: ...
-            </p>
-            <a href="https://www.facebook.com/michael.pham.1401933" class="link">
-              <i class="fa fa-facebook social"></i>
-            </a>
-            <a href="https://www.facebook.com/michael.pham.1401933" class="link">
-              <i class="fa fa-instagram social"></i>
-            </a>
+            Operation Manager
         </div>
       </div>
-      
-      <!-- <div class="col-md-4 contact-card">
-        <div class="title-card-contact">Trung Tâm Bảo Hành</div>
-        
-        <div class="des-card-contact">
-          Tìm kiếm Trung Tâm Bảo Hành gần bạn nhất
-        </div>
-        <div class="info-card-contact" style="margin-top: 100px;">
-          <a href="#" class="btn btn-dark">Tìm trung tâm bảo hành</a>
-          <a href="#" class="btn btn-dark">Giao nhận tận nơi (Điện thoại)</a>
-        </div>
-      </div>
-      <div class="col-md-4 contact-card">
-        <div class="title-card-contact">Dành Cho Khách Hàng Doanh Nghiệp</div>
-        <div class="des-card-contact">
-          <p class="des-card-contact-content">
-            1800-588-890 (dành cho khách hàng doanh nghiệp)
-          </p>
-          <p class="des-card-contact-content">
-            Giờ làm việc:
-            24 giờ, 7 ngày trong tuần. Miễn cước phí
-          </p>
-        </div>
-        <div class="info-card-contact">
-          <a href="#" class="btn btn-dark">1800 588 890</a>
-        </div>
-      </div> -->
     </div>
   </div>
 
