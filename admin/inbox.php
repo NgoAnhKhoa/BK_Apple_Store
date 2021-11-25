@@ -14,7 +14,7 @@
     <table class="table table-striped">
         <thead class="thead-dark">
             <tr>
-                <th>Id</th>
+                <th>No.</th>
                 <th>User</th>
                 <th>Time</th>
                 <th>Action</th>
@@ -22,18 +22,20 @@
         </thead>
         <tbody>
             <?php
+                $no = 1;
                 while($row = $inboxList->fetch_array(MYSQLI_BOTH)){
                     $id = $row['messageId'];
                     $userName = $row['userName'];
                     $time = $row['time'];
                     $msg = $row['content'];
                     echo "<tr>";
-                    echo "<td>$id</td>";
+                    echo "<td>$no</td>";
                     echo "<td>$userName</td>";
                     echo "<td>$time</td>";
                     echo "<td><button class='btn btn-primary' id='seeDetailBtn$id' value='1' onclick=".'"seeDetail('."'$msg'".", $id".')"'.">View</button></td>";
                     echo "</tr>";
                     echo "<tr id='detail$id'></tr>";
+                    $no++;
                 }
             ?>
         </tbody>

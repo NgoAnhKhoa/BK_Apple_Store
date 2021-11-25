@@ -23,7 +23,7 @@
     <table class="table table-striped">
         <thead class="thead-dark">
             <tr>
-                <th>STT</th>
+                <th>No.</th>
                 <th>Time</th>
                 <th>Total (₫)</th>
                 <th>Action</th>

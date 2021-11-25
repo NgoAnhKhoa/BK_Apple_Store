@@ -14,7 +14,7 @@
     <table class="table table-striped">
         <thead class="thead-dark">
             <tr>
-                <th>ID</th>
+                <th>No.</th>
                 <th>User name</th>
                 <th>Email</th>
                 <th class="text-center">State</th>
@@ -22,13 +22,16 @@
             </tr>
         </thead>
         <tbody>
-            <?php while($row = $user->fetch_array(MYSQLI_BOTH)) {
+            <?php
+                $no = 1;
+                while($row = $user->fetch_array(MYSQLI_BOTH)) {
                 $id = $row['userId'];
                 $name = $row['userName'];
                 $email = $row['email'];
                 $state = $row['state'];
                 echo "<tr>";
-                echo "<td>$id</td>";
+                echo "<td>$no</td>";
+                $no++;
                 echo "<td>$name</td>";
                 echo "<td>$email</td>";
                 if($state) {

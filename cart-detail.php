@@ -30,7 +30,7 @@
     <table class="table table-striped">
         <thead class="thead-dark">
             <tr>
-                <th>STT</th>
+                <th>No.</th>
                 <th>Product</th>
                 <th class="text-center">Quantity</th>
                 <th class="text-right">Unit Price (₫)</th>
