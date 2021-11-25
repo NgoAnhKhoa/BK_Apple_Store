@@ -64,7 +64,7 @@
                     <?php echo $des; ?>
                 </div>
                 <div class="price-product">
-                    <?php echo $price; ?> ₫
+                    <?php echo number_format($price, 0, '' ,'.'); ?> ₫
                 </div>
                 <div class="rate">
                     <span class="rate-title">Rating:</span>
