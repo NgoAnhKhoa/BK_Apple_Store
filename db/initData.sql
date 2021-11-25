@@ -1,9 +1,12 @@
 USE bk_apple_db;
 
-INSERT INTO `Users` (`userName`, `email`, `password`, `type`)
-VALUES
-('Admin 1','admin1@gmail.com','$2y$10$KJzTJ7.SIKyilTT.olXLKuqG4d5tnlNHMwzXi343zL7b2noENyysG',1),
-('User 1','user1@gmail.com','$2y$10$/dUNHOEHXrxp4gQmYlM7k..UaJ49Qxc9uyX4zo.T3XNvsrIKr8t1q',0);
+INSERT INTO `Users` (`userId`, `userName`, `email`, `password`, `type`, `state`) VALUES
+(1, 'Admin 1', 'admin1@gmail.com', '$2y$10$KJzTJ7.SIKyilTT.olXLKuqG4d5tnlNHMwzXi343zL7b2noENyysG', 1, 1),
+(2, 'User 1', 'user1@gmail.com', '$2y$10$/dUNHOEHXrxp4gQmYlM7k..UaJ49Qxc9uyX4zo.T3XNvsrIKr8t1q', 0, 1),
+(3, 'Khoa Ngo', 'khoa.ngobk@hcmut.edu.vn', '$2y$10$0f50obt7jfheVYBIs0SkfOSEK8lgyr/ulC9deIfp4JffNaxZse2UC', 0, 1),
+(4, 'Khoa Tran', 'khoatran@gmail.com', '$2y$10$NgpI92GxcxGRyxUP/SRuMONWV8KSN1jNzAP6xyKj1J6s1DcB9J2R.', 0, 1),
+(5, 'Khang Pham', 'khangpham@hcmut.edu.vn', '$2y$10$v0BFIVFUs3jVOdSct6mnNuRtGm/qP4I7OmQHXRZ9TECHmJpNMRYam', 0, 1),
+(6, 'Khang Nguyen', 'khangnguyen@gmail.com', '$2y$10$bXNOiq3MZN80.bl.ELiFH.CeBEM1AJ4Hjv8OEODcLXoPRgQkXiRx6', 0, 1);
 
 INSERT INTO `Products` (`productId`, `name`, `price`, `des`, `type`, `url1`, `url2`, `url3`, `url4`, `rate`, `rateQuantity`) VALUES
 (1, 'MacBook Air 2020 M1 256GB', '28999000', 'Màn hình siêu rộng như máy tính bảng khi mở.<br>Đa nhiệm vượt trội, mạnh mẽ dẫn đầu.<br>Thách thức giới hạn với khả năng gập mở linh hoạt', 1, 'https://salt.tikicdn.com/cache/400x400/media/catalog/producttmp/e6/30/f3/f82bda03945cc1907614da72f523e76c.jpg.webp', 'https://salt.tikicdn.com/cache/400x400/media/catalog/producttmp/08/5a/c3/0048bf2ccc571bccb5ddafdfade5cbcb.jpg.webp', 'https://salt.tikicdn.com/cache/400x400/media/catalog/producttmp/6f/8c/1b/3d05be1255cd45f88bd91097b45fad92.jpg.webp', 'https://salt.tikicdn.com/cache/400x400/media/catalog/producttmp/c1/73/67/fc00371c2a5e7813c6eaae1790a09d42.jpg.webp', 0, 0),
@@ -56,3 +59,29 @@ INSERT INTO `Products` (`productId`, `name`, `price`, `des`, `type`, `url1`, `ur
 (48, 'iPad Mini 3 16GB Wifi & 4G', '4190000', 'iPad Mini 3 16GB Wifi & 4G cũ có thiết kế nhỏ gọn, màn hình 7.9 inches, camera sau 5MP, dung lượng pin 6470 mAh cho thời gian sử dụng lâu dài.\r\n\r\niPad Mini 3 16GB Wifi & 4G cũ bán tại Di Động Việt có ngoại hình rất mới, được cam kết nguyên bản chưa qua sửa chữa, chất lượng đã được kiểm định kĩ càng. Máy được bảo hành trong 6 tháng và nhận đủ các ưu đãi, đặc quyền khuyến mãi hấp dẫn tại Di Động Việt.', 6, 'https://didongviet.vn/pub/media/catalog/product//i/p/ipad-mini-3-16gb-wifi-4g-trang-didongviet_1_1.jpg', 'https://didongviet.vn/pub/media/catalog/product//i/p/ipad-mini-3-16gb-wifi-4g-trang-didongviet_1_1.jpg', 'https://didongviet.vn/pub/media/catalog/product//i/p/ipad-mini-3-16gb-wifi-4g-trang-didongviet_1_1.jpg', 'https://didongviet.vn/pub/media/catalog/product//i/p/ipad-mini-3-16gb-wifi-4g-trang-didongviet_1_1.jpg', 0, 0),
 (49, 'Apple Watch S6 Nike Space Gray Aluminum Case', '13550000', 'Tại sự kiện \"Time Flies\" được tổ chức vào lúc rạng sáng ngày 16/9 (theo giờ Việt Nam), Apple đã chính thức giới thiệu thế hệ Apple Watch tiếp theo của mình: Apple Watch Series 6 là một phiên bản nâng cấp tương đối nhẹ của chiếc Series 5 ra mắt hồi năm ngoái.\r\n\r\nThiết kế không đổi\r\n\r\nNếu bạn mong chờ vào một thiết kế mới trên Apple Watch thì có lẽ bạn sẽ phải thất vọng bởi Series 6 năm nay có thiết kế không thay đổi quá nhiều so với Series 5, hay thậm chí là Series 4. Điều khác biệt duy nhất có thể nhận thấy là các cảm biến đo nồng độ oxy trong máu mới được đặt dưới đáy của Apple Watch Series 6.Series 6 sử dụng màn hình LTPO Retina tương tự so với thế hệ tiền nhiệm, hỗ trợ tính năng Alway-on Display. Người dùng sẽ vẫn có hai phiên bản kích thước là 40mm và 44mm.\r\n\r\nTính năng mới: Đo nồng độ oxy trong máu (SpO2)\r\n\r\nNhư đã đề cập ở trên, Apple Watch Series 6 được trang bị các cảm biến quang học mới cho phép đo độ bão hòa oxy trong máu của người dùng. Tính năng này khá hữu ích trong thời điểm dịch bệnh COVID-19 đang trở nên cấp báo hơn bởi nồng độ oxy trong máu thấp có thể là dấu hiệu cho thấy bạn đã dương tính với virus corona chủng mới.\r\n\r\n ', 13, 'https://product.hstatic.net/1000300544/product/mx8c2_vw_34fr_watch-40-alum-spacegray-cell-nike6s_vw_34fr_wf_co_711f323b97f64465ae6f79f675bee07a_grande.jpeg', 'https://product.hstatic.net/1000300544/product/mx8c2_vw_pf_watch-40-alum-spacegray-nc-nike6s_vw_pf_wf_co_96d50b3a3cb2443596af544496583b55_grande.jpeg', 'https://product.hstatic.net/1000300544/product/mg3v3_vw_34fr_watch-40-alum-spacegray-cell-nike6s_vw_34fr_wf_co_170235937d664b1fb7aa62031fa4d180_grande.jpeg', 'https://product.hstatic.net/1000300544/product/mx8c2_vw_34fr_watch-40-alum-spacegray-cell-nike6s_vw_34fr_wf_co_711f323b97f64465ae6f79f675bee07a_grande.jpeg', 0, 0),
 (50, 'iPhone 13 128GB Chính Hãng', '24990000', 'iPhone 13 128GB Chính hãng (VN/A) bán tại Di Động Việt - Đại lý uỷ quyền chính thức của Apple tại Việt Nam, iPhone 13 mini là phiên bản quốc tế 2 sim (Nano + Esim) chính hãng VN/A. Máy chưa Active + nguyên seal hộp, mới 100% (Fullbox)\r\niPhone 13 128GB Chính hãng (VN/A) là phiên bản được phân phối chính thức bởi Apple Việt Nam, được bảo hành 12 tháng tại Trung tâm Uỷ quyền cao cấp nhất của Apple tại Việt Nam và trên toàn cầu miễn phí. Đồng thời hưởng nhiều ưu đãi, khuyến mãi hấp dẫn tại Di Động Việt.', 7, 'https://didongviet.vn/pub/media/catalog/product//i/p/iphone-13-black-friday_2.jpg', 'https://didongviet.vn/pub/media/catalog/product//i/p/iphone-13-red-9-didongviet.jpg', 'https://didongviet.vn/pub/media/catalog/product//i/p/iphone-13-red-10-didongviet.jpg', 'https://didongviet.vn/pub/media/catalog/product//i/p/iphone-13-black-friday_2.jpg', 0, 0);
+
+INSERT INTO `Message` (`messageId`, `userId`, `time`, `content`) VALUES
+(1, 5, '2021-11-26 00:21:39', 'Admin đẹp trai thế'),
+(2, 5, '2021-11-26 00:21:56', 'Hế lô'),
+(3, 6, '2021-11-26 00:22:35', 'Tui nè'),
+(4, 4, '2021-11-26 00:23:20', 'đm Admin ngáo đá'),
+(5, 6, '2021-11-26 00:31:26', 'Ố là la haloo');
+
+INSERT INTO `Comment` (`cmtId`, `userId`, `productId`, `content`, `time`) VALUES
+(1, 2, 16, 'Good !', '2021-11-25 23:26:10'),
+(2, 2, 16, 'Khoa Ngo đẹp trai', '2021-11-25 23:29:37');
+
+INSERT INTO `Cart` (`cartId`, `userId`, `time`, `totalPrice`) VALUES
+('21637856477', 2, '2021-11-25 23:08:14', '18338580'),
+('21637856743', 2, '2021-11-25 23:12:37', '1530000'),
+('31637859269', 3, '2021-11-25 23:54:41', '1530000'),
+('41637860740', 4, '2021-11-26 00:19:29', '1530000'),
+('51637859399', 5, '2021-11-25 23:56:50', '8149800');
+
+INSERT INTO `ItemCart` (`itemId`, `name`, `price`, `cartId`, `quantity`) VALUES
+(1, 'Apple Watch SE GPS + Cellular 44mm', '10999000', '21637856477', 1),
+(2, 'iPad Mini 2 Wifi', '3490000', '21637856477', 2),
+(3, 'HyperDrive 6-in-11 For iPad Pro', '1500000', '21637856743', 1),
+(4, 'HyperDrive 6-in-11 For iPad Pro', '1500000', '31637859269', 1),
+(5, 'Apple Watch SE 44', '7990000', '51637859399', 1),
+(6, 'HyperDrive 6-in-11 For iPad Pro', '1500000', '41637860740', 1);
