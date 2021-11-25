@@ -11,16 +11,16 @@ Web assignment - HK211
 
 ## Quick start:
 
-1. Install environment:
+1. Install server environment XAMPP:
    Follow this [link](https://www.apachefriends.org/download.html)
 
 2. Run project:
 
 - Download this project.
-- Copy project into `htdocs` folder in xampp location. (Ex: Ubuntu is `/opt/lampp/htdocs`).
-- Run xampp, start MySQL Database, Apache Web Server.
-- Open http://localhost/phpmyadmin/, create database by running `createDb.sql` file, then create data by running `createData.sql`.
-- Open http://localhost/BK_Apple_Store to open this project.
+- Copy folder `BK_Apple_Store` into `htdocs` folder in xampp location.
+- Run XAMPP, start Apache, MySQL.
+- Open http://localhost/phpmyadmin/, create database by running file `createDatabase.sql` and insert some data by running file `initData.sql`.
+- Open http://localhost/BK_Apple_Store/ to try this project.
 
 ## Feature:
 
@@ -31,24 +31,26 @@ Web assignment - HK211
 
 2. Anonymous users:
 
-   - See product (search, filter).
-   - See contact.
+   - View product (search, filter).
+   - View news.
+   - View contact.
 
 3. Users:
 
-   - See product (search, filter).
+   - View product (search, filter).
    - Rate, comment product.
    - Buy product.
-   - See order history.
+   - View order history.
    - Send messages to admin.
    - Edit profile.
 
 4. Admin:
 
    - Add user.
+   - Delete user.
    - Lock/Unlock user.
-   - See order list.
+   - View orders history of users.
    - Add product.
    - Edit product.
    - Delete product
-   - See inbox.
+   - View inbox.
