@@ -55,16 +55,6 @@ CREATE TABLE `Cart` (
     FOREIGN KEY(`userId`) REFERENCES Users(`userId`)
 );
 
--- CREATE TABLE `ItemCart` (
---     `itemId`    INT AUTO_INCREMENT UNIQUE NOT NULL,
---     `productId` INT,
---     `cartId`    VARCHAR(255),
---     `quantity`  INT,
---     PRIMARY KEY(`itemId`),
---     FOREIGN KEY(`productId`) REFERENCES Products(`productId`),
---     FOREIGN KEY(`cartId`) REFERENCES Cart(`cartId`)
--- );
-
 CREATE TABLE `ItemCart` (
     `itemId`    INT AUTO_INCREMENT UNIQUE NOT NULL,
     `name`      VARCHAR(255) NOT NULL,
