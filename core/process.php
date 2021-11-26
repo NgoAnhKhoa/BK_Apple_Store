@@ -102,6 +102,13 @@
         return $result;
     }
 
+    function getUserInfo($userId) {
+        $conn = newConnection();
+        $query = "SELECT * FROM `Users` WHERE `userId`=$userId";
+        $result = $conn->query($query);
+        return $result;
+    }
+
     function getAllProduct($id, $q, $price) {
         $conn = newConnection();
         $query = "SELECT * FROM `Products`";

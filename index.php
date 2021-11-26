@@ -48,7 +48,6 @@
 <?php
         // array("Mac")
         for ($i = 15; $i <= 18; $i++) {
-            $type = 
             $hightlight = get_HightLight($i);
             if ($hightlight->num_rows != 0) {
     ?>
