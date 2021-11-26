@@ -32,7 +32,7 @@ CREATE TABLE `Message` (
     `time`      DATETIME DEFAULT CURRENT_TIMESTAMP,
     `content`   TEXT,
     PRIMARY KEY(`messageId`),
-    FOREIGN KEY(`userId`) REFERENCES Users(`userId`)
+    FOREIGN KEY(`userId`) REFERENCES Users(`userId`) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE `Comment` (
@@ -42,8 +42,8 @@ CREATE TABLE `Comment` (
     `content`   TEXT,
     `time`   DATETIME DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY(`cmtId`),
-    FOREIGN KEY(`userId`) REFERENCES Users(`userId`),
-    FOREIGN KEY(`productId`) REFERENCES Products(`productId`)
+    FOREIGN KEY(`userId`) REFERENCES Users(`userId`) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY(`productId`) REFERENCES Products(`productId`) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE `Cart` (
@@ -52,7 +52,7 @@ CREATE TABLE `Cart` (
     `time`      DATETIME DEFAULT CURRENT_TIMESTAMP,
     `totalPrice` DECIMAL(10,0),
     PRIMARY KEY(`cartId`),
-    FOREIGN KEY(`userId`) REFERENCES Users(`userId`)
+    FOREIGN KEY(`userId`) REFERENCES Users(`userId`) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE `ItemCart` (
@@ -62,10 +62,8 @@ CREATE TABLE `ItemCart` (
     `cartId`    VARCHAR(255),
     `quantity`  INT,
     PRIMARY KEY(`itemId`),
-    FOREIGN KEY(`cartId`) REFERENCES Cart(`cartId`)
+    FOREIGN KEY(`cartId`) REFERENCES Cart(`cartId`) ON DELETE CASCADE ON UPDATE CASCADE
 );
-
-
 
 CREATE VIEW CommentView AS
 SELECT `cmtId`, `content`, `time`,`userName`, `productId`, `type`
