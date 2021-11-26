@@ -147,7 +147,23 @@ if ($action == "InitData") {
     (3, 'HyperDrive 6-in-11 For iPad Pro', '1500000', '21637856743', 1),
     (4, 'HyperDrive 6-in-11 For iPad Pro', '1500000', '31637859269', 1),
     (5, 'Apple Watch SE 44', '7990000', '51637859399', 1),
-    (6, 'HyperDrive 6-in-11 For iPad Pro', '1500000', '41637860740', 1);");
+    (6, 'HyperDrive 6-in-11 For iPad Pro', '1500000', '41637860740', 1)",
+
+    "CREATE VIEW CommentView AS
+    SELECT `cmtId`, `content`, `time`,`userName`, `productId`, `type`
+    FROM `Comment`, `Users`
+    WHERE Users.userId = Comment.userId",
+
+    "CREATE VIEW MessageView AS
+    SELECT `messageId`, `userName`, `time`, `content`
+    FROM `Message`, `Users`
+    WHERE Message.userId = Users.userId",
+
+    "CREATE VIEW CartView AS
+    SELECT `userName`, `totalPrice`, `time`
+    FROM `Cart`, `Users`
+    WHERE Cart.userId = Users.userId");
+
     for ($i = 0; $i < count($query); $i++) {
         $result = $conn->query($query[$i]);
         if ($result) {
@@ -158,7 +174,7 @@ if ($action == "InitData") {
     }
 
 } else if ($action == "DeleteData") {
-    $query = array("DROP TABLE `ItemCart`", "DROP TABLE `Cart`", "DROP TABLE `Comment`", "DROP TABLE `Message`", "DROP TABLE `Products`", "DROP TABLE `Users`");
+    $query = array("DROP TABLE `ItemCart`", "DROP TABLE `Cart`", "DROP TABLE `Comment`", "DROP TABLE `Message`", "DROP TABLE `Products`", "DROP TABLE `Users`", "DROP VIEW CommentView", "DROP VIEW MessageView", "DROP VIEW CartView");
     for ($i = 0; $i < count($query); $i++) {
         if (mysqli_query($conn, $query[$i])) {
             echo "Query " . $i . " OK<br>";
