@@ -81,6 +81,7 @@
         	display: inline-block;
         }
     </style>
+    <link rel="icon" href="../assets/images/logo_apple_1.png">
 </head>
 <body>
 
