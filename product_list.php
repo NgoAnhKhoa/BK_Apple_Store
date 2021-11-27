@@ -34,10 +34,10 @@
     else{
         $begin = ($page-1)*6;
     }
-    if ($id != 0)
-        $result = searchProduct($id, $q, $price, $begin);
-    else
-        $result = getAllProduct(0, $q, $price);
+    // if ($id != 0)
+    $result = searchProduct($id, $q, $price, $begin);
+    // else
+        // $result = getAllProduct(0, $q, $price);
     
 
 ?>
@@ -98,7 +98,7 @@
                 ?>
             </div>
             <?php 
-            if($id!=NULL && intval($id)!=0 && $result->num_rows!=0){
+            if($result->num_rows!=0){
             ?>
             <nav aria-label="Page navigation example">
                 <ul class="pagination justify-content-center">

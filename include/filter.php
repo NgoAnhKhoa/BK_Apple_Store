@@ -37,6 +37,8 @@
                     </div>
                     <div class="type-select" class="form-control">
                         <div class="title-type-search">Price:</div>
+                        <input type="radio" name="price" id="option-all" value="0" <?php if(intval($price)==0) echo "checked"; ?>>
+                        <label for="option-all">All</label><br>
                         <input type="radio" name="price" id="option1" value="1" <?php if(intval($price)==1) echo "checked"; ?>>
                         <label for="option1">Less than 10.000.000 ₫</label><br>
                         <input type="radio" name="price" id="option2" value="2" <?php if(intval($price)==2) echo "checked"; ?>>
