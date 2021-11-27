@@ -160,7 +160,7 @@ if ($action == "InitData") {
     WHERE Message.userId = Users.userId",
 
     "CREATE VIEW CartView AS
-    SELECT `userName`, `totalPrice`, `time`
+    SELECT `userName`, `totalPrice`, `time`, `cartId`
     FROM `Cart`, `Users`
     WHERE Cart.userId = Users.userId");
 

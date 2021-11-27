@@ -40,7 +40,7 @@
                 else {
                     echo '<td class="text-center"><a href="unlock_user.php?id=' . $id . '"><i class="fa fa-lock" style="color: red;"></i></a></td>';
                 }
-                echo '<td><a style="color:red;text-decoration:none;" href="delete_user.php?id=' . $id . '">Delete</td>';
+                echo '<td><a style="color:red;text-decoration:none;" href="delete_user.php?id=' . $id . '"><button class="btn btn-danger">Delete</button></td>';
                 echo "</tr>";
             } ?>
         </tbody>

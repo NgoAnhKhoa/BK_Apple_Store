@@ -40,7 +40,7 @@
                     echo "<td>$i</td>";
                     echo "<td>$time</td>";
                     echo "<td>". number_format($price, 0, '' ,'.') ."</td>";
-                    echo "<td><a href='cart-detail?id=$id'>Detail</a></td>";
+                    echo "<td><a href='cart-detail?id=$id'><button class='btn btn-primary'>Detail</button></a></td>";
                     echo "</tr>";
                     $i++;
                 }

@@ -1,6 +1,9 @@
 <?php
   include "./core/auth.php";
 
+  if (checkLogin()) {
+      header("Location: home");
+  }
   $success = true;
   $log = "";
 

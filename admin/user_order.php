@@ -19,6 +19,7 @@
                 <th>User</th>
                 <th>Total (₫)</th>
                 <th>Time</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
@@ -28,11 +29,13 @@
                     $username = $row['userName'];
                     $price = $row['totalPrice'];
                     $time = $row['time'];
+                    $cartId = $row['cartId'];
                     echo "<tr>";
                     echo "<td>$i</td>";
                     echo "<td>$username</td>";
                     echo "<td>" . number_format($price, 0, '' ,'.') . "</td>";
                     echo "<td>$time</td>";
+                    echo "<td><a href='user_order_detail.php?id=$cartId'><button class='btn btn-primary'>Detail</button></a></td>";
                     echo "</tr>";
                     $i++;
                 }
