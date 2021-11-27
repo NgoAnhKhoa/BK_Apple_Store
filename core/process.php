@@ -183,7 +183,7 @@
     function getCart($userId) {
         $conn = newConnection();
         if(checkState($userId)) {
-            $query = "SELECT * FROM `Cart` WHERE `userId` = $userId";
+            $query = "SELECT * FROM `Cart` WHERE `userId` = $userId ORDER BY `time`";
             $result = $conn->query($query);
             $conn->close();
             return $result;
@@ -211,7 +211,7 @@
 
     function getAllCart() {
         $conn = newConnection();
-        $query = "SELECT * FROM `CartView`";
+        $query = "SELECT * FROM `CartView` ORDER BY `time`";
         $result = $conn->query($query);
         $conn->close();
         return $result;
