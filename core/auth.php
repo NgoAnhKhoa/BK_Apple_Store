@@ -15,7 +15,7 @@
 
     function checkPass($pass){
         $id = $_SESSION['user']['userId'];
-        $conn = new mysqli('localhost','root','','samsungDb');
+        $conn = new mysqli('localhost','root','','bk_apple_db');
         $result = $conn->query("SELECT * FROM `Users` WHERE `userId`=$id");
         $row = $result->fetch_array(MYSQLI_BOTH);
         return password_verify($pass, $row['password']);
