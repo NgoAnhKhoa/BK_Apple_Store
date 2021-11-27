@@ -30,8 +30,18 @@
                 </div>
                 <div class="col-sm-12 col-md-6 text-right">
                     <form action="./payment/paymomo/init_payment.php" method="POST">
-                        <input hidden type="text" name="amount" id="amount">
-                        <button class="btn btn-lg btn-block btn-success text-uppercase" id="checkout">Checkout</button>
+                        <div class="row">
+                            <div class="col">
+                                <input hidden type="text" name="amount" id="amount">
+                                <select name="paymentType" id="paymentType" class="custom-select">
+                                    <option value="cash">Cash payment</option>
+                                    <option value="momo">Momo payment</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <button class="btn btn-lg btn-block btn-success text-uppercase" id="checkout">Checkout</button>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -47,9 +57,11 @@ $(document).ready(() => {
             showToast("Checkout Failed !", "Please choose product to checkout", "error", 3000);
             return;
         }
-        if ($("#amount").val() < 10000 || $("#amount").val() > 50000000) {
-            showToast("Checkout Failed !", "Momo limits payment from 10.000 to 50.000.000 VND", "error", 3000);
-            return;
+        if ($("#paymentType").val() == "momo") {
+            if ($("#amount").val() < 10000 || $("#amount").val() > 20000000) {
+                showToast("Checkout Failed !", "Momo limits payment from 10.000 to 20.000.000 VND", "error", 3000);
+                return;
+            }
         }
     });
 });
