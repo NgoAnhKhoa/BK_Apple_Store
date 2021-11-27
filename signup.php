@@ -38,6 +38,7 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="./assets/js/script.js"></script>
+    <link rel="icon" href="assets/images/logo_apple_1.png">
 </head>
 <body>
   <div class="center">

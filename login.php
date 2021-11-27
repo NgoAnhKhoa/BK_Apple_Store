@@ -25,6 +25,7 @@
     <title>Login</title>
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/login.css">
+    <link rel="icon" href="assets/images/logo_apple_1.png">
 </head>
 <body>
   <div class="center">
