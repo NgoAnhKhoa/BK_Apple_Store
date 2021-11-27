@@ -13,26 +13,6 @@
             $route = "product_list";
             $title = "Admin | List of products";
             break;
-        // case "/BK_Apple_Store/tvav.php":
-        //     $route = "product";
-        //     $title = "TV & AV";
-        //     break;
-        // case "/BK_Apple_Store/appliance.php":
-        //     $route = "product";
-        //     $title = "Gia dụng";
-        //     break;
-        // case "/BK_Apple_Store/screen.php":
-        //     $title = "Màn hình";
-        //     $route = "product";
-        //     break;
-        // case "/BK_Apple_Store/about.php":
-        //     // $route = "about";
-        //     $title = "Khám phá";
-        //     break;
-        // case "/BK_Apple_Store/contact.php":
-        //     // $route = "contact";
-        //     $title = "Liên hệ";
-        //     break;
         case "/BK_Apple_Store/admin/add_account.php":
             $title = "Admin | Add account";
             break;
@@ -40,9 +20,6 @@
             $route = "inbox";
             $title = "Admin | Inbox";
             break;
-        // case "/BK_Apple_Store/product_list.php":
-        //     $title = "Danh sách sản phẩm";
-        //     break;
         case "/BK_Apple_Store/admin/product.php":
             $title = "Admin | Product";
             break;
