@@ -64,6 +64,9 @@
         case "/BK_Apple_Store/admin/add_product.php":
             $title = "Admin | Add product";
             break;
+        case "/BK_Apple_Store/admin/user_order_detail.php":
+            $title = "Admin | User order details";
+            break;
     }
 
 

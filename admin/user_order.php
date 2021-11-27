@@ -30,12 +30,13 @@
                     $price = $row['totalPrice'];
                     $time = $row['time'];
                     $cartId = $row['cartId'];
+                    $userId = $row['userId'];
                     echo "<tr>";
                     echo "<td>$i</td>";
                     echo "<td>$username</td>";
                     echo "<td>" . number_format($price, 0, '' ,'.') . "</td>";
                     echo "<td>$time</td>";
-                    echo "<td><a href='user_order_detail.php?id=$cartId'><button class='btn btn-primary'>Detail</button></a></td>";
+                    echo "<td><a href='user_order_detail.php?id=$cartId&userId=$userId'><button class='btn btn-primary'>Detail</button></a></td>";
                     echo "</tr>";
                     $i++;
                 }

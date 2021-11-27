@@ -4,6 +4,9 @@
     if(checkLogin()){
         if(isset($_GET['id'])) {
             $id = $_GET['id'];
+        }
+        if(isset($_GET['userId'])) {
+            $userId = $_GET['userId'];
     
         }
         else {
@@ -16,10 +19,13 @@
     }
 
     $item_list = getCartItem($id);
+    $user = getUserInfo($userId);
+    $row_user = $user->fetch_array(MYSQLI_BOTH);
 ?>
 <link rel="stylesheet" href="../assets/css/common.css">
 <div class="container padding-top">
-    <h2 class="title">User order details</h2>
+    <h2 class="title"><?php echo $row_user["userName"]?>'s order details</h2>
+    <strong>Email:</strong> <?php echo $row_user["email"]?><br><br>
     <table class="table table-striped">
         <thead class="thead-dark">
             <tr>

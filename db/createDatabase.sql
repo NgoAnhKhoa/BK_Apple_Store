@@ -76,6 +76,6 @@ FROM `Message`, `Users`
 WHERE Message.userId = Users.userId;
 
 CREATE VIEW CartView AS
-SELECT `userName`, `totalPrice`, `time`, `cartId`
+SELECT `userName`, `totalPrice`, `time`, `cartId`, `Users`.`userId`
 FROM `Cart`, `Users`
 WHERE Cart.userId = Users.userId;
