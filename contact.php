@@ -74,9 +74,9 @@
               <div id="form-message">
                   <div class="rate-title">Message:</div>
                 <div class="form-group">
-                    <label for="message" class="sr-only">Message</label>
+                    <label for="message" class="sr-only">Feedback</label>
                     <textarea name="message" id="message" cols="30" rows="10" class="form-control"
-                              placeholder="Write your message..."></textarea>
+                              placeholder="Please write your feedback here..."></textarea>
                     
                 </div>
                 <div class="form-group">
