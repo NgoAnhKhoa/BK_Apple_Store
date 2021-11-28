@@ -10,12 +10,24 @@ body {
   margin: 15px auto;
 }
 
+.navbar-style {
+    position: fixed;
+    z-index: 100;
+    margin-left: auto;
+    width: 100%;
+    margin-top: -15px;
+    /* background-color: #afafaf; */
+    background: linear-gradient(120deg, #2980b9, #b62c93, #d6aecc);
+    height:90px;
+}
+
 .navbar-brand {
   font-weight: 700;
 }
 
 .navbar-light .navbar-nav .nav-link {
   font-weight: 700;
+  color: white;
 }
 
 .navbar-light .navbar-nav .nav-item {
@@ -70,6 +82,9 @@ body {
   font-weight: bold;
 }
 
+.dropdown-item.active, .dropdown-item:active {
+    background: linear-gradient(120deg, #2980b9, #b62c93, #d6aecc);
+}
 .title {
   text-align: center;
   margin: 60px auto 80px;
@@ -153,13 +168,12 @@ body {
   font-size: small;
 }
 
-.link-footer,
-.nav-footer {
-  color: black;
+.link-footer, .nav-footer {
+  color: white;
 }
 
 .footer-bar {
-  background: #afafaf;
+  background: linear-gradient(120deg, #2980b9, #b62c93, #d6aecc);
 }
 
 .text-footer {
@@ -1163,7 +1177,7 @@ input::-webkit-input-placeholder {
     width: auto;
     margin-top:0;
     height: auto;
-    background-color: #afafaf;
+    background: linear-gradient(120deg, #2980b9, #b62c93, #d6aecc);
   }
 
   .rainbow-text{
