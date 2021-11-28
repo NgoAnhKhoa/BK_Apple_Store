@@ -1,7 +1,5 @@
 # BK_Apple_Store
 
-Web assignment - HK211
-
 ## Team
 
 1. Ngo Anh Khoa - 1812648
@@ -9,7 +7,7 @@ Web assignment - HK211
 3. Nguyen Van Khang - 1812554
 4. Pham The Khang - 1812558
 
-## Quick start
+## Run
 
 1. Install server environment XAMPP:
    Follow this [link](https://www.apachefriends.org/download.html)
@@ -29,28 +27,34 @@ Web assignment - HK211
    - Login.
    - Signup.
 
-2. Anonymous users:
+2. Anonymous:
 
    - View product (search, filter).
    - View news.
    - View contact.
 
-3. Users:
+3. User:
 
    - View product (search, filter).
    - Rate, comment product.
-   - Buy product.
+   - Add product to cart.
+   - Payment (cash, Momo)
    - View order history.
-   - Send messages to admin.
+   - View order details.
+   - Send messages to Admin.
    - Edit profile.
 
 4. Admin:
 
+   - View product (search, filter).
+   - Comment product.
    - Add user.
    - Delete user.
    - Lock/Unlock user.
-   - View orders history of users.
+   - View orders history of all users.
+   - View order details of each user.
    - Add product.
    - Edit product.
    - Delete product
    - View inbox.
+   - Edit profile.
